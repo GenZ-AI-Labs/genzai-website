@@ -27,5 +27,3 @@ Our innovations empower healthcare providers with accurate, detailed, and action
 - **Hosting:** [genzailabs.com](https://genzailabs.com) (GoDaddy / Cloud / etc.)  
 
 ---
-
-## 📂 Project Structure  
