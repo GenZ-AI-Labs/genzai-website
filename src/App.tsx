@@ -15,6 +15,11 @@ import Events from "./pages/Events";
 import Contact from "./pages/Contact";
 import Careers from "./pages/Careers";
 import NotFound from "./pages/NotFound";
+import { DemoRequest } from "./pages/DemoRequest";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import StrokeWhitePaper from "./pages/Strokewhitepaper";
+import ApplyNowPage from "./pages/ApplyNowPage";
+
 
 const queryClient = new QueryClient();
 
@@ -36,6 +41,10 @@ const App = () => (
               <Route path="/events" element={<Events />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/careers" element={<Careers />} />
+              <Route path="/demo-request" element={<DemoRequest />} />
+              <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+              <Route path="/stroke-white-paper" element={<StrokeWhitePaper />} />
+              <Route path="/apply-now" element={<ApplyNowPage />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>

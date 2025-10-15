@@ -1,0 +1,152 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.curve-container {
+  height: 120px;
+  position: relative;
+  top: 14px; /* changed from -20 */
+  z-index: 2;
+  overflow: hidden;
+}
+
+
+.curve-content {
+    box-sizing: border-box;
+    position: relative;
+    height: 100%;
+    width: 150%;
+    left: -25%;
+    margin: auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border: solid .25rem transparent;
+    border-top-left-radius: 50% 100%;
+    border-top-right-radius: 50% 100%;
+    border-bottom: none;
+    background: radial-gradient(50% 500% at 50% -420%, rgba(64, 97, 231, 0.4) 80%, rgba(0, 0, 0, 0.1) 100%), black;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    
+}
+
+/* Gradient top border using ::before */
+.curve-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin-top: -.25rem;
+    border-radius: inherit;
+    background: linear-gradient(to right, rgba(33, 13, 22, 1) 16%, rgb(16, 28, 191), rgb(93, 104, 255), rgb(55, 71, 137), rgba(33, 13, 22, 1) 84%);
+}
+
+.curve-content h2 {
+    position: relative;
+    z-index: 10;
+    color: white;
+    font-size: 1.45rem;
+    font-weight: 600;
+    left: 1000px;
+    top: 23px;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeInUp {
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeText {
+  0% { opacity: 0; }
+  20% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.animate-fadeText {
+  animation: fadeText 2.5s infinite;
+}
+
+/* Partners scrolling */
+.scroll-container {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.scroll-content {
+  display: flex;
+  width: max-content;
+  animation: scroll-left 25s linear infinite;
+}
+
+.logo-item {
+  flex: 0 0 auto;
+  padding: 0 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-img {
+  height: 300px; /* 🔥 Increased logo size */
+  width: auto;
+  object-fit: contain;
+}
+
+/* Infinite left-to-right scroll animation */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Reverse version (for right-to-left) — optional */
+@keyframes scroll-right {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Pause animation on hover */
+.scroll-content:hover {
+  animation-play-state: paused;
+}
+
+/* For hiding scrollbar */
+/* Hide scrollbar for Chrome, Safari, and Edge */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for Firefox */
+.scrollbar-hide {
+  scrollbar-width: none;
+  -ms-overflow-style: none; /* IE and Edge */
+}

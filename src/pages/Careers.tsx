@@ -1,12 +1,17 @@
-
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { 
-  Briefcase, 
-  MapPin, 
-  Clock, 
-  Users, 
+import {
+  Briefcase,
+  MapPin,
+  Clock,
+  Users,
   ArrowRight,
   Heart,
   Lightbulb,
@@ -14,10 +19,12 @@ import {
   Award,
   Coffee,
   Laptop,
-  Zap
+  Zap,
 } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const Careers = () => {
+  const navigate = useNavigate();
   const openPositions = [
     {
       title: "Senior AI/ML Engineer",
@@ -25,17 +32,29 @@ const Careers = () => {
       location: "Bengaluru, India",
       type: "Full-time",
       experience: "3-5 years",
-      description: "Develop and optimize deep learning models for medical image analysis and stroke detection.",
-      requirements: ["Python, TensorFlow/PyTorch", "Computer Vision experience", "Medical imaging knowledge", "PhD/MS in CS/AI preferred"]
+      description:
+        "Develop and optimize deep learning models for medical image analysis and stroke detection.",
+      requirements: [
+        "Python, TensorFlow/PyTorch",
+        "Computer Vision experience",
+        "Medical imaging knowledge",
+        "PhD/MS in CS/AI preferred",
+      ],
     },
     {
       title: "Clinical Affairs Specialist",
       department: "Clinical",
       location: "Remote/Bengaluru",
-      type: "Full-time", 
+      type: "Full-time",
       experience: "2-4 years",
-      description: "Support clinical validation studies and regulatory submissions for our AI-powered diagnostic tools.",
-      requirements: ["Medical/Clinical background", "Regulatory experience", "Clinical trial management", "Strong communication skills"]
+      description:
+        "Support clinical validation studies and regulatory submissions for our AI-powered diagnostic tools.",
+      requirements: [
+        "Medical/Clinical background",
+        "Regulatory experience",
+        "Clinical trial management",
+        "Strong communication skills",
+      ],
     },
     {
       title: "Software Engineer - Backend",
@@ -43,8 +62,14 @@ const Careers = () => {
       location: "Bengaluru, India",
       type: "Full-time",
       experience: "2-4 years",
-      description: "Build scalable backend systems for AI model deployment and healthcare data processing.",
-      requirements: ["Node.js/Python", "Cloud platforms (AWS/Azure)", "Database design", "Healthcare IT experience preferred"]
+      description:
+        "Build scalable backend systems for AI model deployment and healthcare data processing.",
+      requirements: [
+        "Node.js/Python",
+        "Cloud platforms (AWS/Azure)",
+        "Database design",
+        "Healthcare IT experience preferred",
+      ],
     },
     {
       title: "Product Manager - Healthcare AI",
@@ -52,61 +77,77 @@ const Careers = () => {
       location: "Bengaluru, India",
       type: "Full-time",
       experience: "4-6 years",
-      description: "Drive product strategy and roadmap for our AI-powered medical imaging solutions.",
-      requirements: ["Healthcare/Medical device experience", "Product management", "AI/ML understanding", "Market research skills"]
-    }
+      description:
+        "Drive product strategy and roadmap for our AI-powered medical imaging solutions.",
+      requirements: [
+        "Healthcare/Medical device experience",
+        "Product management",
+        "AI/ML understanding",
+        "Market research skills",
+      ],
+    },
   ];
 
   const benefits = [
     {
       icon: <Heart className="h-8 w-8 text-blue-600" />,
       title: "Healthcare & Wellness",
-      description: "Comprehensive health insurance, mental health support, and wellness programs for you and your family."
+      description:
+        "Comprehensive health insurance, mental health support, and wellness programs for you and your family.",
     },
     {
       icon: <Laptop className="h-8 w-8 text-blue-600" />,
       title: "Remote-First Culture",
-      description: "Flexible work arrangements with state-of-the-art home office setup and modern workspaces."
+      description:
+        "Flexible work arrangements with state-of-the-art home office setup and modern workspaces.",
     },
     {
       icon: <Lightbulb className="h-8 w-8 text-blue-600" />,
-      title: "Learning & Development", 
-      description: "Continuous learning opportunities, conference attendance, and professional development budget."
+      title: "Learning & Development",
+      description:
+        "Continuous learning opportunities, conference attendance, and professional development budget.",
     },
     {
       icon: <Target className="h-8 w-8 text-blue-600" />,
       title: "Meaningful Impact",
-      description: "Work on technology that directly improves patient outcomes and saves lives worldwide."
+      description:
+        "Work on technology that directly improves patient outcomes and saves lives worldwide.",
     },
     {
       icon: <Award className="h-8 w-8 text-blue-600" />,
       title: "Competitive Compensation",
-      description: "Market-leading salaries, equity participation, and performance-based bonuses."
+      description:
+        "Market-leading salaries, equity participation, and performance-based bonuses.",
     },
     {
       icon: <Coffee className="h-8 w-8 text-blue-600" />,
       title: "Great Work Environment",
-      description: "Collaborative culture, team events, and a supportive environment that values innovation."
-    }
+      description:
+        "Collaborative culture, team events, and a supportive environment that values innovation.",
+    },
   ];
 
   const values = [
     {
       title: "Innovation First",
-      description: "We push the boundaries of what's possible in AI and healthcare technology."
+      description:
+        "We push the boundaries of what's possible in AI and healthcare technology.",
     },
     {
       title: "Patient Focus",
-      description: "Every decision we make is guided by how it will impact patient care and outcomes."
+      description:
+        "Every decision we make is guided by how it will impact patient care and outcomes.",
     },
     {
       title: "Collaboration",
-      description: "We believe the best solutions come from diverse teams working together."
+      description:
+        "We believe the best solutions come from diverse teams working together.",
     },
     {
       title: "Continuous Learning",
-      description: "We invest in our team's growth and encourage exploration of new technologies."
-    }
+      description:
+        "We invest in our team's growth and encourage exploration of new technologies.",
+    },
   ];
 
   return (
@@ -123,19 +164,11 @@ const Careers = () => {
               <span className="text-blue-600"> Healthcare AI</span>
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-4xl mx-auto">
-              Join a passionate team of engineers, researchers, and healthcare professionals who are 
-              revolutionizing medical diagnosis through cutting-edge AI technology. Make a meaningful 
-              impact while growing your career at the forefront of healthcare innovation.
+              Join a passionate team of engineers, researchers, and healthcare
+              professionals who are revolutionizing medical diagnosis through
+              cutting-edge AI technology. Make a meaningful impact while growing
+              your career at the forefront of healthcare innovation.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3">
-                View Open Positions
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-              <Button size="lg" variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-3">
-                Learn About Our Culture
-              </Button>
-            </div>
           </div>
         </div>
       </section>
@@ -144,16 +177,21 @@ const Careers = () => {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Values</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Our Values
+            </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              The principles that guide our work and shape our culture every day.
+              The principles that guide our work and shape our culture every
+              day.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
               <Card key={index} className="text-center border-none shadow-md">
                 <CardHeader>
-                  <CardTitle className="text-xl text-gray-900">{value.title}</CardTitle>
+                  <CardTitle className="text-xl text-gray-900">
+                    {value.title}
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <CardDescription className="text-gray-600">
@@ -166,7 +204,7 @@ const Careers = () => {
         </div>
       </section>
 
-      {/* Open Positions */}
+      {/* Open Positions
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -226,25 +264,31 @@ const Careers = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Benefits & Perks */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Benefits & Perks</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Benefits & Perks
+            </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We invest in our team's success and well-being with comprehensive benefits and a supportive work environment.
+              We invest in our team's success and well-being with comprehensive
+              benefits and a supportive work environment.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
-              <Card key={index} className="text-center hover:shadow-lg transition-shadow border-none shadow-md">
+              <Card
+                key={index}
+                className="text-center hover:shadow-lg transition-shadow border-none shadow-md"
+              >
                 <CardHeader className="pb-4">
-                  <div className="flex justify-center mb-4">
-                    {benefit.icon}
-                  </div>
-                  <CardTitle className="text-xl text-gray-900">{benefit.title}</CardTitle>
+                  <div className="flex justify-center mb-4">{benefit.icon}</div>
+                  <CardTitle className="text-xl text-gray-900">
+                    {benefit.title}
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <CardDescription className="text-gray-600">
@@ -261,9 +305,12 @@ const Careers = () => {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Hiring Process</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Our Hiring Process
+            </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We've designed a transparent and efficient hiring process to help us get to know each other better.
+              We've designed a transparent and efficient hiring process to help
+              us get to know each other better.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -272,11 +319,14 @@ const Careers = () => {
                 <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
                   1
                 </div>
-                <CardTitle className="text-xl text-gray-900">Application</CardTitle>
+                <CardTitle className="text-xl text-gray-900">
+                  Application
+                </CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-gray-600">
-                  Submit your application with resume and cover letter through our careers portal.
+                  Submit your application with resume and cover letter through
+                  our careers portal.
                 </CardDescription>
               </CardContent>
             </Card>
@@ -286,11 +336,14 @@ const Careers = () => {
                 <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
                   2
                 </div>
-                <CardTitle className="text-xl text-gray-900">Initial Screening</CardTitle>
+                <CardTitle className="text-xl text-gray-900">
+                  Initial Screening
+                </CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-gray-600">
-                  Phone or video call with our hiring team to discuss your background and interests.
+                  Phone or video call with our hiring team to discuss your
+                  background and interests.
                 </CardDescription>
               </CardContent>
             </Card>
@@ -300,11 +353,14 @@ const Careers = () => {
                 <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
                   3
                 </div>
-                <CardTitle className="text-xl text-gray-900">Technical Interview</CardTitle>
+                <CardTitle className="text-xl text-gray-900">
+                  Technical Interview
+                </CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-gray-600">
-                  Technical assessment and interview with team members relevant to your role.
+                  Technical assessment and interview with team members relevant
+                  to your role.
                 </CardDescription>
               </CardContent>
             </Card>
@@ -314,11 +370,14 @@ const Careers = () => {
                 <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
                   4
                 </div>
-                <CardTitle className="text-xl text-gray-900">Final Interview</CardTitle>
+                <CardTitle className="text-xl text-gray-900">
+                  Final Interview
+                </CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-gray-600">
-                  Meet with leadership team and discuss culture fit, career goals, and expectations.
+                  Meet with leadership team and discuss culture fit, career
+                  goals, and expectations.
                 </CardDescription>
               </CardContent>
             </Card>
@@ -327,7 +386,7 @@ const Careers = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-blue-600">
+      <section className="py-20 bg-gradient-to-b from-blue-400 via-blue-600 to-blue-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="flex justify-center mb-6">
             <Zap className="h-16 w-16 text-white" />
@@ -336,14 +395,27 @@ const Careers = () => {
             Ready to Make an Impact?
           </h2>
           <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-            Join our mission to transform healthcare through AI innovation. If you don't see a perfect 
-            match in our current openings, we'd still love to hear from you.
+            Join our mission to transform healthcare through AI innovation. If
+            you don't see a perfect match in our current openings, we'd still
+            love to hear from you.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3">
+            {/* Apply Now Button */}
+            <Button
+              size="lg"
+              className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3"
+              onClick={() => navigate("/apply-now")}
+            >
               Apply Now
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-blue-700 px-8 py-3">
+
+            {/* Send Resume Button */}
+            <Button
+              size="lg"
+              variant="outline"
+              className="bg-transparent border-white text-white hover:bg-blue-700 px-8 py-3"
+              onClick={() => navigate("/apply-now")}
+            >
               Send Resume
             </Button>
           </div>

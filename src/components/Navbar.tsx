@@ -1,6 +1,5 @@
-
 import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -11,10 +10,13 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
+import { DemoRequestModal } from "@/components/modals/DemoRequestModal";
 
 export function Navbar() {
+  const [demoModalOpen, setDemoModalOpen] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
   const isActive = (path: string) => location.pathname === path;
 
@@ -24,10 +26,11 @@ export function Navbar() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">G</span>
+            <div className="flex items-center justify-center">
+              <img src="/genz-ai-logo.png" alt="Logo" className="w-14" />
             </div>
-            <span className="text-xl font-bold text-gray-900">GenzaiLabs</span>
+
+            {/* <span className="text-xl font-bold text-gray-900">GENZ AI LABS</span> */}
           </Link>
 
           {/* Desktop Navigation */}
@@ -38,7 +41,9 @@ export function Navbar() {
                   <Link
                     to="/"
                     className={`px-3 py-2 text-sm font-medium transition-colors ${
-                      isActive("/") ? "text-blue-600" : "text-gray-700 hover:text-blue-600"
+                      isActive("/")
+                        ? "text-blue-600"
+                        : "text-gray-700 hover:text-blue-600"
                     }`}
                   >
                     Home
@@ -49,7 +54,9 @@ export function Navbar() {
                   <Link
                     to="/about"
                     className={`px-3 py-2 text-sm font-medium transition-colors ${
-                      isActive("/about") ? "text-blue-600" : "text-gray-700 hover:text-blue-600"
+                      isActive("/about")
+                        ? "text-blue-600"
+                        : "text-gray-700 hover:text-blue-600"
                     }`}
                   >
                     About
@@ -88,7 +95,9 @@ export function Navbar() {
                   <Link
                     to="/events"
                     className={`px-3 py-2 text-sm font-medium transition-colors ${
-                      isActive("/events") ? "text-blue-600" : "text-gray-700 hover:text-blue-600"
+                      isActive("/events")
+                        ? "text-blue-600"
+                        : "text-gray-700 hover:text-blue-600"
                     }`}
                   >
                     Events
@@ -99,7 +108,9 @@ export function Navbar() {
                   <Link
                     to="/contact"
                     className={`px-3 py-2 text-sm font-medium transition-colors ${
-                      isActive("/contact") ? "text-blue-600" : "text-gray-700 hover:text-blue-600"
+                      isActive("/contact")
+                        ? "text-blue-600"
+                        : "text-gray-700 hover:text-blue-600"
                     }`}
                   >
                     Contact
@@ -110,7 +121,9 @@ export function Navbar() {
                   <Link
                     to="/careers"
                     className={`px-3 py-2 text-sm font-medium transition-colors ${
-                      isActive("/careers") ? "text-blue-600" : "text-gray-700 hover:text-blue-600"
+                      isActive("/careers")
+                        ? "text-blue-600"
+                        : "text-gray-700 hover:text-blue-600"
                     }`}
                   >
                     Careers
@@ -119,7 +132,10 @@ export function Navbar() {
               </NavigationMenuList>
             </NavigationMenu>
 
-            <Button className="bg-blue-600 hover:bg-blue-700 text-white">
+            <Button
+              className="bg-blue-600 hover:bg-blue-700 text-white"
+              onClick={() => navigate("/demo-request")}
+            >
               Request Demo
             </Button>
           </div>
@@ -131,7 +147,11 @@ export function Navbar() {
               size="sm"
               onClick={() => setIsOpen(!isOpen)}
             >
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
             </Button>
           </div>
         </div>
@@ -191,6 +211,8 @@ export function Navbar() {
           </div>
         )}
       </div>
+      {/* Modals */}
+      <DemoRequestModal open={demoModalOpen} onOpenChange={setDemoModalOpen} />
     </nav>
   );
 }
