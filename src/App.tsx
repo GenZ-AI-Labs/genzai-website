@@ -17,7 +17,7 @@ import Careers from "./pages/Careers";
 import NotFound from "./pages/NotFound";
 import { DemoRequest } from "./pages/DemoRequest";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
-import StrokeWhitePaper from "./pages/Strokewhitepaper";
+import StrokeWhitePaper from "./pages/StrokeWhitepaper";
 import ApplyNowPage from "./pages/ApplyNowPage";
 
 
