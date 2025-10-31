@@ -1,3 +1,4 @@
+// src/components/DemoRequest.tsx
 import React from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -33,12 +34,12 @@ export const DemoRequest: React.FC = () => {
     try {
       setIsSubmitting(true);
       const result = await submitDemoRequest(data);
-      
+
       toast({
         title: "Demo Request Submitted!",
         description: result.message,
       });
-      
+
       form.reset();
       navigate("/");
     } catch (error) {
@@ -78,7 +79,7 @@ export const DemoRequest: React.FC = () => {
                 <p className="text-red-600 text-sm mt-1">{form.formState.errors.firstName.message}</p>
               )}
             </div>
-            
+
             <div>
               <Label htmlFor="lastName" className="text-sm font-medium text-gray-700">
                 Last Name *
