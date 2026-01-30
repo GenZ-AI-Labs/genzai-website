@@ -54,7 +54,7 @@ const About = () => {
             </Badge>
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
               Pioneering the Future of
-              <span className="text-blue-600"> AI Healthcare</span>
+              <span className="text-blue-600"> AI Healthcare testing </span>
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-4xl mx-auto">
               GenzaiLabs is at the forefront of medical AI innovation,
