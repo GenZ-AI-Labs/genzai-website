@@ -8,7 +8,7 @@ export const demoRequestSchema = z.object({
   phone: z.string().min(10, "Please enter a valid phone number"),
   organization: z.string().min(2, "Organization is required"),
   role: z.string().optional(),
-  productInterest: z.enum(["stroke-insightz", "cxr-insightz", "general-inquiry", "partnership"]),
+  productInterest: z.enum(["ct-stroke-insightz", "mr-stroke-insightz", "asl-insightz", "tumor-insightz", "tb-insightz", "general-inquiry", "partnership"]),
   preferredDate: z.date().optional(),
   message: z.string().min(10, "Please provide more details about your requirements"),
 });
@@ -22,7 +22,7 @@ export const freeTrialSchema = z.object({
   role: z.string().min(2, "Role/Title is required"),
   hospitalSize: z.enum(["small", "medium", "large", "enterprise"]),
   currentSolution: z.string().optional(),
-  trialType: z.enum(["stroke-insightz", "cxr-insightz", "both"]),
+  trialType: z.enum(["ct-stroke-insightz", "mr-stroke-insightz", "asl-insightz", "tumor-insightz", "tb-insightz", "all"]),
 });
 
 export const brochureDownloadSchema = z.object({
@@ -31,7 +31,7 @@ export const brochureDownloadSchema = z.object({
   email: z.string().email("Please enter a valid email address"),
   organization: z.string().min(2, "Organization is required"),
   role: z.string().min(2, "Role/Title is required"),
-  brochureType: z.enum(["company-overview", "stroke-insightz", "cxr-insightz", "all-products"]),
+  brochureType: z.enum(["company-overview", "ct-stroke-insightz", "mr-stroke-insightz", "asl-insightz", "tumor-insightz", "tb-insightz", "all-products"]),
 });
 
 export const consultationSchema = z.object({

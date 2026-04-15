@@ -21,76 +21,79 @@ const Products = () => {
   const navigate = useNavigate();
   const products = [
     {
-      id: "stroke-insightz",
-      title: "Stroke Insightz",
+      id: "ct-stroke-insightz",
+      title: "CT Stroke Insightz",
       description:
-        "Advanced AI-powered stroke detection and analysis for CT scans with real-time alerts and comprehensive reporting.",
-      icon: (
-        <img
-          src="/stroke-logo.png"
-          alt="Stroke Insightz Logo"
-          className="h-20 w-20 object-contain"
-        />
-      ),
+        "AI-powered CT Perfusion analysis for acute stroke triage — core/penumbra volumetrics, CT-ASPECTS, and collateral assessment in minutes.",
+      icon: <Brain className="h-16 w-16 text-blue-600" />,
       features: [
-        "Real-time stroke detection",
-        "CT scan analysis",
-        "Automated alerts",
-        "Clinical decision support",
+        "Core/Penumbra volumetrics",
+        "CT-ASPECTS scoring",
+        "Mismatch ratio & HIR",
+        "Thrombectomy decision support",
       ],
-      link: "/products/stroke-insightz",
+      link: "/products/ct-stroke-insightz",
       status: "Available",
     },
     {
-      id: "cxr-insightz",
-      title: "CXR Insightz",
+      id: "mr-stroke-insightz",
+      title: "MR Stroke Insightz",
       description:
-        "Comprehensive chest X-ray analysis with automated detection of abnormalities and pathologies using advanced AI.",
-      icon: (
-        <img
-          src="/cxr-logo1.png"
-          alt="CXR Insightz Logo"
-          className="h-20 w-20 object-contain"
-        />
-      ),
-      features: [
-        "Chest X-ray analysis",
-        "Abnormality detection",
-        "Pathology identification",
-        "Report generation",
-      ],
-      link: "/products/cxr-insightz",
-      status: "Available",
-    },
-    {
-      id: "oncology-insightz",
-      title: "Oncology Insightz",
-      description:
-        "Advanced cancer detection and staging through comprehensive imaging analysis and AI-powered tumor identification.",
+        "MRI DSC Perfusion stroke evaluation with DWI-ASPECTS, FLAIR mismatch for onset estimation, and perfusion-diffusion analysis.",
       icon: <Activity className="h-16 w-16 text-blue-600" />,
       features: [
-        "Cancer detection",
-        "Tumor staging",
-        "Treatment planning",
-        "Progress monitoring",
+        "DWI infarct segmentation",
+        "DWI-ASPECTS scoring",
+        "FLAIR Mismatch (SIR)",
+        "Wake-up stroke onset estimation",
       ],
-      link: "#",
-      status: "Coming Soon",
+      link: "/products/mr-stroke-insightz",
+      status: "Available",
     },
     {
-      id: "ct-brain-perfusion",
-      title: "CT Brain Perfusion Analysis",
+      id: "asl-insightz",
+      title: "MRI ASL Insightz",
       description:
-        "Specialized analysis of brain perfusion studies for enhanced stroke assessment and treatment planning.",
+        "Non-contrast brain perfusion via Arterial Spin Labeling — gadolinium-free CBF quantification for 7 clinical indications.",
       icon: <Scan className="h-16 w-16 text-blue-600" />,
       features: [
-        "Perfusion mapping",
-        "Blood flow analysis",
-        "Tissue viability assessment",
-        "Treatment guidance",
+        "Absolute CBF (ml/100g/min)",
+        "pCASL / CASL / PASL support",
+        "CBF Asymmetry Index",
+        "Pediatric & renal-impaired safe",
       ],
-      link: "#",
-      status: "In Development",
+      link: "/products/asl-insightz",
+      status: "Available",
+    },
+    {
+      id: "tumor-insightz",
+      title: "MRI Tumor Insightz",
+      description:
+        "Neuro-oncology DSC perfusion with nCBV/PSR/K2 maps, tumor differential diagnosis, and hot-spot biopsy guidance.",
+      icon: <Heart className="h-16 w-16 text-blue-600" />,
+      features: [
+        "nCBV, PSR, K2, rPH maps",
+        "Tumor differential Dx",
+        "Hot-Spot biopsy guidance",
+        "Recurrence vs pseudoprogression",
+      ],
+      link: "/products/tumor-insightz",
+      status: "Available",
+    },
+    {
+      id: "tb-insightz",
+      title: "TB Insightz",
+      description:
+        "AI-powered tuberculosis screening from chest X-rays with supporting device/artifact detection and cardiomegaly assessment.",
+      icon: <Activity className="h-16 w-16 text-blue-600" />,
+      features: [
+        "Tuberculosis detection (up to 99% confidence)",
+        "Device & artifact flagging",
+        "Cardiomegaly / CT-ratio assessment",
+        "Structured report with RT-PCR recommendation",
+      ],
+      link: "/products/tb-insightz",
+      status: "Available",
     },
   ];
 

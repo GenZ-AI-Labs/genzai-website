@@ -68,22 +68,40 @@ export function Navbar() {
                     Products
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <div className="w-64 p-4 bg-white">
+                    <div className="w-72 p-4 bg-white">
                       <Link
-                        to="/products/stroke-insightz"
+                        to="/products/ct-stroke-insightz"
                         className="block px-3 py-2 text-sm text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md"
                       >
-                        Stroke Insightz
+                        CT Stroke Insightz
                       </Link>
                       <Link
-                        to="/products/cxr-insightz"
+                        to="/products/mr-stroke-insightz"
                         className="block px-3 py-2 text-sm text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md"
                       >
-                        CXR Insightz
+                        MR Stroke Insightz
+                      </Link>
+                      <Link
+                        to="/products/asl-insightz"
+                        className="block px-3 py-2 text-sm text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md"
+                      >
+                        MRI ASL Insightz
+                      </Link>
+                      <Link
+                        to="/products/tumor-insightz"
+                        className="block px-3 py-2 text-sm text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md"
+                      >
+                        MRI Tumor Insightz
+                      </Link>
+                      <Link
+                        to="/products/tb-insightz"
+                        className="block px-3 py-2 text-sm text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md"
+                      >
+                        TB Insightz
                       </Link>
                       <Link
                         to="/products"
-                        className="block px-3 py-2 text-sm text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md"
+                        className="block px-3 py-2 text-sm text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md border-t mt-2 pt-3"
                       >
                         View All Products
                       </Link>
@@ -101,6 +119,19 @@ export function Navbar() {
                     }`}
                   >
                     Events
+                  </Link>
+                </NavigationMenuItem>
+
+                <NavigationMenuItem>
+                  <Link
+                    to="/publications"
+                    className={`px-3 py-2 text-sm font-medium transition-colors ${
+                      isActive("/publications")
+                        ? "text-blue-600"
+                        : "text-gray-700 hover:text-blue-600"
+                    }`}
+                  >
+                    Publications
                   </Link>
                 </NavigationMenuItem>
 
@@ -187,6 +218,13 @@ export function Navbar() {
                 onClick={() => setIsOpen(false)}
               >
                 Events
+              </Link>
+              <Link
+                to="/publications"
+                className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-600"
+                onClick={() => setIsOpen(false)}
+              >
+                Publications
               </Link>
               <Link
                 to="/contact"

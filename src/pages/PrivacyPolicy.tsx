@@ -235,9 +235,9 @@ const PrivacyPolicy = () => {
             </p>
             <div className="bg-gray-50 p-4 rounded-md mb-4">
               <p className="text-gray-700 font-semibold mb-2">India</p>
-              <p className="text-gray-700 mb-1">S. No. 159/1/2, Surbhi Heights</p>
-              <p className="text-gray-700 mb-1">Fl. No.602, Masurkar Colony</p>
-              <p className="text-gray-700 mb-1">Pune, Pune 411018</p>
+              <p className="text-gray-700 mb-1">Office No. 659, Gera's Imperium Gateway</p>
+              <p className="text-gray-700 mb-1">near Bhosari Metro Station, Nashik Phata Flyover</p>
+              <p className="text-gray-700 mb-1">Pune – 411034</p>
               <p className="text-gray-700">Maharashtra, India</p>
             </div>
             <p className="text-gray-700 leading-relaxed">

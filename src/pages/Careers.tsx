@@ -29,7 +29,7 @@ const Careers = () => {
     {
       title: "Senior AI/ML Engineer",
       department: "Engineering",
-      location: "Bengaluru, India",
+      location: "Pune, India",
       type: "Full-time",
       experience: "3-5 years",
       description:
@@ -44,7 +44,7 @@ const Careers = () => {
     {
       title: "Clinical Affairs Specialist",
       department: "Clinical",
-      location: "Remote/Bengaluru",
+      location: "Remote/Pune",
       type: "Full-time",
       experience: "2-4 years",
       description:
@@ -59,7 +59,7 @@ const Careers = () => {
     {
       title: "Software Engineer - Backend",
       department: "Engineering",
-      location: "Bengaluru, India",
+      location: "Pune, India",
       type: "Full-time",
       experience: "2-4 years",
       description:
@@ -74,7 +74,7 @@ const Careers = () => {
     {
       title: "Product Manager - Healthcare AI",
       department: "Product",
-      location: "Bengaluru, India",
+      location: "Pune, India",
       type: "Full-time",
       experience: "4-6 years",
       description:

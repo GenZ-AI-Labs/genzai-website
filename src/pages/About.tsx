@@ -83,10 +83,9 @@ const About = () => {
                 real-time.
               </p>
               <p className="text-lg text-gray-600 mb-6">
-                By leveraging advanced machine learning algorithms and deep
-                neural networks, we're creating solutions that not only improve
-                patient outcomes but also streamline clinical workflows and
-                reduce the burden on healthcare systems worldwide.
+                We build AI-driven clinical decision support that improves
+                patient outcomes, streamlines clinical workflows and reduces
+                the burden on healthcare systems worldwide.
               </p>
               <div className="flex items-center space-x-4">
                 <Award className="h-8 w-8 text-blue-600" />
@@ -180,17 +179,15 @@ const About = () => {
                 Advanced AI Technology
               </h2>
               <p className="text-lg text-gray-600 mb-6">
-                Our platform utilizes state-of-the-art deep learning algorithms
-                specifically designed for medical imaging analysis. We employ
-                convolutional neural networks and advanced computer vision
-                techniques to achieve unprecedented accuracy in stroke detection
-                and medical diagnosis.
+                Our platform is purpose-built for medical imaging analysis,
+                delivering high accuracy across stroke detection, perfusion
+                analysis and neuro-oncology workflows.
               </p>
               <p className="text-lg text-gray-600 mb-6">
-                Through continuous learning and improvement, our AI models are
-                trained on vast datasets of medical images, ensuring they can
-                detect even the most subtle indicators of stroke and other
-                medical conditions with remarkable precision.
+                Through continuous refinement and validation, our AI is
+                engineered to detect even subtle clinical indicators with
+                remarkable precision — while keeping clinicians firmly in
+                control of every diagnostic decision.
               </p>
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">

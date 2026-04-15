@@ -29,7 +29,6 @@ import {
 import { FreeTrialModal } from "@/components/modals/FreeTrialModal";
 import { BrochureDownloadModal } from "@/components/modals/BrochureDownloadModal";
 import { ConsultationModal } from "@/components/modals/ConsultationModal";
-import { LiveChat } from "@/components/LiveChat";
 import React from "react";
 import strokeLogo from "/prod-stroke-logo.png";
 import cxrLogo from "/prod-cxr-logo.png";
@@ -52,11 +51,6 @@ const Index = () => {
 
   // Incubated by
   const incubators = [
-    {
-      src: "/AIC-SEED-logo-pune.jpg",
-      alt: "AIC-SEED",
-      link: "https://seedforstartup.in/",
-    },
     {
       src: "/DPU-logo-pune.png",
       alt: "Dr. D. Y. Patil Vidyapeeth",
@@ -102,7 +96,7 @@ const Index = () => {
       icon: <Brain className="h-8 w-8 text-blue-600" />,
       title: "AI-Powered Accuracy",
       description:
-        "Advanced machine learning algorithms provide precise stroke detection through comprehensive imaging analysis.",
+        "Purpose-built AI delivers precise stroke detection through comprehensive imaging analysis.",
     },
     {
       icon: <Award className="h-8 w-8 text-blue-600" />,
@@ -155,25 +149,39 @@ const Index = () => {
 
   const products = [
     {
-      title: "Stroke Insightz",
+      title: "CT Stroke Insightz",
       description:
-        "AI-powered stroke detection and analysis for CT scans with real-time alerts.",
+        "CT Perfusion for acute stroke triage — core/penumbra, CT-ASPECTS, collateral assessment.",
       image: strokeLogo,
-      link: "/products/stroke-insightz",
+      link: "/products/ct-stroke-insightz",
     },
     {
-      title: "CXR Insightz",
+      title: "MR Stroke Insightz",
       description:
-        "Chest X-ray analysis with automated detection of abnormalities and pathologies.",
+        "MRI DSC perfusion with DWI-ASPECTS and FLAIR mismatch for onset estimation.",
+      image: strokeLogo,
+      link: "/products/mr-stroke-insightz",
+    },
+    {
+      title: "MRI ASL Insightz",
+      description:
+        "Non-contrast brain perfusion — gadolinium-free CBF for 7 clinical indications.",
+      image: strokeLogo,
+      link: "/products/asl-insightz",
+    },
+    {
+      title: "MRI Tumor Insightz",
+      description:
+        "Neuro-oncology DSC perfusion with nCBV/PSR/K2 and tumor differential diagnosis.",
+      image: strokeLogo,
+      link: "/products/tumor-insightz",
+    },
+    {
+      title: "TB Insightz",
+      description:
+        "AI-powered tuberculosis screening from chest X-rays with device/artifact and cardiomegaly checks.",
       image: cxrLogo,
-      link: "/products/cxr-insightz",
-    },
-    {
-      title: "Next Product Soon...",
-      description:
-        "A new chapter begins soon. Stay tuned. We've been tirelessly crafting the next evolution in design and function. Prepare to experience the future.",
-      icon: <Activity className="h-12 w-12 text-blue-600" />,
-      link: "/products",
+      link: "/products/tb-insightz",
     },
   ];
 
@@ -885,8 +893,6 @@ const Index = () => {
         onOpenChange={setConsultationModalOpen}
       />
 
-      {/* Live Chat */}
-      <LiveChat />
     </div>
   );
 };

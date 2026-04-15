@@ -82,7 +82,7 @@ const Contact = () => {
       icon: <Phone className="h-8 w-8 text-blue-600" />,
       title: "Phone Support",
       description: "Speak directly with our technical support team",
-      details: "+91-84119-11234",
+      details: "+91 99230 30250",
       availability: "24/7 for critical issues"
     },
     {
@@ -111,8 +111,8 @@ const Contact = () => {
   const offices = [
     {
       location: "Headquarters - India",
-      address: "Bengaluru, Karnataka, India",
-      phone: "+91-84119-11234",
+      address: "Office No. 659, Gera's Imperium Gateway, near Bhosari Metro Station, Nashik Phata Flyover, Pune – 411034",
+      phone: "+91 99230 30250",
       email: "doc@genzailabs.com",
       hours: "9:00 AM - 6:00 PM IST"
     }
@@ -266,8 +266,11 @@ const Contact = () => {
                         className="mt-1 w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
                       >
                         <option value="">Select an option</option>
-                        <option value="stroke-insightz">Stroke Insightz</option>
-                        <option value="cxr-insightz">CXR Insightz</option>
+                        <option value="ct-stroke-insightz">CT Stroke Insightz</option>
+                        <option value="mr-stroke-insightz">MR Stroke Insightz</option>
+                        <option value="asl-insightz">MRI ASL Insightz</option>
+                        <option value="tumor-insightz">MRI Tumor Insightz</option>
+                        <option value="tb-insightz">TB Insightz</option>
                         <option value="general-inquiry">General Inquiry</option>
                         <option value="partnership">Partnership</option>
                         <option value="support">Technical Support</option>
@@ -364,8 +367,8 @@ const Contact = () => {
                   </p>
                   <div className="flex flex-col space-y-2">
                     <Button className="bg-blue-600 hover:bg-blue-700 text-white">
-                      <a href="tel:+91-84119-11234" className="flex items-center">
-                        Call Now: +91-84119-11234
+                      <a href="tel:+919923030250" className="flex items-center">
+                        Call Now: +91 99230 30250
                       </a>
                     </Button>
                     <Button variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50">

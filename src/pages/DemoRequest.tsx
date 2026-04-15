@@ -165,8 +165,11 @@ export const DemoRequest: React.FC = () => {
               className="mt-1 w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             >
               <option value="general-inquiry">General Inquiry</option>
-              <option value="stroke-insightz">Stroke Insightz</option>
-              <option value="cxr-insightz">CXR Insightz</option>
+              <option value="ct-stroke-insightz">CT Stroke Insightz</option>
+              <option value="mr-stroke-insightz">MR Stroke Insightz</option>
+              <option value="asl-insightz">MRI ASL Insightz</option>
+              <option value="tumor-insightz">MRI Tumor Insightz</option>
+              <option value="tb-insightz">TB Insightz</option>
               <option value="partnership">Partnership</option>
             </select>
           </div>

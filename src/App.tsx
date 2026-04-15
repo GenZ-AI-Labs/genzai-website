@@ -9,8 +9,8 @@ import { Footer } from "./components/Footer";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import Products from "./pages/Products";
-import StrokeInsightz from "./pages/products/StrokeInsightz";
-import CXRInsightz from "./pages/products/CXRInsightz";
+import PerfusionProductDetail from "./pages/products/PerfusionProductDetail";
+import TbInsightz from "./pages/products/TbInsightz";
 import Events from "./pages/Events";
 import Contact from "./pages/Contact";
 import Careers from "./pages/Careers";
@@ -19,6 +19,7 @@ import { DemoRequest } from "./pages/DemoRequest";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import StrokeWhitePaper from "./pages/StrokeWhitePaper";
 import ApplyNowPage from "./pages/ApplyNowPage";
+import Publications from "./pages/Publications";
 
 
 const queryClient = new QueryClient();
@@ -36,8 +37,8 @@ const App = () => (
               <Route path="/" element={<Index />} />
               <Route path="/about" element={<About />} />
               <Route path="/products" element={<Products />} />
-              <Route path="/products/stroke-insightz" element={<StrokeInsightz />} />
-              <Route path="/products/cxr-insightz" element={<CXRInsightz />} />
+              <Route path="/products/tb-insightz" element={<TbInsightz />} />
+              <Route path="/products/:slug" element={<PerfusionProductDetail />} />
               <Route path="/events" element={<Events />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/careers" element={<Careers />} />
@@ -45,6 +46,7 @@ const App = () => (
               <Route path="/privacy-policy" element={<PrivacyPolicy />} />
               <Route path="/stroke-white-paper" element={<StrokeWhitePaper />} />
               <Route path="/apply-now" element={<ApplyNowPage />} />
+              <Route path="/publications" element={<Publications />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>

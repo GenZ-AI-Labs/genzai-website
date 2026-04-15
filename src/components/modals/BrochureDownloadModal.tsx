@@ -153,8 +153,11 @@ export const BrochureDownloadModal: React.FC<BrochureDownloadModalProps> = ({
               className="mt-1 w-full px-3 py-2 border border-gray-300 rounded-md"
             >
               <option value="company-overview">Company Overview</option>
-              <option value="stroke-insightz">Stroke Insightz Product Guide</option>
-              <option value="cxr-insightz">CXR Insightz Product Guide</option>
+              <option value="ct-stroke-insightz">CT Stroke Insightz Product Guide</option>
+              <option value="mr-stroke-insightz">MR Stroke Insightz Product Guide</option>
+              <option value="asl-insightz">MRI ASL Insightz Product Guide</option>
+              <option value="tumor-insightz">MRI Tumor Insightz Product Guide</option>
+              <option value="tb-insightz">TB Insightz Product Guide</option>
               <option value="all-products">Complete Product Suite</option>
             </select>
           </div>

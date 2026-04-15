@@ -7,6 +7,7 @@ import {
   Mail,
   Phone,
   Youtube,
+  MapPin,
 } from "lucide-react";
 
 export function Footer() {
@@ -66,10 +67,7 @@ export function Footer() {
               </a>
             </div>
             <div className="mt-6">
-              <p className="text-gray-300 text-sm font-semibold">
-                Incubated By AIC IISER Pune
-              </p>
-              <p className="text-gray-300 text-sm mt-2">
+              <p className="text-gray-300 text-sm">
                 Official Research Partner with Dr. D. Y. Patil Vidyapeeth, Pune
                 includes DPU Medical College, Research Centre & Super-Specialty
                 Hospital
@@ -122,7 +120,9 @@ export function Footer() {
             <ul className="space-y-2">
               <li className="flex items-center space-x-2 text-gray-300">
                 <Phone className="h-4 w-4" />
-                <span>+91-84119-11234</span>
+                <a href="tel:+919923030250" className="hover:text-white transition-colors">
+                  +91 99230 30250
+                </a>
               </li>
               <li className="flex items-center space-x-2 text-gray-300">
                 <Mail className="h-4 w-4" />
@@ -132,6 +132,12 @@ export function Footer() {
                 >
                   doc@genzailabs.com
                 </a>
+              </li>
+              <li className="flex items-start space-x-2 text-gray-300">
+                <MapPin className="h-4 w-4 mt-1 flex-shrink-0" />
+                <span className="text-sm">
+                  Office No. 659, Gera's Imperium Gateway, near Bhosari Metro Station, Nashik Phata Flyover, Pune – 411034
+                </span>
               </li>
             </ul>
           </div>
