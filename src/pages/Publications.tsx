@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
+import { Seo } from "@/components/Seo";
 import {
   BookOpen,
   Users,
@@ -37,7 +38,7 @@ const publications: Publication[] = [
     authors: [
       "Dr. Yashraj Patil",
       "Dr. Sushil Kachewar",
-      "Rahim Pathan (GenZ AI Labs)",
+      "Rahim Pathan (GenzAI Labs)",
     ],
     journal: "International Journal of Scientific Research",
     volume: "Vol. 15 | Issue 03",
@@ -60,7 +61,7 @@ const publications: Publication[] = [
     authors: [
       "Yashraj Patil",
       "Sushil Kachewar",
-      "Rahim Pathan (GenZ AI Labs)",
+      "Rahim Pathan (GenzAI Labs)",
     ],
     journal: "British Journal of Medical & Health Sciences (BJMHS)",
     volume: "Vol. 8 | Issue 2",
@@ -83,7 +84,7 @@ const publications: Publication[] = [
     authors: [
       "Yashraj Patil",
       "Sushil Kachewar",
-      "Rahim Pathan (GenZ AI Labs)",
+      "Rahim Pathan (GenzAI Labs)",
     ],
     journal: "British Journal of Medical & Health Sciences (BJMHS)",
     volume: "Vol. 8 | Issue 2",
@@ -107,6 +108,11 @@ const Publications = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <Seo
+        title="Publications"
+        description="Peer-reviewed research publications from GenzAI Labs on AI stroke analysis, MRI perfusion workflow integration, and AI-based tuberculosis screening."
+        path="/publications"
+      />
       {/* Hero */}
       <section className="bg-gradient-to-br from-blue-50 via-white to-cyan-50 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -119,7 +125,7 @@ const Publications = () => {
           </h1>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto">
             Published research papers validating the clinical performance and
-            real-world workflow impact of GenZ AI Labs' AI-powered medical
+            real-world workflow impact of GenzAI Labs' AI-powered medical
             imaging platforms.
           </p>
         </div>

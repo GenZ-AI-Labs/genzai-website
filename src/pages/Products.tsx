@@ -9,13 +9,15 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Link, useNavigate } from "react-router-dom";
 import {
-  Brain,
   Heart,
   Activity,
-  Scan,
+  Waves,
+  Microscope,
+  Stethoscope,
   ArrowRight,
   CheckCircle,
 } from "lucide-react";
+import { Seo } from "@/components/Seo";
 
 const Products = () => {
   const navigate = useNavigate();
@@ -25,7 +27,11 @@ const Products = () => {
       title: "CT Stroke Insightz",
       description:
         "AI-powered CT Perfusion analysis for acute stroke triage — core/penumbra volumetrics, CT-ASPECTS, and collateral assessment in minutes.",
-      icon: <Brain className="h-16 w-16 text-blue-600" />,
+      icon: (
+        <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-red-500 to-orange-500 flex items-center justify-center">
+          <Heart className="h-8 w-8 text-white" />
+        </div>
+      ),
       features: [
         "Core/Penumbra volumetrics",
         "CT-ASPECTS scoring",
@@ -40,7 +46,11 @@ const Products = () => {
       title: "MR Stroke Insightz",
       description:
         "MRI DSC Perfusion stroke evaluation with DWI-ASPECTS, FLAIR mismatch for onset estimation, and perfusion-diffusion analysis.",
-      icon: <Activity className="h-16 w-16 text-blue-600" />,
+      icon: (
+        <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-purple-500 to-indigo-500 flex items-center justify-center">
+          <Activity className="h-8 w-8 text-white" />
+        </div>
+      ),
       features: [
         "DWI infarct segmentation",
         "DWI-ASPECTS scoring",
@@ -55,7 +65,11 @@ const Products = () => {
       title: "MRI ASL Insightz",
       description:
         "Non-contrast brain perfusion via Arterial Spin Labeling — gadolinium-free CBF quantification for 7 clinical indications.",
-      icon: <Scan className="h-16 w-16 text-blue-600" />,
+      icon: (
+        <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-cyan-500 to-teal-500 flex items-center justify-center">
+          <Waves className="h-8 w-8 text-white" />
+        </div>
+      ),
       features: [
         "Absolute CBF (ml/100g/min)",
         "pCASL / CASL / PASL support",
@@ -70,7 +84,11 @@ const Products = () => {
       title: "MRI Tumor Insightz",
       description:
         "Neuro-oncology DSC perfusion with nCBV/PSR/K2 maps, tumor differential diagnosis, and hot-spot biopsy guidance.",
-      icon: <Heart className="h-16 w-16 text-blue-600" />,
+      icon: (
+        <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-pink-500 to-rose-500 flex items-center justify-center">
+          <Microscope className="h-8 w-8 text-white" />
+        </div>
+      ),
       features: [
         "nCBV, PSR, K2, rPH maps",
         "Tumor differential Dx",
@@ -85,7 +103,11 @@ const Products = () => {
       title: "TB Insightz",
       description:
         "AI-powered tuberculosis screening from chest X-rays with supporting device/artifact detection and cardiomegaly assessment.",
-      icon: <Activity className="h-16 w-16 text-blue-600" />,
+      icon: (
+        <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-emerald-500 to-green-600 flex items-center justify-center">
+          <Stethoscope className="h-8 w-8 text-white" />
+        </div>
+      ),
       features: [
         "Tuberculosis detection (up to 99% confidence)",
         "Device & artifact flagging",
@@ -124,6 +146,11 @@ const Products = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <Seo
+        title="Products"
+        description="Explore the GenzAI Labs AI product suite: CT Stroke, MR Stroke, MRI ASL, MRI Tumor, and TB Insightz — purpose-built medical AI for imaging departments."
+        path="/products"
+      />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-50 via-white to-cyan-50 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

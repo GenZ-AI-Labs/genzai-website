@@ -20,6 +20,7 @@ import {
   Award,
   Shield,
 } from "lucide-react";
+import { Seo } from "@/components/Seo";
 
 const TbInsightz = () => {
   const navigate = useNavigate();
@@ -103,6 +104,11 @@ const TbInsightz = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <Seo
+        title="TB Insightz — AI Tuberculosis Detection"
+        description="AI-powered tuberculosis screening from chest X-rays with 99% detection confidence, device/artifact flagging, and cardiomegaly assessment."
+        path="/products/tb-insightz"
+      />
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <video

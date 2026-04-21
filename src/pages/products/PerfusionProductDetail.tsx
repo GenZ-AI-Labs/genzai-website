@@ -12,11 +12,22 @@ import {
   ArrowRight,
   CheckCircle,
   Activity,
+  Heart,
+  Waves,
+  Microscope,
   Layers,
   FileText,
   Target,
 } from "lucide-react";
 import { getProductBySlug } from "@/data/perfusionProducts";
+import { Seo } from "@/components/Seo";
+
+const iconMap = {
+  Heart,
+  Activity,
+  Waves,
+  Microscope,
+} as const;
 
 const PerfusionProductDetail = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -27,6 +38,11 @@ const PerfusionProductDetail = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <Seo
+        title={`${product.title} — ${product.tagline}`}
+        description={product.description}
+        path={`/products/${product.slug}`}
+      />
       {/* Hero */}
       <section className="relative py-20 overflow-hidden">
         <video
@@ -47,13 +63,16 @@ const PerfusionProductDetail = () => {
                 {product.badge}
               </Badge>
               <div className="mb-6 flex items-center space-x-4">
-                <div className="bg-white p-2 rounded-lg border-2 border-blue-300">
-                  <img
-                    src={product.logo}
-                    alt={`${product.title} Logo`}
-                    className="h-20 w-20 object-contain"
-                  />
-                </div>
+                {(() => {
+                  const Icon = iconMap[product.iconName];
+                  return (
+                    <div
+                      className={`flex-shrink-0 w-20 h-20 rounded-2xl bg-gradient-to-br ${product.accent.from} ${product.accent.to} ring-4 ${product.accent.ring} ring-opacity-30 flex items-center justify-center shadow-lg`}
+                    >
+                      <Icon className="h-10 w-10 text-white" strokeWidth={2} />
+                    </div>
+                  );
+                })()}
                 <h1 className="text-4xl md:text-5xl font-bold">
                   <span className="text-white">{product.heroHeadline}</span>{" "}
                   <span className="text-blue-400">{product.heroHighlight}</span>

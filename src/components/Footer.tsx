@@ -1,9 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import {
-  Facebook,
-  Instagram,
   Linkedin,
-  Twitter,
   Mail,
   Phone,
   Youtube,
@@ -21,10 +18,10 @@ export function Footer() {
             <div className="flex items-center space-x-2 mb-4">
               <img
                 src="/genz-main-logo.png"
-                alt="GenzaiLabs Logo"
+                alt="GenzAI Labs Logo"
                 className="w-8 h-8 object-contain rounded-sm"
               />
-              <span className="text-xl font-bold">GenzaiLabs</span>
+              <span className="text-xl font-bold">GenzAI Labs</span>
             </div>
             <p className="text-gray-300 mb-4 max-w-md">
               Transforming healthcare with AI-powered solutions for faster, more
@@ -46,24 +43,6 @@ export function Footer() {
                 rel="noopener noreferrer"
               >
                 <Linkedin className="h-5 w-5" />
-              </a>
-              <a
-                href="#"
-                className="text-gray-400 hover:text-white transition-colors"
-              >
-                <Facebook className="h-5 w-5" />
-              </a>
-              <a
-                href="#"
-                className="text-gray-400 hover:text-white transition-colors"
-              >
-                <Instagram className="h-5 w-5" />
-              </a>
-              <a
-                href="#"
-                className="text-gray-400 hover:text-white transition-colors"
-              >
-                <Twitter className="h-5 w-5" />
               </a>
             </div>
             <div className="mt-6">
@@ -146,7 +125,7 @@ export function Footer() {
         <div className="border-t border-gray-800 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
-              © 2024 GenzaiLabs. All rights reserved.
+              © 2026 GenzAI Labs Pvt Ltd. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <button
@@ -156,10 +135,10 @@ export function Footer() {
                 Privacy Policy
               </button>
               <button
-                onClick={() => navigate("/terms-of-service")}
+                onClick={() => navigate("/disclaimer")}
                 className="text-gray-400 hover:text-white text-sm transition-colors"
               >
-                Terms of Service
+                Medical Disclaimer
               </button>
             </div>
           </div>

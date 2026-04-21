@@ -11,7 +11,13 @@ export interface PerfusionProduct {
   heroHeadline: string;
   heroHighlight: string;
   description: string;
-  logo: string;
+  iconName: "Heart" | "Activity" | "Waves" | "Microscope";
+  accent: {
+    from: string;
+    to: string;
+    ring: string;
+    text: string;
+  };
   heroImage: string;
   pipeline: string[];
   mapsTitle: string;
@@ -35,7 +41,13 @@ export const perfusionProducts: PerfusionProduct[] = [
     heroHighlight: "CT Stroke Analysis",
     description:
       "Automated core/penumbra volumetrics, ASPECTS scoring, and collateral assessment from CT Perfusion — delivering clinical decision support within minutes of scan completion.",
-    logo: "/stroke-logo-Photoroom.png",
+    iconName: "Heart",
+    accent: {
+      from: "from-red-500",
+      to: "to-orange-500",
+      ring: "ring-red-400",
+      text: "text-red-500",
+    },
     heroImage: "/brain-3D-image.png",
     pipeline: [
       "Automated DICOM ingestion and preprocessing",
@@ -102,7 +114,13 @@ export const perfusionProducts: PerfusionProduct[] = [
     heroHighlight: "MR Stroke Evaluation",
     description:
       "DWI-ASPECTS, FLAIR Mismatch for onset estimation, and perfusion-diffusion mismatch analysis from DSC MRI — the complete MRI stroke decision support workflow.",
-    logo: "/stroke-logo-Photoroom.png",
+    iconName: "Activity",
+    accent: {
+      from: "from-purple-500",
+      to: "to-indigo-500",
+      ring: "ring-purple-400",
+      text: "text-purple-500",
+    },
     heroImage: "/brain-3D-image.png",
     pipeline: [
       "Auto-segregate Perfusion, DWI and FLAIR series from mixed upload",
@@ -171,7 +189,13 @@ export const perfusionProducts: PerfusionProduct[] = [
     heroHighlight: "Brain Perfusion",
     description:
       "Absolute CBF quantification from Arterial Spin Labeling — gadolinium-free perfusion for pediatric stroke, Moyamoya, epilepsy, dementia, and seven clinical indications.",
-    logo: "/stroke-logo-Photoroom.png",
+    iconName: "Waves",
+    accent: {
+      from: "from-cyan-500",
+      to: "to-teal-500",
+      ring: "ring-cyan-400",
+      text: "text-cyan-500",
+    },
     heroImage: "/brain-3D-image.png",
     pipeline: [
       "Auto-detect pCASL/CASL/PASL acquisition scheme",
@@ -230,7 +254,13 @@ export const perfusionProducts: PerfusionProduct[] = [
     heroHighlight: "Perfusion Intelligence",
     description:
       "nCBV, PSR, K2 leakage-corrected perfusion maps with tumor differential diagnosis, hot-spot biopsy guidance, and recurrence vs pseudoprogression assessment.",
-    logo: "/stroke-logo-Photoroom.png",
+    iconName: "Microscope",
+    accent: {
+      from: "from-pink-500",
+      to: "to-rose-500",
+      ring: "ring-pink-400",
+      text: "text-pink-500",
+    },
     heroImage: "/brain-3D-image.png",
     pipeline: [
       "DSC preprocessing and motion correction",

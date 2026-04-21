@@ -46,7 +46,7 @@ export const BrochureDownloadModal: React.FC<BrochureDownloadModalProps> = ({
       if (result.downloadUrl) {
         const link = document.createElement('a');
         link.href = result.downloadUrl;
-        link.download = 'GenzaiLabs-Brochure.pdf';
+        link.download = 'GenzAI Labs-Brochure.pdf';
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);

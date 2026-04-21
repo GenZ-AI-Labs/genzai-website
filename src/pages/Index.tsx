@@ -25,13 +25,17 @@ import {
   Award,
   Stethoscope,
   Heart,
+  Waves,
+  Microscope,
+  BookOpen,
+  FileText,
 } from "lucide-react";
 import { FreeTrialModal } from "@/components/modals/FreeTrialModal";
 import { BrochureDownloadModal } from "@/components/modals/BrochureDownloadModal";
 import { ConsultationModal } from "@/components/modals/ConsultationModal";
+import { StatCounter } from "@/components/StatCounter";
+import { Seo } from "@/components/Seo";
 import React from "react";
-import strokeLogo from "/prod-stroke-logo.png";
-import cxrLogo from "/prod-cxr-logo.png";
 
 const Index = () => {
   const [demoModalOpen, setDemoModalOpen] = React.useState(false);
@@ -152,35 +156,40 @@ const Index = () => {
       title: "CT Stroke Insightz",
       description:
         "CT Perfusion for acute stroke triage — core/penumbra, CT-ASPECTS, collateral assessment.",
-      image: strokeLogo,
+      Icon: Heart,
+      gradient: "from-red-500 to-orange-500",
       link: "/products/ct-stroke-insightz",
     },
     {
       title: "MR Stroke Insightz",
       description:
         "MRI DSC perfusion with DWI-ASPECTS and FLAIR mismatch for onset estimation.",
-      image: strokeLogo,
+      Icon: Activity,
+      gradient: "from-purple-500 to-indigo-500",
       link: "/products/mr-stroke-insightz",
     },
     {
       title: "MRI ASL Insightz",
       description:
         "Non-contrast brain perfusion — gadolinium-free CBF for 7 clinical indications.",
-      image: strokeLogo,
+      Icon: Waves,
+      gradient: "from-cyan-500 to-teal-500",
       link: "/products/asl-insightz",
     },
     {
       title: "MRI Tumor Insightz",
       description:
         "Neuro-oncology DSC perfusion with nCBV/PSR/K2 and tumor differential diagnosis.",
-      image: strokeLogo,
+      Icon: Microscope,
+      gradient: "from-pink-500 to-rose-500",
       link: "/products/tumor-insightz",
     },
     {
       title: "TB Insightz",
       description:
         "AI-powered tuberculosis screening from chest X-rays with device/artifact and cardiomegaly checks.",
-      image: cxrLogo,
+      Icon: Stethoscope,
+      gradient: "from-emerald-500 to-green-600",
       link: "/products/tb-insightz",
     },
   ];
@@ -196,15 +205,15 @@ const Index = () => {
     {
       id: 1,
       image: "/first-event.jpg",
-      title: "GenZ AI Labs Joins DPU FIIIE as an Officially Incubated Startup",
+      title: "GenzAI Labs Joins DPU FIIIE as an Officially Incubated Startup",
       summary:
-        "Excited to share a proud milestone for GenZ AI Labs Pvt Ltd! We are now officially an Incubated Startup at DPU Foundation For Innovation Incubation & Entrepreneurship (DPU FIIIE).",
+        "Excited to share a proud milestone for GenzAI Labs Pvt Ltd! We are now officially an Incubated Startup at DPU Foundation For Innovation Incubation & Entrepreneurship (DPU FIIIE).",
       date: "September 23, 2025",
       location: "Dr. D. Y. Patil Medical College, Pune",
       type: "Milestone",
       status: "Past",
       fullDescription:
-        "Excited to share a proud milestone for GenZ AI Labs Pvt Ltd! We are now officially an Incubated Startup at DPU Foundation For Innovation Incubation & Entrepreneurship (DPU FIIIE). At GenZ AI Labs, we are committed to building cutting-edge AI solutions for MRI, CT, and X-ray scans. Our flagship product, Stroke Insightz, is designed to assist doctors in stroke detection and analysis, ensuring clinical reliability, data security, and seamless hospital integration. A heartfelt thanks to Prof. Dr. Sushil Kachewar MD, DNB, Ph.D, along with the faculties, deans, and directors of Dr. D. Y. Patil Medical College, Hospital & Research Centre, Pimpri, Pune, and the team at DPU FIIIE for their support and recognition. This is just the beginning of our journey towards transforming medical imaging with AI.",
+        "Excited to share a proud milestone for GenzAI Labs Pvt Ltd! We are now officially an Incubated Startup at DPU Foundation For Innovation Incubation & Entrepreneurship (DPU FIIIE). At GenzAI Labs, we are committed to building cutting-edge AI solutions for MRI, CT, and X-ray scans. Our flagship product, Stroke Insightz, is designed to assist doctors in stroke detection and analysis, ensuring clinical reliability, data security, and seamless hospital integration. A heartfelt thanks to Prof. Dr. Sushil Kachewar MD, DNB, Ph.D, along with the faculties, deans, and directors of Dr. D. Y. Patil Medical College, Hospital & Research Centre, Pimpri, Pune, and the team at DPU FIIIE for their support and recognition. This is just the beginning of our journey towards transforming medical imaging with AI.",
       highlights: [
         "Official incubation at DPU FIIIE",
         "Support from Dr. D. Y. Patil Medical College",
@@ -216,7 +225,7 @@ const Index = () => {
       id: 2,
       image: "/third-event.jpg",
       title:
-        "Genzai Labs presented Stroke Insightz at Imaging Update August 2024 Conference in Goa",
+        "GenzAI Labs presented Stroke Insightz at Imaging Update August 2024 Conference in Goa",
       summary:
         "We successfully presented our flagship product, Stroke Insightz, at the Imaging Update 2024 conference in Goa, drawing significant interest from healthcare professionals.",
       date: "August 17, 2024",
@@ -224,7 +233,7 @@ const Index = () => {
       type: "Conference",
       status: "Past",
       fullDescription:
-        "We are excited to announce that GenzaiLabs successfully presented our flagship product, Stroke Insightz, at the Imaging Update 2024 conference, organized by the Indian Imaging Academy in Goa. Our team set up a dedicated stall showcasing the power of AI-driven stroke detection, which drew significant interest from healthcare professionals and industry experts alike. Attendees were able to experience firsthand how Stroke Insightz delivers fast, accurate, and reliable stroke detection, revolutionizing patient care. This event provided an excellent opportunity for us to engage with leading medical imaging specialists and demonstrate the potential of AI technology in transforming stroke diagnostics. We look forward to future collaborations and continuing to innovate in the healthcare space.",
+        "We are excited to announce that GenzAI Labs successfully presented our flagship product, Stroke Insightz, at the Imaging Update 2024 conference, organized by the Indian Imaging Academy in Goa. Our team set up a dedicated stall showcasing the power of AI-driven stroke detection, which drew significant interest from healthcare professionals and industry experts alike. Attendees were able to experience firsthand how Stroke Insightz delivers fast, accurate, and reliable stroke detection, revolutionizing patient care. This event provided an excellent opportunity for us to engage with leading medical imaging specialists and demonstrate the potential of AI technology in transforming stroke diagnostics. We look forward to future collaborations and continuing to innovate in the healthcare space.",
       highlights: [
         "Presented Stroke Insightz at Imaging Update 2024",
         "Dedicated stall showcasing AI-driven stroke detection",
@@ -236,15 +245,15 @@ const Index = () => {
       id: 3,
       image: "/stroke-logo.png",
       title:
-        "The Future of Stroke Detection: How Genzai Labs is Revolutionizing Healthcare",
+        "The Future of Stroke Detection: How GenzAI Labs is Revolutionizing Healthcare",
       summary:
-        "As healthcare moves toward faster and more precise diagnostics, GenzaiLabs is at the forefront of this transformation with cutting-edge AI technology.",
+        "As healthcare moves toward faster and more precise diagnostics, GenzAI Labs is at the forefront of this transformation with cutting-edge AI technology.",
       date: "August 17, 2024",
       location: "Virtual Webinar",
       type: "Webinar",
       status: "Past",
       fullDescription:
-        "As healthcare moves toward faster and more precise diagnostics, GenzaiLabs is at the forefront of this transformation. With cutting-edge AI technology, we are reshaping stroke detection, reducing diagnostic time, and improving patient outcomes. Key Points: The current challenges in stroke detection, How GenzaiLabs' AI-powered tools enhance accuracy and speed, Real-world applications of GenzaiLabs' technology in stroke care, The profound impact on patient care and medical workflows.",
+        "As healthcare moves toward faster and more precise diagnostics, GenzAI Labs is at the forefront of this transformation. With cutting-edge AI technology, we are reshaping stroke detection, reducing diagnostic time, and improving patient outcomes. Key Points: The current challenges in stroke detection, How GenzAI Labs' AI-powered tools enhance accuracy and speed, Real-world applications of GenzAI Labs' technology in stroke care, The profound impact on patient care and medical workflows.",
       highlights: [
         "Current challenges in stroke detection",
         "AI-powered tools for enhanced accuracy and speed",
@@ -255,19 +264,19 @@ const Index = () => {
     {
       id: 4,
       image: "/genz-main-logo.png",
-      title: "Early Stroke Detection: Why Every Second Counts with GenzaiLabs",
+      title: "Early Stroke Detection: Why Every Second Counts with GenzAI Labs",
       summary:
-        "In stroke cases, time is crucial, and every second can save a life. GenzaiLabs' AI-driven technology enables healthcare professionals to detect and treat strokes with unprecedented speed.",
+        "In stroke cases, time is crucial, and every second can save a life. GenzAI Labs' AI-driven technology enables healthcare professionals to detect and treat strokes with unprecedented speed.",
       date: "August 17, 2024",
       location: "Pune, India",
       type: "Workshop",
       status: "Past",
       fullDescription:
-        "In stroke cases, time is crucial, and every second can save a life. GenzaiLabs' AI-driven technology enables healthcare professionals to detect and treat strokes with unprecedented speed, preventing critical damage and improving recovery rates. Key Points: The importance of early intervention in stroke treatment, Traditional methods vs. GenzaiLabs' AI-powered stroke detection, How GenzaiLabs' technology minimizes treatment delays, Success stories of improved patient outcomes using GenzaiLabs' solutions.",
+        "In stroke cases, time is crucial, and every second can save a life. GenzAI Labs' AI-driven technology enables healthcare professionals to detect and treat strokes with unprecedented speed, preventing critical damage and improving recovery rates. Key Points: The importance of early intervention in stroke treatment, Traditional methods vs. GenzAI Labs' AI-powered stroke detection, How GenzAI Labs' technology minimizes treatment delays, Success stories of improved patient outcomes using GenzAI Labs' solutions.",
       highlights: [
         "Importance of early intervention in stroke treatment",
         "Traditional methods vs. AI-powered stroke detection",
-        "Minimizing treatment delays with GenzaiLabs technology",
+        "Minimizing treatment delays with GenzAI Labs technology",
         "Success stories of improved patient outcomes",
       ],
     },
@@ -328,6 +337,11 @@ const Index = () => {
 
   return (
     <div className="min-h-screen">
+      <Seo
+        title="AI Medical Imaging for Stroke, Tumor & TB Diagnosis"
+        description="GenzAI Labs builds AI-powered medical imaging platforms for acute stroke triage, tumor perfusion analysis, and tuberculosis screening — validated in peer-reviewed clinical studies."
+        path="/"
+      />
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden bg-white">
         {/* Background Video */}
@@ -427,9 +441,9 @@ const Index = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/80"></div>
 
         {/* Heading */}
-        <h1 className="relative z-10 text-white text-2xl sm:text-3xl md:text-4xl font-semibold text-center mb-4 sm:mb-6 md:mb-8">
+        <h2 className="relative z-10 text-white text-2xl sm:text-3xl md:text-4xl font-semibold text-center mb-4 sm:mb-6 md:mb-8">
           AI Analysis Images
-        </h1>
+        </h2>
 
         {/* Image Containers */}
         <div className="relative z-10 flex flex-col md:flex-row gap-4 md:gap-8 lg:gap-16 px-4 sm:px-6 lg:px-8 w-full max-w-7xl mx-auto">
@@ -483,6 +497,22 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Trust Strip — animated stat counters */}
+      <section className="py-16 bg-gradient-to-br from-blue-50 via-white to-cyan-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+            <StatCounter value={5} suffix="" label="AI Products" />
+            <StatCounter value={4} suffix="+" label="Partner Hospitals" />
+            <StatCounter value={99} suffix="%" label="TB Detection Confidence" />
+            <StatCounter value={30} suffix="s" label="Typical Analysis Time" prefix="<" />
+          </div>
+          <p className="text-center text-xs text-gray-500 mt-6 max-w-2xl mx-auto">
+            TB detection confidence reflects results from the peer-reviewed validation
+            study (BJMHS, Feb 2026). Analysis times vary by modality and study size.
+          </p>
+        </div>
+      </section>
+
       {/* Products Overview Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -503,15 +533,11 @@ const Index = () => {
               >
                 <CardHeader className="text-center pb-4">
                   <div className="flex justify-center mb-4">
-                    {product.image ? (
-                      <img
-                        src={product.image}
-                        alt={`${product.title} logo`}
-                        className="h-20 w-40 object-contain"
-                      />
-                    ) : (
-                      product.icon
-                    )}
+                    <div
+                      className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${product.gradient} flex items-center justify-center shadow-md`}
+                    >
+                      <product.Icon className="h-10 w-10 text-white" strokeWidth={2} />
+                    </div>
                   </div>
                   <CardTitle className="text-xl text-gray-900">
                     {product.title}
@@ -530,6 +556,112 @@ const Index = () => {
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
                   </Link>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Clinical Evidence Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <Badge className="mb-4 bg-blue-100 text-blue-800">Clinical evidence</Badge>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Clinically Validated & Peer-Reviewed
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Our platforms are backed by published research, clinical validation
+              studies, and an active patent portfolio.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <Card className="border-none shadow-md hover:shadow-xl transition-shadow">
+              <CardHeader>
+                <div className="w-12 h-12 rounded-lg bg-blue-100 flex items-center justify-center mb-4">
+                  <BookOpen className="h-6 w-6 text-blue-600" />
+                </div>
+                <CardTitle className="text-xl text-gray-900">3 Peer-Reviewed Papers</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-gray-600 mb-4">
+                  Published in International Journal of Scientific Research and
+                  British Journal of Medical & Health Sciences (2026).
+                </CardDescription>
+                <Link to="/publications">
+                  <Button variant="outline" size="sm" className="border-blue-600 text-blue-600">
+                    Read Publications
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </Link>
+              </CardContent>
+            </Card>
+            <Card className="border-none shadow-md hover:shadow-xl transition-shadow">
+              <CardHeader>
+                <div className="w-12 h-12 rounded-lg bg-blue-100 flex items-center justify-center mb-4">
+                  <FileText className="h-6 w-6 text-blue-600" />
+                </div>
+                <CardTitle className="text-xl text-gray-900">Provisional Patent Filed</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-gray-600">
+                  Indian Patent Office — MRI Stroke Analysis & Perfusion
+                  Decision Support System (Application No. 202521099215,
+                  October 2025).
+                </CardDescription>
+              </CardContent>
+            </Card>
+            <Card className="border-none shadow-md hover:shadow-xl transition-shadow">
+              <CardHeader>
+                <div className="w-12 h-12 rounded-lg bg-blue-100 flex items-center justify-center mb-4">
+                  <Award className="h-6 w-6 text-blue-600" />
+                </div>
+                <CardTitle className="text-xl text-gray-900">TB Validation Study</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-gray-600">
+                  Pilot study on 170 chest X-rays: 93.53% accuracy, 100%
+                  sensitivity, Cohen's Kappa 0.87 vs. radiologist readings.
+                </CardDescription>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials placeholder */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <Badge className="mb-4 bg-blue-100 text-blue-800">Clinician voices</Badge>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Trusted by Radiologists & Hospitals
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              We are actively deploying across our partner hospitals. Pilot
+              results and clinician testimonials coming soon.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              { hospital: "Datta Meghe Hospital", note: "Pilot deployment in progress" },
+              { hospital: "DPU Super Specialty Hospital", note: "Active research partnership" },
+              { hospital: "Smt. Kashibai Navale Medical College", note: "Clinical validation ongoing" },
+            ].map((site, i) => (
+              <Card
+                key={i}
+                className="border-dashed border-2 border-gray-300 bg-white/50 shadow-none hover:border-blue-300 transition-colors"
+              >
+                <CardContent className="pt-8 pb-6 text-center">
+                  <div className="w-12 h-12 mx-auto rounded-full bg-gray-100 flex items-center justify-center mb-4">
+                    <Users className="h-6 w-6 text-gray-400" />
+                  </div>
+                  <p className="text-gray-500 italic text-sm mb-4">
+                    "Clinician testimonial coming soon — stay tuned."
+                  </p>
+                  <p className="text-sm font-semibold text-gray-700">{site.hospital}</p>
+                  <p className="text-xs text-gray-500 mt-1">{site.note}</p>
                 </CardContent>
               </Card>
             ))}
@@ -866,7 +998,7 @@ const Index = () => {
             Ready to Transform Your Healthcare Practice?
           </h2>
           <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-            Join leading healthcare institutions worldwide who trust GenzaiLabs
+            Join leading healthcare institutions worldwide who trust GenzAI Labs
             for their AI-powered diagnostic solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

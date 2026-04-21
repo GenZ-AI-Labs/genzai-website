@@ -22,6 +22,7 @@ import {
   Zap,
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { Seo } from "@/components/Seo";
 
 const Careers = () => {
   const navigate = useNavigate();
@@ -152,6 +153,11 @@ const Careers = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <Seo
+        title="Careers"
+        description="Join GenzAI Labs in building the next generation of AI-powered medical imaging. Open roles in AI/ML, clinical affairs, engineering, and product."
+        path="/careers"
+      />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-50 via-white to-cyan-50 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

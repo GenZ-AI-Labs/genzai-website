@@ -7,6 +7,7 @@ import {
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Brain, Target, Users, Globe, Award, Lightbulb } from "lucide-react";
+import { Seo } from "@/components/Seo";
 
 const About = () => {
   const values = [
@@ -45,19 +46,24 @@ const About = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <Seo
+        title="About Us"
+        description="GenzAI Labs Pvt Ltd is a medical AI company from Pune, India, building AI-powered imaging platforms for stroke, tumor, and TB diagnostics. Incubated by Dr. D. Y. Patil Vidyapeeth."
+        path="/about"
+      />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-50 via-white to-cyan-50 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <Badge className="mb-4 bg-blue-100 text-blue-800 hover:bg-blue-200">
-              About GenzaiLabs
+              About GenzAI Labs
             </Badge>
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
               Pioneering the Future of
               <span className="text-blue-600"> AI Healthcare </span>
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-4xl mx-auto">
-              GenzaiLabs is at the forefront of medical AI innovation,
+              GenzAI Labs is at the forefront of medical AI innovation,
               developing cutting-edge solutions that enable healthcare
               professionals to make faster, more accurate diagnoses and deliver
               exceptional patient care through the power of artificial
@@ -247,7 +253,7 @@ const About = () => {
             Meet the Team
           </h2>
           <p className="text-gray-600 text-lg text-center mb-12">
-            At GenzaiLabs, our team is a blend of visionary leaders, AI
+            At GenzAI Labs, our team is a blend of visionary leaders, AI
             specialists, and medical experts dedicated to transforming
             healthcare. Each member brings a wealth of knowledge and passion,
             working collaboratively to push the boundaries of stroke detection
@@ -284,7 +290,7 @@ const About = () => {
               <p className="text-gray-600">Founder and CEO</p>
               <p className="text-gray-500 mt-2">
                 Rahim Pathan, as the founder, drives innovation with his
-                expertise in AI and healthcare, shaping GenzaiLabs into a leader
+                expertise in AI and healthcare, shaping GenzAI Labs into a leader
                 in medical technology.
               </p>
             </div>

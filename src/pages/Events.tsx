@@ -19,6 +19,7 @@ import {
   Award,
   ExternalLink,
 } from "lucide-react";
+import { Seo } from "@/components/Seo";
 
 const Events = () => {
   const navigate = useNavigate();
@@ -28,7 +29,7 @@ const Events = () => {
   const whitepapers = [
     {
       title: "Through the Lens of Stroke Insights",
-      author: "GenzaiLabs Research Team",
+      author: "GenzAI Labs Research Team",
       date: "October 2025",
       description:
         "AI-powered clinical decision support (CDS) software helps physicians make life-changing decisions faster. But only CDS tools with clinical depth identify, locate, characterize and quantify suspected conditions with an unrivaled degree of accuracy.",
@@ -67,15 +68,15 @@ const Events = () => {
     {
       id: 1,
       image: "/first-event.jpg",
-      title: "GenZ AI Labs Joins DPU FIIIE as an Officially Incubated Startup",
+      title: "GenzAI Labs Joins DPU FIIIE as an Officially Incubated Startup",
       summary:
-        "Excited to share a proud milestone for GenZ AI Labs Pvt Ltd! We are now officially an Incubated Startup at DPU Foundation For Innovation Incubation & Entrepreneurship (DPU FIIIE).",
+        "Excited to share a proud milestone for GenzAI Labs Pvt Ltd! We are now officially an Incubated Startup at DPU Foundation For Innovation Incubation & Entrepreneurship (DPU FIIIE).",
       date: "September 23, 2025",
       location: "Dr. D. Y. Patil Medical College, Pune",
       type: "Milestone",
       status: "Past",
       fullDescription:
-        "Excited to share a proud milestone for GenZ AI Labs Pvt Ltd! We are now officially an Incubated Startup at DPU Foundation For Innovation Incubation & Entrepreneurship (DPU FIIIE). At GenZ AI Labs, we are committed to building cutting-edge AI solutions for MRI, CT, and X-ray scans. Our flagship product, Stroke Insightz, is designed to assist doctors in stroke detection and analysis, ensuring clinical reliability, data security, and seamless hospital integration. A heartfelt thanks to Prof. Dr. Sushil Kachewar MD, DNB, Ph.D, along with the faculties, deans, and directors of Dr. D. Y. Patil Medical College, Hospital & Research Centre, Pimpri, Pune, and the team at DPU FIIIE for their support and recognition. This is just the beginning of our journey towards transforming medical imaging with AI.",
+        "Excited to share a proud milestone for GenzAI Labs Pvt Ltd! We are now officially an Incubated Startup at DPU Foundation For Innovation Incubation & Entrepreneurship (DPU FIIIE). At GenzAI Labs, we are committed to building cutting-edge AI solutions for MRI, CT, and X-ray scans. Our flagship product, Stroke Insightz, is designed to assist doctors in stroke detection and analysis, ensuring clinical reliability, data security, and seamless hospital integration. A heartfelt thanks to Prof. Dr. Sushil Kachewar MD, DNB, Ph.D, along with the faculties, deans, and directors of Dr. D. Y. Patil Medical College, Hospital & Research Centre, Pimpri, Pune, and the team at DPU FIIIE for their support and recognition. This is just the beginning of our journey towards transforming medical imaging with AI.",
       highlights: [
         "Official incubation at DPU FIIIE",
         "Support from Dr. D. Y. Patil Medical College",
@@ -87,7 +88,7 @@ const Events = () => {
       id: 2,
       image: "/third-event.jpg",
       title:
-        "Genzai Labs presented Stroke Insightz at Imaging Update August 2024 Conference in Goa",
+        "GenzAI Labs presented Stroke Insightz at Imaging Update August 2024 Conference in Goa",
       summary:
         "We successfully presented our flagship product, Stroke Insightz, at the Imaging Update 2024 conference in Goa, drawing significant interest from healthcare professionals.",
       date: "August 17, 2024",
@@ -95,7 +96,7 @@ const Events = () => {
       type: "Conference",
       status: "Past",
       fullDescription:
-        "We are excited to announce that GenzaiLabs successfully presented our flagship product, Stroke Insightz, at the Imaging Update 2024 conference, organized by the Indian Imaging Academy in Goa. Our team set up a dedicated stall showcasing the power of AI-driven stroke detection, which drew significant interest from healthcare professionals and industry experts alike. Attendees were able to experience firsthand how Stroke Insightz delivers fast, accurate, and reliable stroke detection, revolutionizing patient care. This event provided an excellent opportunity for us to engage with leading medical imaging specialists and demonstrate the potential of AI technology in transforming stroke diagnostics. We look forward to future collaborations and continuing to innovate in the healthcare space.",
+        "We are excited to announce that GenzAI Labs successfully presented our flagship product, Stroke Insightz, at the Imaging Update 2024 conference, organized by the Indian Imaging Academy in Goa. Our team set up a dedicated stall showcasing the power of AI-driven stroke detection, which drew significant interest from healthcare professionals and industry experts alike. Attendees were able to experience firsthand how Stroke Insightz delivers fast, accurate, and reliable stroke detection, revolutionizing patient care. This event provided an excellent opportunity for us to engage with leading medical imaging specialists and demonstrate the potential of AI technology in transforming stroke diagnostics. We look forward to future collaborations and continuing to innovate in the healthcare space.",
       highlights: [
         "Presented Stroke Insightz at Imaging Update 2024",
         "Dedicated stall showcasing AI-driven stroke detection",
@@ -107,15 +108,15 @@ const Events = () => {
       id: 3,
       image: "/stroke-logo.png",
       title:
-        "The Future of Stroke Detection: How Genzai Labs is Revolutionizing Healthcare",
+        "The Future of Stroke Detection: How GenzAI Labs is Revolutionizing Healthcare",
       summary:
-        "As healthcare moves toward faster and more precise diagnostics, GenzaiLabs is at the forefront of this transformation with cutting-edge AI technology.",
+        "As healthcare moves toward faster and more precise diagnostics, GenzAI Labs is at the forefront of this transformation with cutting-edge AI technology.",
       date: "August 17, 2024",
       location: "Virtual Webinar",
       type: "Webinar",
       status: "Past",
       fullDescription:
-        "As healthcare moves toward faster and more precise diagnostics, GenzaiLabs is at the forefront of this transformation. With cutting-edge AI technology, we are reshaping stroke detection, reducing diagnostic time, and improving patient outcomes. Key Points: The current challenges in stroke detection, How GenzaiLabs' AI-powered tools enhance accuracy and speed, Real-world applications of GenzaiLabs' technology in stroke care, The profound impact on patient care and medical workflows.",
+        "As healthcare moves toward faster and more precise diagnostics, GenzAI Labs is at the forefront of this transformation. With cutting-edge AI technology, we are reshaping stroke detection, reducing diagnostic time, and improving patient outcomes. Key Points: The current challenges in stroke detection, How GenzAI Labs' AI-powered tools enhance accuracy and speed, Real-world applications of GenzAI Labs' technology in stroke care, The profound impact on patient care and medical workflows.",
       highlights: [
         "Current challenges in stroke detection",
         "AI-powered tools for enhanced accuracy and speed",
@@ -126,19 +127,19 @@ const Events = () => {
     {
       id: 4,
       image: "/genz-main-logo.png",
-      title: "Early Stroke Detection: Why Every Second Counts with GenzaiLabs",
+      title: "Early Stroke Detection: Why Every Second Counts with GenzAI Labs",
       summary:
-        "In stroke cases, time is crucial, and every second can save a life. GenzaiLabs' AI-driven technology enables healthcare professionals to detect and treat strokes with unprecedented speed.",
+        "In stroke cases, time is crucial, and every second can save a life. GenzAI Labs' AI-driven technology enables healthcare professionals to detect and treat strokes with unprecedented speed.",
       date: "August 17, 2024",
       location: "Pune, India",
       type: "Workshop",
       status: "Past",
       fullDescription:
-        "In stroke cases, time is crucial, and every second can save a life. GenzaiLabs' AI-driven technology enables healthcare professionals to detect and treat strokes with unprecedented speed, preventing critical damage and improving recovery rates. Key Points: The importance of early intervention in stroke treatment, Traditional methods vs. GenzaiLabs' AI-powered stroke detection, How GenzaiLabs' technology minimizes treatment delays, Success stories of improved patient outcomes using GenzaiLabs' solutions.",
+        "In stroke cases, time is crucial, and every second can save a life. GenzAI Labs' AI-driven technology enables healthcare professionals to detect and treat strokes with unprecedented speed, preventing critical damage and improving recovery rates. Key Points: The importance of early intervention in stroke treatment, Traditional methods vs. GenzAI Labs' AI-powered stroke detection, How GenzAI Labs' technology minimizes treatment delays, Success stories of improved patient outcomes using GenzAI Labs' solutions.",
       highlights: [
         "Importance of early intervention in stroke treatment",
         "Traditional methods vs. AI-powered stroke detection",
-        "Minimizing treatment delays with GenzaiLabs technology",
+        "Minimizing treatment delays with GenzAI Labs technology",
         "Success stories of improved patient outcomes",
       ],
     },
@@ -171,6 +172,11 @@ const Events = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <Seo
+        title="Events & News"
+        description="Latest news, conferences, milestones, and partnerships at GenzAI Labs."
+        path="/events"
+      />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-50 via-white to-cyan-50 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -183,7 +189,7 @@ const Events = () => {
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-4xl mx-auto">
               Stay informed about our latest research, conference presentations,
-              white papers, and industry events where GenzaiLabs is advancing
+              white papers, and industry events where GenzAI Labs is advancing
               the future of AI-powered healthcare.
             </p>
           </div>
@@ -244,7 +250,7 @@ const Events = () => {
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Stay updated with the latest breakthroughs, innovations, and
-              developments at GenzaiLabs. Explore our upcoming events, product
+              developments at GenzAI Labs. Explore our upcoming events, product
               launches, industry conferences, and expert insights. Follow our
               journey as we continue to revolutionize stroke detection and
               medical AI solutions.{" "}

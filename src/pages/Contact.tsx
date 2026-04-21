@@ -20,6 +20,7 @@ import {
   Users,
   Loader2
 } from "lucide-react";
+import { Seo } from "@/components/Seo";
 
 const contactFormSchema = z.object({
   firstName: z.string().min(2, "First name is required"),
@@ -120,6 +121,11 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <Seo
+        title="Contact"
+        description="Get in touch with GenzAI Labs Pvt Ltd for demos, clinical partnerships, or product inquiries. Pune, India."
+        path="/contact"
+      />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-50 via-white to-cyan-50 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -320,6 +326,20 @@ const Contact = () => {
                 Visit us at our headquarters or reach out through any of the contact methods below.
               </p>
               
+              {/* Embedded Google Map */}
+              <div className="mb-8 rounded-2xl overflow-hidden shadow-lg border border-gray-200">
+                <iframe
+                  title="GenzAI Labs Pune Office"
+                  src="https://www.google.com/maps?q=Gera's+Imperium+Gateway+Bhosari+Pune&output=embed"
+                  width="100%"
+                  height="280"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
+              </div>
+
               {offices.map((office, index) => (
                 <Card key={index} className="mb-8 border-none shadow-lg">
                   <CardHeader>
