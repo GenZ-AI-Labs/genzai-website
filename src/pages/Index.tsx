@@ -943,7 +943,7 @@ const Index = () => {
                 <div className="flex flex-wrap gap-2 mt-5">
                   <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-semibold">
                     <Calendar className="h-3 w-3" />
-                    Since September 2025
+                    Since April 2025
                   </span>
                   <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-slate-700 text-xs font-semibold">
                     <MapPin className="h-3 w-3" />
