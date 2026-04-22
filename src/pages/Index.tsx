@@ -47,10 +47,9 @@ const Index = () => {
 
   // Logos for partners
   const logos = [
-    { src: "/noble-hospital.png", alt: "Partner 1" },
-    { src: "/dmh.png", alt: "Partner 2" },
-    { src: "/navale.png", alt: "Partner 3" },
-    { src: "/dpu.png", alt: "Partner 4" },
+    { src: "/noble-hospital.png", alt: "Noble Hospital" },
+    { src: "/dmh.png", alt: "Datta Meghe Hospital" },
+    { src: "/dpu.png", alt: "DY Patil Hospital" },
   ];
 
   // Incubated by
@@ -421,7 +420,7 @@ const Index = () => {
             {[
               { label: "99% TB Accuracy", Icon: Shield },
               { label: "<30s Analysis", Icon: Zap },
-              { label: "4+ Clinical Partners", Icon: Users },
+              { label: "3 Clinical Partners", Icon: Users },
               { label: "3 Peer-Reviewed Papers", Icon: BookOpen },
             ].map(({ label, Icon }) => (
               <div
@@ -438,7 +437,7 @@ const Index = () => {
             className="mt-6 text-xs text-slate-400 tracking-wide animate-fadeInUp"
             style={{ animationDelay: "1.05s" }}
           >
-            Trusted by Datta Meghe Hospital &nbsp;·&nbsp; DPU Super Specialty &nbsp;·&nbsp; Smt. Kashibai Navale Medical College
+            Trusted by Datta Meghe Hospital &nbsp;·&nbsp; DY Patil Hospital &nbsp;·&nbsp; Noble Hospital
           </p>
         </div>
 
@@ -465,8 +464,7 @@ const Index = () => {
               icon={<Brain className="h-6 w-6" />}
             />
             <StatCounter
-              value={4}
-              suffix="+"
+              value={3}
               label="Clinical Partners"
               icon={<Users className="h-6 w-6" />}
             />
@@ -737,10 +735,10 @@ const Index = () => {
                 note: "Research partnership — DSC perfusion & tumor neuro-oncology cases.",
               },
               {
-                hospital: "Smt. Kashibai Navale Medical College",
-                city: "Narhe, Pune",
-                status: "Validation",
-                note: "Clinical validation ongoing — MRI stroke dataset review.",
+                hospital: "Noble Hospital",
+                city: "Pune, Maharashtra",
+                status: "Clinical Partner",
+                note: "Clinical collaboration — perfusion AI evaluation in progress.",
               },
             ].map((site, i) => (
               <motion.div
@@ -1214,7 +1212,7 @@ const Index = () => {
             Ready to Transform Your Healthcare Practice?
           </h2>
           <p className="text-base md:text-lg text-slate-300 mb-4 max-w-2xl mx-auto leading-relaxed">
-            Join 4+ clinical partners across India already using GenzAI Labs for
+            Join 3 clinical partners across India already using GenzAI Labs for
             perfusion analysis, stroke triage, and TB screening.
           </p>
           <p className="text-sm text-blue-300/80 mb-10 font-semibold">
