@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { ReactNode, useEffect, useRef, useState } from "react";
 
 interface StatCounterProps {
   value: number;
@@ -7,6 +7,7 @@ interface StatCounterProps {
   duration?: number;
   label: string;
   decimals?: number;
+  icon?: ReactNode;
 }
 
 export const StatCounter = ({
@@ -16,6 +17,7 @@ export const StatCounter = ({
   duration = 1800,
   label,
   decimals = 0,
+  icon,
 }: StatCounterProps) => {
   const [current, setCurrent] = useState(0);
   const ref = useRef<HTMLDivElement>(null);
@@ -49,14 +51,19 @@ export const StatCounter = ({
   return (
     <div
       ref={ref}
-      className="text-center p-6 rounded-2xl bg-white shadow-md border border-gray-100 hover:shadow-xl hover:border-blue-200 transition-all duration-300"
+      className="group text-center p-6 md:p-8 rounded-2xl bg-white shadow-sm border border-slate-200 hover:shadow-xl hover:-translate-y-1 hover:border-teal-200 transition-all duration-300"
     >
-      <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent font-mono">
+      {icon && (
+        <div className="mx-auto mb-3 w-12 h-12 rounded-xl bg-teal-50 border border-teal-100 flex items-center justify-center text-teal-600 group-hover:bg-teal-500 group-hover:text-white group-hover:border-teal-500 transition-colors duration-300">
+          {icon}
+        </div>
+      )}
+      <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-slate-900 via-teal-600 to-cyan-600 bg-clip-text text-transparent font-mono">
         {prefix}
         {current.toFixed(decimals)}
         {suffix}
       </div>
-      <div className="mt-2 text-sm text-gray-600 font-medium uppercase tracking-wide">
+      <div className="mt-2 text-xs md:text-sm text-slate-600 font-semibold uppercase tracking-wider">
         {label}
       </div>
     </div>

@@ -42,8 +42,8 @@ export function Navbar() {
                     to="/"
                     className={`px-3 py-2 text-sm font-medium transition-colors ${
                       isActive("/")
-                        ? "text-blue-600"
-                        : "text-gray-700 hover:text-blue-600"
+                        ? "text-teal-600"
+                        : "text-slate-700 hover:text-teal-600"
                     }`}
                   >
                     Home
@@ -55,8 +55,8 @@ export function Navbar() {
                     to="/about"
                     className={`px-3 py-2 text-sm font-medium transition-colors ${
                       isActive("/about")
-                        ? "text-blue-600"
-                        : "text-gray-700 hover:text-blue-600"
+                        ? "text-teal-600"
+                        : "text-slate-700 hover:text-teal-600"
                     }`}
                   >
                     About
@@ -64,44 +64,44 @@ export function Navbar() {
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-gray-700 hover:text-blue-600">
+                  <NavigationMenuTrigger className="text-slate-700 hover:text-teal-600">
                     Products
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <div className="w-72 p-4 bg-white">
                       <Link
                         to="/products/ct-stroke-insightz"
-                        className="block px-3 py-2 text-sm text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md"
+                        className="block px-3 py-2 text-sm text-slate-700 hover:text-teal-600 hover:bg-slate-50 rounded-md"
                       >
                         CT Stroke Insightz
                       </Link>
                       <Link
                         to="/products/mr-stroke-insightz"
-                        className="block px-3 py-2 text-sm text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md"
+                        className="block px-3 py-2 text-sm text-slate-700 hover:text-teal-600 hover:bg-slate-50 rounded-md"
                       >
                         MR Stroke Insightz
                       </Link>
                       <Link
                         to="/products/asl-insightz"
-                        className="block px-3 py-2 text-sm text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md"
+                        className="block px-3 py-2 text-sm text-slate-700 hover:text-teal-600 hover:bg-slate-50 rounded-md"
                       >
                         MRI ASL Insightz
                       </Link>
                       <Link
                         to="/products/tumor-insightz"
-                        className="block px-3 py-2 text-sm text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md"
+                        className="block px-3 py-2 text-sm text-slate-700 hover:text-teal-600 hover:bg-slate-50 rounded-md"
                       >
                         MRI Tumor Insightz
                       </Link>
                       <Link
                         to="/products/tb-insightz"
-                        className="block px-3 py-2 text-sm text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md"
+                        className="block px-3 py-2 text-sm text-slate-700 hover:text-teal-600 hover:bg-slate-50 rounded-md"
                       >
                         TB Insightz
                       </Link>
                       <Link
                         to="/products"
-                        className="block px-3 py-2 text-sm text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md border-t mt-2 pt-3"
+                        className="block px-3 py-2 text-sm text-slate-700 hover:text-teal-600 hover:bg-slate-50 rounded-md border-t mt-2 pt-3"
                       >
                         View All Products
                       </Link>
@@ -114,8 +114,8 @@ export function Navbar() {
                     to="/events"
                     className={`px-3 py-2 text-sm font-medium transition-colors ${
                       isActive("/events")
-                        ? "text-blue-600"
-                        : "text-gray-700 hover:text-blue-600"
+                        ? "text-teal-600"
+                        : "text-slate-700 hover:text-teal-600"
                     }`}
                   >
                     Events
@@ -127,8 +127,8 @@ export function Navbar() {
                     to="/publications"
                     className={`px-3 py-2 text-sm font-medium transition-colors ${
                       isActive("/publications")
-                        ? "text-blue-600"
-                        : "text-gray-700 hover:text-blue-600"
+                        ? "text-teal-600"
+                        : "text-slate-700 hover:text-teal-600"
                     }`}
                   >
                     Publications
@@ -140,8 +140,8 @@ export function Navbar() {
                     to="/contact"
                     className={`px-3 py-2 text-sm font-medium transition-colors ${
                       isActive("/contact")
-                        ? "text-blue-600"
-                        : "text-gray-700 hover:text-blue-600"
+                        ? "text-teal-600"
+                        : "text-slate-700 hover:text-teal-600"
                     }`}
                   >
                     Contact
@@ -153,8 +153,8 @@ export function Navbar() {
                     to="/careers"
                     className={`px-3 py-2 text-sm font-medium transition-colors ${
                       isActive("/careers")
-                        ? "text-blue-600"
-                        : "text-gray-700 hover:text-blue-600"
+                        ? "text-teal-600"
+                        : "text-slate-700 hover:text-teal-600"
                     }`}
                   >
                     Careers
@@ -164,7 +164,7 @@ export function Navbar() {
             </NavigationMenu>
 
             <Button
-              className="bg-blue-600 hover:bg-blue-700 text-white"
+              className="bg-teal-500 hover:bg-teal-400 text-white shadow-sm shadow-teal-500/20"
               onClick={() => navigate("/demo-request")}
             >
               Request Demo
@@ -193,55 +193,55 @@ export function Navbar() {
             <div className="flex flex-col space-y-2">
               <Link
                 to="/"
-                className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-600"
+                className="px-3 py-2 text-sm font-medium text-slate-700 hover:text-teal-600"
                 onClick={() => setIsOpen(false)}
               >
                 Home
               </Link>
               <Link
                 to="/about"
-                className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-600"
+                className="px-3 py-2 text-sm font-medium text-slate-700 hover:text-teal-600"
                 onClick={() => setIsOpen(false)}
               >
                 About
               </Link>
               <Link
                 to="/products"
-                className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-600"
+                className="px-3 py-2 text-sm font-medium text-slate-700 hover:text-teal-600"
                 onClick={() => setIsOpen(false)}
               >
                 Products
               </Link>
               <Link
                 to="/events"
-                className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-600"
+                className="px-3 py-2 text-sm font-medium text-slate-700 hover:text-teal-600"
                 onClick={() => setIsOpen(false)}
               >
                 Events
               </Link>
               <Link
                 to="/publications"
-                className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-600"
+                className="px-3 py-2 text-sm font-medium text-slate-700 hover:text-teal-600"
                 onClick={() => setIsOpen(false)}
               >
                 Publications
               </Link>
               <Link
                 to="/contact"
-                className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-600"
+                className="px-3 py-2 text-sm font-medium text-slate-700 hover:text-teal-600"
                 onClick={() => setIsOpen(false)}
               >
                 Contact
               </Link>
               <Link
                 to="/careers"
-                className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-600"
+                className="px-3 py-2 text-sm font-medium text-slate-700 hover:text-teal-600"
                 onClick={() => setIsOpen(false)}
               >
                 Careers
               </Link>
               <div className="pt-2">
-                <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white">
+                <Button className="w-full bg-teal-500 hover:bg-teal-400 text-white shadow-sm shadow-teal-500/20">
                   Request Demo
                 </Button>
               </div>
