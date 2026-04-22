@@ -47,8 +47,7 @@ const Index = () => {
 
   // Logos for partners
   const logos = [
-    { src: "/noble-hospital.png", alt: "Noble Hospital" },
-    { src: "/dmh.png", alt: "Datta Meghe Hospital" },
+    { src: "/dmh.png", alt: "Deenanath Mangeshkar Hospital" },
     { src: "/dpu.png", alt: "DY Patil Hospital" },
   ];
 
@@ -437,7 +436,7 @@ const Index = () => {
             className="mt-6 text-xs text-slate-400 tracking-wide animate-fadeInUp"
             style={{ animationDelay: "1.05s" }}
           >
-            Trusted by Datta Meghe Hospital &nbsp;·&nbsp; DY Patil Hospital &nbsp;·&nbsp; Noble Hospital
+            Trusted by Deenanath Mangeshkar Hospital &nbsp;·&nbsp; DY Patil Hospital &nbsp;·&nbsp; Noble Hospital
           </p>
         </div>
 
@@ -723,8 +722,8 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                hospital: "Datta Meghe Hospital",
-                city: "Wardha, Maharashtra",
+                hospital: "Deenanath Mangeshkar Hospital",
+                city: "Pune, Maharashtra",
                 status: "Pilot Active",
                 note: "Active pilot — stroke perfusion workflow in daily clinical use.",
               },
