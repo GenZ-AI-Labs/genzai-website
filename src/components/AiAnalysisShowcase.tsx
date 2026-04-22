@@ -40,7 +40,7 @@ const CornerBracket = ({
       initial={{ opacity: 0, scale: 0.6 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.6, delay: 0.2 }}
-      className={`absolute ${posMap[position]} w-5 h-5 md:w-6 md:h-6 border-teal-400/80 pointer-events-none`}
+      className={`absolute ${posMap[position]} w-5 h-5 md:w-6 md:h-6 border-blue-400/80 pointer-events-none`}
     />
   );
 };
@@ -48,6 +48,14 @@ const CornerBracket = ({
 export const AiAnalysisShowcase = () => {
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
+
+  // Preload every slide image on mount so switching is instant
+  useEffect(() => {
+    slides.forEach((slide) => {
+      const img = new Image();
+      img.src = slide.src;
+    });
+  }, []);
 
   useEffect(() => {
     if (paused || slides.length === 0) return;
@@ -74,7 +82,7 @@ export const AiAnalysisShowcase = () => {
       <div className="absolute inset-0 pointer-events-none">
         <motion.div
           aria-hidden
-          className="absolute -top-40 -left-40 w-[36rem] h-[36rem] rounded-full bg-teal-200/40 blur-3xl"
+          className="absolute -top-40 -left-40 w-[36rem] h-[36rem] rounded-full bg-blue-200/40 blur-3xl"
           animate={{ x: [0, 60, 0], y: [0, 30, 0] }}
           transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
         />
@@ -89,7 +97,7 @@ export const AiAnalysisShowcase = () => {
           <motion.span
             key={i}
             aria-hidden
-            className="absolute w-1 h-1 rounded-full bg-teal-400/40"
+            className="absolute w-1 h-1 rounded-full bg-blue-400/40"
             style={{
               top: `${15 + i * 13}%`,
               left: `${8 + i * 15}%`,
@@ -117,7 +125,7 @@ export const AiAnalysisShowcase = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12 md:mb-16"
         >
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-50 border border-teal-200 text-teal-700 text-[11px] font-semibold tracking-[0.18em] uppercase mb-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-[11px] font-semibold tracking-[0.18em] uppercase mb-4">
             <Sparkles className="h-3 w-3" />
             Clinical Showcase
           </div>
@@ -144,7 +152,7 @@ export const AiAnalysisShowcase = () => {
               <div className="absolute top-0 left-0 right-0 h-[3px] bg-slate-100 z-30">
                 <motion.div
                   key={`bar-${index}-${paused ? "p" : "r"}`}
-                  className="h-full bg-gradient-to-r from-teal-400 to-cyan-500"
+                  className="h-full bg-gradient-to-r from-blue-400 to-cyan-500"
                   initial={{ width: "0%" }}
                   animate={{ width: paused ? "0%" : "100%" }}
                   transition={{
@@ -180,17 +188,17 @@ export const AiAnalysisShowcase = () => {
                       src={slide.src}
                       alt={slide.caption}
                       className="max-w-full max-h-full object-contain rounded-lg relative z-10"
-                      initial={{ opacity: 0, scale: 1.06 }}
+                      initial={{ opacity: 0, scale: 1.03 }}
                       animate={{ opacity: 1, scale: 1 }}
-                      exit={{ opacity: 0, scale: 0.98 }}
+                      exit={{ opacity: 0, scale: 0.99 }}
                       transition={{
-                        opacity: { duration: 0.6 },
+                        opacity: { duration: 0.25 },
                         scale: {
                           duration: AUTO_ADVANCE_MS / 1000,
                           ease: "linear",
                         },
                       }}
-                      loading="lazy"
+                      decoding="async"
                     />
                   </AnimatePresence>
                 </div>
@@ -222,9 +230,9 @@ export const AiAnalysisShowcase = () => {
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -10 }}
                       transition={{ duration: 0.4, delay: 0.2 }}
-                      className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-950/80 border border-teal-400/40 backdrop-blur text-teal-300 text-[10px] md:text-[11px] font-semibold tracking-[0.15em] uppercase"
+                      className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-950/80 border border-blue-400/40 backdrop-blur text-blue-300 text-[10px] md:text-[11px] font-semibold tracking-[0.15em] uppercase"
                     >
-                      <span className="w-1.5 h-1.5 rounded-full bg-teal-400 animate-pulse" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse" />
                       {slide.productBadge}
                     </motion.div>
                   </AnimatePresence>
@@ -289,7 +297,7 @@ export const AiAnalysisShowcase = () => {
                     exit: { opacity: 0, x: -20 },
                   }}
                   transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-                  className="text-[11px] font-semibold tracking-[0.22em] uppercase text-teal-600 mb-4"
+                  className="text-[11px] font-semibold tracking-[0.22em] uppercase text-blue-600 mb-4"
                 >
                   {slide.productBadge}
                 </motion.div>
@@ -317,7 +325,7 @@ export const AiAnalysisShowcase = () => {
                   className="relative h-[2px] w-32 mt-6 mb-7 bg-slate-200 overflow-hidden rounded-full"
                 >
                   <motion.div
-                    className="absolute inset-y-0 w-1/2 bg-gradient-to-r from-transparent via-teal-500 to-transparent"
+                    className="absolute inset-y-0 w-1/2 bg-gradient-to-r from-transparent via-blue-500 to-transparent"
                     animate={{ x: ["-100%", "200%"] }}
                     transition={{
                       duration: 2.2,
@@ -369,7 +377,7 @@ export const AiAnalysisShowcase = () => {
                     onClick={() => setIndex(i)}
                     className={`transition-all duration-500 rounded-full h-1.5 ${
                       i === index
-                        ? "w-10 bg-teal-500"
+                        ? "w-10 bg-blue-500"
                         : "w-1.5 bg-slate-300 hover:bg-slate-400"
                     }`}
                   />

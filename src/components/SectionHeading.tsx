@@ -27,7 +27,7 @@ export const SectionHeading = ({
     >
       {kicker && (
         <div
-          className={`inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-50 border border-teal-200 text-teal-700 text-[11px] font-semibold tracking-[0.18em] uppercase mb-4`}
+          className={`inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-[11px] font-semibold tracking-[0.18em] uppercase mb-4`}
         >
           {withIcon && <Sparkles className="h-3 w-3" />}
           {kicker}

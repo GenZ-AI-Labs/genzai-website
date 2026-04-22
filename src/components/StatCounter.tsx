@@ -51,14 +51,14 @@ export const StatCounter = ({
   return (
     <div
       ref={ref}
-      className="group text-center p-6 md:p-8 rounded-2xl bg-white shadow-sm border border-slate-200 hover:shadow-xl hover:-translate-y-1 hover:border-teal-200 transition-all duration-300"
+      className="group text-center p-6 md:p-8 rounded-2xl bg-white shadow-sm border border-slate-200 hover:shadow-xl hover:-translate-y-1 hover:border-blue-200 transition-all duration-300"
     >
       {icon && (
-        <div className="mx-auto mb-3 w-12 h-12 rounded-xl bg-teal-50 border border-teal-100 flex items-center justify-center text-teal-600 group-hover:bg-teal-500 group-hover:text-white group-hover:border-teal-500 transition-colors duration-300">
+        <div className="mx-auto mb-3 w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center text-blue-600 group-hover:bg-blue-500 group-hover:text-white group-hover:border-blue-500 transition-colors duration-300">
           {icon}
         </div>
       )}
-      <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-slate-900 via-teal-600 to-cyan-600 bg-clip-text text-transparent font-mono">
+      <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-slate-900 via-blue-600 to-cyan-600 bg-clip-text text-transparent font-mono">
         {prefix}
         {current.toFixed(decimals)}
         {suffix}

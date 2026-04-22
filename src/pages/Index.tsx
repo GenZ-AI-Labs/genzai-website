@@ -167,7 +167,7 @@ const Index = () => {
       description:
         "Non-contrast brain perfusion — gadolinium-free CBF for 7 clinical indications.",
       Icon: Waves,
-      gradient: "from-cyan-500 to-teal-500",
+      gradient: "from-cyan-500 to-blue-500",
       link: "/products/asl-insightz",
       stats: ["Gadolinium-free", "Absolute CBF", "7 Indications"],
     },
@@ -283,8 +283,8 @@ const Index = () => {
         Past Event
       </span>
     ) : (
-      <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-medium bg-teal-50 text-teal-700 border border-teal-200">
-        <span className="w-1.5 h-1.5 rounded-full bg-teal-500 animate-pulse" />
+      <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-50 text-blue-700 border border-blue-200">
+        <span className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse" />
         Upcoming
       </span>
     );
@@ -358,10 +358,10 @@ const Index = () => {
         {/* Hero Content */}
         <div className="relative z-10 text-center max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
           <div
-            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-500/10 border border-teal-400/40 text-teal-300 text-[11px] font-semibold tracking-[0.18em] uppercase mb-6 animate-fadeInUp"
+            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-400/40 text-blue-300 text-[11px] font-semibold tracking-[0.18em] uppercase mb-6 animate-fadeInUp"
             style={{ animationDelay: "0.2s" }}
           >
-            <span className="w-1.5 h-1.5 rounded-full bg-teal-400 animate-pulse" />
+            <span className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse" />
             Transforming Healthcare with AI
           </div>
 
@@ -375,7 +375,7 @@ const Index = () => {
               <span className="text-slate-300">with </span>
               <span
                 key={index}
-                className="animate-fadeText inline-block bg-gradient-to-r from-teal-300 via-cyan-300 to-teal-400 bg-clip-text text-transparent"
+                className="animate-fadeText inline-block bg-gradient-to-r from-blue-300 via-cyan-300 to-blue-400 bg-clip-text text-transparent"
               >
                 {phrases[index]}
               </span>
@@ -397,7 +397,7 @@ const Index = () => {
           >
             <Button
               size="lg"
-              className="bg-teal-500 text-white hover:bg-teal-400 px-8 py-3 rounded-full shadow-lg shadow-teal-500/30 transition-all duration-300"
+              className="bg-blue-500 text-white hover:bg-blue-400 px-8 py-3 rounded-full shadow-lg shadow-blue-500/30 transition-all duration-300"
               onClick={() => navigate("/demo-request")}
             >
               Request a Demo
@@ -428,7 +428,7 @@ const Index = () => {
                 key={label}
                 className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/5 border border-white/15 backdrop-blur-sm text-white/90 text-xs font-semibold"
               >
-                <Icon className="h-3.5 w-3.5 text-teal-300" />
+                <Icon className="h-3.5 w-3.5 text-blue-300" />
                 {label}
               </div>
             ))}
@@ -510,7 +510,7 @@ const Index = () => {
                 viewport={{ once: true, margin: "-60px" }}
                 transition={{ duration: 0.5, delay: index * 0.08 }}
               >
-                <Card className="group relative h-full bg-white border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 hover:border-teal-200 transition-all duration-300 rounded-xl overflow-hidden">
+                <Card className="group relative h-full bg-white border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 hover:border-blue-200 transition-all duration-300 rounded-xl overflow-hidden">
                   {/* Hover bloom from icon */}
                   <div
                     className={`absolute top-0 left-1/2 -translate-x-1/2 w-40 h-40 rounded-full bg-gradient-to-br ${product.gradient} opacity-0 group-hover:opacity-10 blur-3xl transition-opacity duration-500 pointer-events-none`}
@@ -535,7 +535,7 @@ const Index = () => {
                       {product.stats.map((stat, i) => (
                         <span
                           key={i}
-                          className="inline-flex items-center px-2.5 py-1 rounded-md bg-slate-50 border border-slate-200 text-[11px] font-semibold text-slate-700 group-hover:bg-teal-50 group-hover:border-teal-200 group-hover:text-teal-700 transition-colors duration-300"
+                          className="inline-flex items-center px-2.5 py-1 rounded-md bg-slate-50 border border-slate-200 text-[11px] font-semibold text-slate-700 group-hover:bg-blue-50 group-hover:border-blue-200 group-hover:text-blue-700 transition-colors duration-300"
                         >
                           {stat}
                         </span>
@@ -563,13 +563,13 @@ const Index = () => {
               transition={{ duration: 0.5, delay: products.length * 0.08 }}
             >
               <Link to="/products" className="block h-full">
-                <div className="group relative h-full bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 border border-slate-800 hover:border-teal-400/50 rounded-xl overflow-hidden shadow-sm hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex flex-col items-center justify-center text-center p-8 min-h-[320px]">
+                <div className="group relative h-full bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 border border-slate-800 hover:border-blue-400/50 rounded-xl overflow-hidden shadow-sm hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex flex-col items-center justify-center text-center p-8 min-h-[320px]">
                   <div className="absolute inset-0 opacity-20 pointer-events-none">
-                    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-40 h-40 rounded-full bg-teal-500/30 blur-3xl group-hover:bg-teal-500/50 transition-colors duration-500" />
+                    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-40 h-40 rounded-full bg-blue-500/30 blur-3xl group-hover:bg-blue-500/50 transition-colors duration-500" />
                   </div>
                   <div className="relative z-10">
-                    <div className="w-16 h-16 mx-auto rounded-xl bg-teal-500/10 border border-teal-400/30 flex items-center justify-center mb-5 group-hover:bg-teal-500 group-hover:border-teal-500 transition-colors duration-300">
-                      <ArrowRight className="h-7 w-7 text-teal-300 group-hover:text-white group-hover:translate-x-1 transition-all duration-300" />
+                    <div className="w-16 h-16 mx-auto rounded-xl bg-blue-500/10 border border-blue-400/30 flex items-center justify-center mb-5 group-hover:bg-blue-500 group-hover:border-blue-500 transition-colors duration-300">
+                      <ArrowRight className="h-7 w-7 text-blue-300 group-hover:text-white group-hover:translate-x-1 transition-all duration-300" />
                     </div>
                     <h3 className="text-xl font-bold text-white mb-2">
                       Explore All Products
@@ -603,11 +603,11 @@ const Index = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-60px" }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="group relative p-6 rounded-xl bg-white border border-slate-200 hover:border-teal-200 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+                className="group relative p-6 rounded-xl bg-white border border-slate-200 hover:border-blue-200 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
               >
-                <div className="absolute top-0 right-0 w-24 h-24 rounded-full bg-teal-500/5 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute top-0 right-0 w-24 h-24 rounded-full bg-blue-500/5 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 <div className="relative">
-                  <div className="w-12 h-12 rounded-xl bg-teal-50 border border-teal-100 flex items-center justify-center mb-4 text-teal-600 group-hover:bg-teal-500 group-hover:text-white group-hover:border-teal-500 transition-colors duration-300">
+                  <div className="w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center mb-4 text-blue-600 group-hover:bg-blue-500 group-hover:text-white group-hover:border-blue-500 transition-colors duration-300">
                     <feature.Icon className="h-6 w-6" />
                   </div>
                   <h3 className="text-lg font-bold text-slate-900 mb-2 leading-tight">
@@ -669,14 +669,14 @@ const Index = () => {
                 viewport={{ once: true, margin: "-60px" }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
               >
-                <Card className="group h-full bg-white border border-slate-200 shadow-sm hover:shadow-lg hover:-translate-y-1 hover:border-teal-200 transition-all duration-300 rounded-xl">
+                <Card className="group h-full bg-white border border-slate-200 shadow-sm hover:shadow-lg hover:-translate-y-1 hover:border-blue-200 transition-all duration-300 rounded-xl">
                   <CardHeader>
                     <div className="flex items-start justify-between mb-4">
-                      <div className="w-12 h-12 rounded-lg bg-teal-50 border border-teal-100 flex items-center justify-center text-teal-600 group-hover:bg-teal-500 group-hover:text-white group-hover:border-teal-500 transition-colors duration-300">
+                      <div className="w-12 h-12 rounded-lg bg-blue-50 border border-blue-100 flex items-center justify-center text-blue-600 group-hover:bg-blue-500 group-hover:text-white group-hover:border-blue-500 transition-colors duration-300">
                         <card.Icon className="h-6 w-6" />
                       </div>
                       <div className="text-right">
-                        <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-slate-900 to-teal-600 bg-clip-text text-transparent font-mono leading-none">
+                        <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-slate-900 to-blue-600 bg-clip-text text-transparent font-mono leading-none">
                           {card.stat}
                         </div>
                         <div className="text-[10px] font-semibold tracking-[0.15em] uppercase text-slate-500 mt-1">
@@ -750,10 +750,10 @@ const Index = () => {
                 viewport={{ once: true, margin: "-60px" }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
               >
-                <Card className="h-full border-dashed border-2 border-slate-300 bg-white/60 shadow-none hover:border-teal-300 hover:bg-white hover:shadow-md transition-all duration-300 rounded-xl">
+                <Card className="h-full border-dashed border-2 border-slate-300 bg-white/60 shadow-none hover:border-blue-300 hover:bg-white hover:shadow-md transition-all duration-300 rounded-xl">
                   <CardContent className="pt-8 pb-6 text-center">
-                    <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-teal-50 border border-teal-200 text-teal-700 text-[10px] font-semibold tracking-[0.12em] uppercase mb-4">
-                      <span className="w-1.5 h-1.5 rounded-full bg-teal-500 animate-pulse" />
+                    <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-[10px] font-semibold tracking-[0.12em] uppercase mb-4">
+                      <span className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse" />
                       {site.status}
                     </div>
                     <div className="w-12 h-12 mx-auto rounded-full bg-slate-100 flex items-center justify-center mb-4">
@@ -780,7 +780,7 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div>
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-50 border border-teal-200 text-teal-700 text-[11px] font-semibold tracking-[0.18em] uppercase mb-5">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-[11px] font-semibold tracking-[0.18em] uppercase mb-5">
                 Enterprise Security
               </div>
               <h2 className="text-3xl md:text-5xl font-bold text-slate-900 tracking-tight leading-tight mb-6">
@@ -808,7 +808,7 @@ const Index = () => {
                     transition={{ duration: 0.4, delay: i * 0.08 }}
                     className="flex items-start space-x-3"
                   >
-                    <CheckCircle className="h-5 w-5 text-teal-600 flex-shrink-0 mt-0.5" />
+                    <CheckCircle className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" />
                     <span className="text-slate-700 leading-relaxed">{item}</span>
                   </motion.div>
                 ))}
@@ -832,7 +832,7 @@ const Index = () => {
                       whileInView={{ opacity: 1, scale: 1 }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.4, delay: 0.3 + i * 0.08 }}
-                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-50 border border-slate-200 text-xs font-semibold text-slate-700 hover:border-teal-200 hover:text-teal-700 hover:bg-teal-50 transition-colors duration-300"
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-50 border border-slate-200 text-xs font-semibold text-slate-700 hover:border-blue-200 hover:text-blue-700 hover:bg-blue-50 transition-colors duration-300"
                     >
                       <Shield className="h-3 w-3" />
                       {badge}
@@ -859,8 +859,8 @@ const Index = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-slate-900/20 group-hover:to-slate-900/30 transition-all duration-500"></div>
                 {/* Floating compliance ring */}
-                <div className="absolute top-4 right-4 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-slate-950/70 border border-teal-400/40 backdrop-blur text-teal-300 text-[10px] font-semibold tracking-[0.15em] uppercase">
-                  <span className="w-1.5 h-1.5 rounded-full bg-teal-400 animate-pulse" />
+                <div className="absolute top-4 right-4 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-slate-950/70 border border-blue-400/40 backdrop-blur text-blue-300 text-[10px] font-semibold tracking-[0.15em] uppercase">
+                  <span className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse" />
                   Secure
                 </div>
               </motion.div>
@@ -935,7 +935,7 @@ const Index = () => {
                   , supporting deep-tech healthcare startups in India.
                 </p>
                 <div className="flex flex-wrap gap-2 mt-5">
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-teal-50 border border-teal-200 text-teal-700 text-xs font-semibold">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-semibold">
                     <Calendar className="h-3 w-3" />
                     Since September 2025
                   </span>
@@ -965,7 +965,7 @@ const Index = () => {
             />
             <button
               onClick={() => navigate("/events")}
-              className="inline-flex items-center gap-1 text-teal-600 hover:text-teal-700 font-semibold text-sm -mt-6 mb-12 transition-colors"
+              className="inline-flex items-center gap-1 text-blue-600 hover:text-blue-700 font-semibold text-sm -mt-6 mb-12 transition-colors"
             >
               View All Events
               <ArrowRight className="h-4 w-4" />
@@ -982,7 +982,7 @@ const Index = () => {
               {events.map((event) => (
                 <div
                   key={event.id}
-                  className="flex-shrink-0 w-80 bg-white border border-slate-200 hover:shadow-xl hover:-translate-y-1 hover:border-teal-200 transition-all duration-300 shadow-sm cursor-pointer rounded-xl snap-center overflow-hidden"
+                  className="flex-shrink-0 w-80 bg-white border border-slate-200 hover:shadow-xl hover:-translate-y-1 hover:border-blue-200 transition-all duration-300 shadow-sm cursor-pointer rounded-xl snap-center overflow-hidden"
                   onClick={() => setSelectedEvent(event)}
                 >
                   <div className="relative overflow-hidden">
@@ -995,7 +995,7 @@ const Index = () => {
                   <div className="p-6">
                     <div className="flex items-start justify-between mb-4">
                       <div className="flex items-center space-x-2">
-                        <Calendar className="h-5 w-5 text-teal-600" />
+                        <Calendar className="h-5 w-5 text-blue-600" />
                         <span className="text-sm text-slate-600">
                           {event.date}
                         </span>
@@ -1100,9 +1100,9 @@ const Index = () => {
 
               {selectedEvent.highlights &&
                 selectedEvent.highlights.length > 0 && (
-                  <div className="bg-teal-50 border border-teal-100 p-4 rounded-lg">
+                  <div className="bg-blue-50 border border-blue-100 p-4 rounded-lg">
                     <h4 className="font-semibold text-slate-900 mb-3 flex items-center space-x-2">
-                      <Award className="h-5 w-5 text-teal-600" />
+                      <Award className="h-5 w-5 text-blue-600" />
                       <span>Event Highlights</span>
                     </h4>
                     <ul className="space-y-2">
@@ -1111,7 +1111,7 @@ const Index = () => {
                           key={idx}
                           className="flex items-start space-x-3 text-slate-700"
                         >
-                          <div className="flex-shrink-0 w-2 h-2 bg-teal-500 rounded-full mt-2"></div>
+                          <div className="flex-shrink-0 w-2 h-2 bg-blue-500 rounded-full mt-2"></div>
                           <span>{highlight}</span>
                         </li>
                       ))}
@@ -1139,7 +1139,7 @@ const Index = () => {
             {awards.map((award) => (
               <div
                 key={award.id}
-                className="group bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 hover:border-teal-200 transition-all duration-500"
+                className="group bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 hover:border-blue-200 transition-all duration-500"
               >
                 <div className="flex justify-center mb-6 overflow-hidden rounded-xl">
                   <img
@@ -1169,7 +1169,7 @@ const Index = () => {
         {/* Ambient accent glows */}
         <div className="absolute inset-0 pointer-events-none">
           <motion.div
-            className="absolute top-0 left-1/4 w-96 h-96 bg-teal-500/20 rounded-full blur-3xl"
+            className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl"
             animate={{ x: [0, 30, 0], y: [0, 20, 0] }}
             transition={{ duration: 16, repeat: Infinity, ease: "easeInOut" }}
           />
@@ -1182,7 +1182,7 @@ const Index = () => {
           {[...Array(5)].map((_, i) => (
             <motion.span
               key={i}
-              className="absolute w-1 h-1 rounded-full bg-teal-400/60"
+              className="absolute w-1 h-1 rounded-full bg-blue-400/60"
               style={{
                 top: `${20 + i * 14}%`,
                 left: `${10 + i * 18}%`,
@@ -1207,7 +1207,7 @@ const Index = () => {
           transition={{ duration: 0.7 }}
           className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
         >
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-500/10 border border-teal-400/30 text-teal-300 text-[11px] font-semibold tracking-[0.18em] uppercase mb-6">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-400/30 text-blue-300 text-[11px] font-semibold tracking-[0.18em] uppercase mb-6">
             Get Started
           </div>
           <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight leading-tight mb-6">
@@ -1217,13 +1217,13 @@ const Index = () => {
             Join 4+ clinical partners across India already using GenzAI Labs for
             perfusion analysis, stroke triage, and TB screening.
           </p>
-          <p className="text-sm text-teal-300/80 mb-10 font-semibold">
+          <p className="text-sm text-blue-300/80 mb-10 font-semibold">
             Peer-reviewed · Patent-filed · Clinically deployed
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               size="lg"
-              className="relative overflow-hidden bg-teal-500 text-white hover:bg-teal-400 px-8 py-3 shadow-lg shadow-teal-500/30 transition-all group"
+              className="relative overflow-hidden bg-blue-500 text-white hover:bg-blue-400 px-8 py-3 shadow-lg shadow-blue-500/30 transition-all group"
               onClick={() => navigate("/demo-request")}
             >
               {/* Shine sweep */}
