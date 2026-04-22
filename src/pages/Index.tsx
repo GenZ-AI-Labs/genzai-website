@@ -875,13 +875,22 @@ const Index = () => {
               title="Our Partners"
             />
           </div>
-        </div>
-        <div className="scroll-container">
-          <div className="scroll-content">
-            {[...logos, ...logos].map((logo, index) => (
-              <div key={index} className="logo-item">
-                <img src={logo.src} alt={logo.alt} className="logo-img" />
-              </div>
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-12 sm:gap-20 md:gap-28">
+            {logos.map((logo, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-60px" }}
+                transition={{ duration: 0.6, delay: index * 0.15 }}
+                className="transition-transform duration-300 hover:scale-105"
+              >
+                <img
+                  src={logo.src}
+                  alt={logo.alt}
+                  className="max-h-24 md:max-h-32 w-auto object-contain"
+                />
+              </motion.div>
             ))}
           </div>
         </div>
