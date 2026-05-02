@@ -32,7 +32,7 @@ const PrivacyPolicy = () => {
               Effective: 28 April 2026
             </span>
             <span className="inline-flex items-center px-3 py-1 rounded-full bg-white border border-slate-200 text-slate-700 font-semibold">
-              Last updated: 28 April 2026
+              Last updated: 2 May 2026
             </span>
           </div>
         </div>
@@ -136,12 +136,72 @@ const PrivacyPolicy = () => {
             </li>
           </ul>
 
-          <SubHeading>2.3 Information we do NOT collect</SubHeading>
+          <SubHeading>2.3 Push notification token (Firebase Cloud Messaging)</SubHeading>
+          <p>
+            To deliver push notifications to your device when a new case is uploaded
+            or a perfusion report becomes ready, the app uses Google&apos;s Firebase
+            Cloud Messaging (FCM) service:
+          </p>
+          <ul className="list-disc pl-6 mb-4 space-y-2">
+            <li>
+              <strong className="font-semibold text-slate-900">Device push token</strong>{" "}
+              — when you log in, the app obtains a unique device-specific FCM
+              registration token from Google&apos;s servers and transmits it (over
+              HTTPS) to our authentication server (
+              <Code>perfusion.genzailabs.com</Code>). The token is stored on our
+              backend against your user account so we can route notifications to
+              your device(s) only. Multiple device tokens per account are supported
+              (e.g., your phone + tablet).
+            </li>
+            <li>
+              <strong className="font-semibold text-slate-900">
+                What FCM is NOT used for
+              </strong>{" "}
+              — we do not use FCM for analytics, advertising, behavioural targeting,
+              location tracking, or sharing data with any third party other than
+              Google&apos;s delivery infrastructure as required to send the
+              notification. The notification payload contains only the patient
+              identifier and case status — the same information already visible to
+              you in the app.
+            </li>
+            <li>
+              <strong className="font-semibold text-slate-900">Permission</strong> —
+              Android 13 and above requires you to explicitly grant notification
+              permission the first time the app runs. If you decline, the app
+              continues to work normally; you simply won&apos;t receive push alerts
+              for new cases.
+            </li>
+            <li>
+              <strong className="font-semibold text-slate-900">
+                Disabling notifications
+              </strong>{" "}
+              — you can disable notifications at any time via Android Settings →
+              Apps → Stroke InsightZ → Notifications. Logging out also removes the
+              token from our servers.
+            </li>
+          </ul>
+          <p>
+            Google&apos;s processing of the FCM token is governed by Google&apos;s
+            own privacy policy (
+            <ExtLink href="https://policies.google.com/privacy">
+              policies.google.com/privacy
+            </ExtLink>
+            ) and Firebase data processing terms (
+            <ExtLink href="https://firebase.google.com/support/privacy">
+              firebase.google.com/support/privacy
+            </ExtLink>
+            ).
+          </p>
+
+          <SubHeading>2.4 Information we do NOT collect</SubHeading>
           <p>The mobile app does not collect, transmit or store:</p>
           <ul className="list-disc pl-6 mb-4 space-y-2">
             <li>Your name, address, phone number, or other contact details</li>
             <li>Your location (GPS, Wi-Fi, or otherwise)</li>
-            <li>Your device identifiers (Android ID, advertising ID, IMEI)</li>
+            <li>
+              Android ID, advertising ID (we do not request, read, or use the
+              Android Advertising ID), or hardware identifiers like IMEI
+            </li>
             <li>Crash logs, analytics, telemetry or usage statistics</li>
             <li>Your contacts, calendar, photos, audio or messages</li>
             <li>
@@ -151,6 +211,11 @@ const PrivacyPolicy = () => {
               does not retain it beyond your active session
             </li>
           </ul>
+          <p>
+            The only &quot;device identifier&quot; the app handles is the Firebase
+            Cloud Messaging registration token described in section 2.3, used solely
+            to deliver push notifications to your device.
+          </p>
           <p>
             We do not use third-party advertising networks, analytics SDKs, or
             tracking libraries.
@@ -181,11 +246,30 @@ const PrivacyPolicy = () => {
         {/* 4. Sharing with third parties */}
         <Section number="4" title="Sharing with third parties">
           <p>
-            We do not share, sell or rent your information to any third party for any
-            purpose. The only network communication the app performs is with Genz AI
-            Labs&apos; own servers at <Code>perfusion.genzailabs.com</Code>{" "}
-            (HTTPS/TLS encrypted) for authentication and report retrieval.
+            We do not share, sell or rent your information to any third party for
+            marketing, analytics, advertising, or behavioural-targeting purposes.
           </p>
+          <p>The app communicates with two destinations:</p>
+          <ol className="list-decimal pl-6 mb-4 space-y-3">
+            <li>
+              <strong className="font-semibold text-slate-900">
+                Genz AI Labs servers
+              </strong>{" "}
+              at <Code>perfusion.genzailabs.com</Code> (HTTPS/TLS encrypted) — for
+              authentication, case retrieval, and PDF download. This is our own
+              infrastructure.
+            </li>
+            <li>
+              <strong className="font-semibold text-slate-900">
+                Google&apos;s Firebase Cloud Messaging service
+              </strong>{" "}
+              — solely to deliver push notifications to your device. Google receives
+              the encrypted notification payload (containing only the patient
+              identifier and case status) and the FCM device token; Google processes
+              this strictly as a transit/delivery service under their Firebase data
+              processing terms.
+            </li>
+          </ol>
           <p>
             When you choose to share a PDF via WhatsApp or email, the file is handed
             to the destination app on your device through Android&apos;s standard
