@@ -58,7 +58,7 @@ const Events = () => {
       location: "San Francisco, CA, USA",
       type: "Summit",
       description:
-        "Presenting our research on stroke detection accuracy improvements and real-world clinical implementation results.",
+        "Presenting our research on stroke perfusion analysis workflow improvements and real-world clinical implementation results.",
       status: "Registration Open",
     },
   ];
@@ -76,7 +76,7 @@ const Events = () => {
       type: "Milestone",
       status: "Past",
       fullDescription:
-        "Excited to share a proud milestone for GenzAI Labs Pvt Ltd! We are now officially an Incubated Startup at DPU Foundation For Innovation Incubation & Entrepreneurship (DPU FIIIE). At GenzAI Labs, we are committed to building cutting-edge AI solutions for MRI, CT, and X-ray scans. Our flagship product, Stroke Insightz, is designed to assist doctors in stroke detection and analysis, ensuring clinical reliability, data security, and seamless hospital integration. A heartfelt thanks to Prof. Dr. Sushil Kachewar MD, DNB, Ph.D, along with the faculties, deans, and directors of Dr. D. Y. Patil Medical College, Hospital & Research Centre, Pimpri, Pune, and the team at DPU FIIIE for their support and recognition. This is just the beginning of our journey towards transforming medical imaging with AI.",
+        "Excited to share a proud milestone for GenzAI Labs Pvt Ltd! We are now officially an Incubated Startup at DPU Foundation For Innovation Incubation & Entrepreneurship (DPU FIIIE). At GenzAI Labs, we are committed to building cutting-edge AI solutions for MRI, CT, and X-ray scans. Our flagship product, Stroke Insightz, is designed to support doctors with stroke perfusion analysis workflows, ensuring clinical reliability, data security, and seamless hospital integration. A heartfelt thanks to Prof. Dr. Sushil Kachewar MD, DNB, Ph.D, along with the faculties, deans, and directors of Dr. D. Y. Patil Medical College, Hospital & Research Centre, Pimpri, Pune, and the team at DPU FIIIE for their support and recognition. This is just the beginning of our journey towards transforming medical imaging with AI.",
       highlights: [
         "Official incubation at DPU FIIIE",
         "Support from Dr. D. Y. Patil Medical College",
@@ -96,51 +96,51 @@ const Events = () => {
       type: "Conference",
       status: "Past",
       fullDescription:
-        "We are excited to announce that GenzAI Labs successfully presented our flagship product, Stroke Insightz, at the Imaging Update 2024 conference, organized by the Indian Imaging Academy in Goa. Our team set up a dedicated stall showcasing the power of AI-driven stroke detection, which drew significant interest from healthcare professionals and industry experts alike. Attendees were able to experience firsthand how Stroke Insightz delivers fast, accurate, and reliable stroke detection, revolutionizing patient care. This event provided an excellent opportunity for us to engage with leading medical imaging specialists and demonstrate the potential of AI technology in transforming stroke diagnostics. We look forward to future collaborations and continuing to innovate in the healthcare space.",
+        "We are excited to announce that GenzAI Labs successfully presented our flagship product, Stroke Insightz, at the Imaging Update 2024 conference, organized by the Indian Imaging Academy in Goa. Our team set up a dedicated stall showcasing AI-driven stroke perfusion analysis, which drew significant interest from healthcare professionals and industry experts alike. Attendees were able to experience firsthand how Stroke Insightz supports clinicians with fast, reliable perfusion analysis for stroke case review. This event provided an excellent opportunity for us to engage with leading medical imaging specialists and demonstrate the potential of AI technology to support stroke imaging workflows. We look forward to future collaborations and continuing to innovate in the healthcare space.",
       highlights: [
         "Presented Stroke Insightz at Imaging Update 2024",
-        "Dedicated stall showcasing AI-driven stroke detection",
+        "Dedicated stall showcasing AI-driven stroke perfusion analysis",
         "Engaged with leading medical imaging specialists",
-        "Demonstrated potential of AI in stroke diagnostics",
+        "Demonstrated potential of AI to support stroke imaging workflows",
       ],
     },
     {
       id: 3,
       image: "/stroke-logo.png",
       title:
-        "The Future of Stroke Detection: How GenzAI Labs is Revolutionizing Healthcare",
+        "The Future of Stroke Perfusion Analysis: How Genz AI Labs Supports Clinicians",
       summary:
-        "As healthcare moves toward faster and more precise diagnostics, GenzAI Labs is at the forefront of this transformation with cutting-edge AI technology.",
+        "As healthcare moves toward faster perfusion analysis workflows, GenzAI Labs is at the forefront of this transformation with cutting-edge AI decision-support technology.",
       date: "August 17, 2024",
       location: "Virtual Webinar",
       type: "Webinar",
       status: "Past",
       fullDescription:
-        "As healthcare moves toward faster and more precise diagnostics, GenzAI Labs is at the forefront of this transformation. With cutting-edge AI technology, we are reshaping stroke detection, reducing diagnostic time, and improving patient outcomes. Key Points: The current challenges in stroke detection, How GenzAI Labs' AI-powered tools enhance accuracy and speed, Real-world applications of GenzAI Labs' technology in stroke care, The profound impact on patient care and medical workflows.",
+        "As healthcare moves toward faster perfusion analysis workflows, GenzAI Labs is at the forefront of this transformation. With cutting-edge AI technology, we are accelerating perfusion analysis workflows for stroke care teams, reducing post-processing time, and supporting clinician decision-making. Key Points: Current workflow challenges in stroke perfusion analysis, How GenzAI Labs' AI-powered tools support clinician accuracy and speed, Real-world applications of GenzAI Labs' technology in stroke care workflows, The impact on clinical workflow efficiency. The technology supports — but does not replace — clinician judgement.",
       highlights: [
-        "Current challenges in stroke detection",
-        "AI-powered tools for enhanced accuracy and speed",
-        "Real-world applications in stroke care",
-        "Impact on patient care and medical workflows",
+        "Current workflow challenges in stroke perfusion analysis",
+        "AI-powered tools that support clinician accuracy and speed",
+        "Real-world applications in stroke care workflows",
+        "Impact on clinical workflow efficiency",
       ],
     },
     {
       id: 4,
       image: "/genz-main-logo.png",
-      title: "Early Stroke Detection: Why Every Second Counts with GenzAI Labs",
+      title: "Faster Perfusion Analysis Workflows for Stroke Care Teams",
       summary:
-        "In stroke cases, time is crucial, and every second can save a life. GenzAI Labs' AI-driven technology enables healthcare professionals to detect and treat strokes with unprecedented speed.",
+        "In stroke cases, time matters. Genz AI Labs' AI-driven technology supports healthcare professionals reviewing suspected stroke cases by accelerating perfusion analysis workflows. The technology does not diagnose or treat stroke.",
       date: "August 17, 2024",
       location: "Pune, India",
       type: "Workshop",
       status: "Past",
       fullDescription:
-        "In stroke cases, time is crucial, and every second can save a life. GenzAI Labs' AI-driven technology enables healthcare professionals to detect and treat strokes with unprecedented speed, preventing critical damage and improving recovery rates. Key Points: The importance of early intervention in stroke treatment, Traditional methods vs. GenzAI Labs' AI-powered stroke detection, How GenzAI Labs' technology minimizes treatment delays, Success stories of improved patient outcomes using GenzAI Labs' solutions.",
+        "In stroke cases, time matters. Genz AI Labs' AI-driven technology supports healthcare professionals reviewing suspected stroke cases by accelerating perfusion analysis workflows. The technology does not diagnose or treat stroke. Key Points: The importance of early clinician intervention in stroke care, Traditional manual post-processing vs. AI-supported perfusion analysis, How GenzAI Labs' technology helps reduce post-processing delays, Examples of improved workflow efficiency at deployed sites.",
       highlights: [
-        "Importance of early intervention in stroke treatment",
-        "Traditional methods vs. AI-powered stroke detection",
-        "Minimizing treatment delays with GenzAI Labs technology",
-        "Success stories of improved patient outcomes",
+        "Importance of early clinician intervention in stroke care",
+        "Traditional manual post-processing vs. AI-supported perfusion analysis",
+        "Reducing post-processing delays with GenzAI Labs technology",
+        "Workflow efficiency improvements at deployed sites",
       ],
     },
   ];
@@ -252,7 +252,7 @@ const Events = () => {
               Stay updated with the latest breakthroughs, innovations, and
               developments at GenzAI Labs. Explore our upcoming events, product
               launches, industry conferences, and expert insights. Follow our
-              journey as we continue to revolutionize stroke detection and
+              journey as we continue to advance stroke perfusion analysis and
               medical AI solutions.{" "}
             </p>
           </div>

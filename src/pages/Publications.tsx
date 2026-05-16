@@ -124,9 +124,28 @@ const Publications = () => {
             <span className="text-blue-600"> Research</span>
           </h1>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-            Published research papers validating the clinical performance and
+            Published research papers describing AI model performance and
             real-world workflow impact of GenzAI Labs' AI-powered medical
             imaging platforms.
+          </p>
+        </div>
+      </section>
+
+      {/* Research vs clinical performance disclaimer */}
+      <section className="bg-amber-50 border-y border-amber-200 py-6">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-sm text-amber-900 leading-relaxed">
+            <strong className="font-semibold">
+              Research vs clinical performance —
+            </strong>{" "}
+            The metrics reported on this page are extracted from peer-reviewed
+            research publications and describe AI model performance on
+            retrospective research datasets. They are not clinical performance
+            claims, regulatory certifications, or guarantees of accuracy in
+            clinical use. Genz AI Labs products are clinical decision-support
+            tools intended for use by qualified healthcare professionals and
+            are not a substitute for clinical judgement, diagnosis, or
+            treatment.
           </p>
         </div>
       </section>

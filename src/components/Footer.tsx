@@ -25,7 +25,7 @@ export function Footer() {
             </div>
             <p className="text-slate-300 mb-4 max-w-md">
               Transforming healthcare with AI-powered solutions for faster, more
-              accurate medical diagnosis and decision-making.
+              accurate medical imaging analysis and clinician decision-support.
             </p>
             <div className="flex space-x-4">
               <a
@@ -122,7 +122,18 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-slate-800 mt-8 pt-8">
+        {/* Compliance disclaimer — shown on every page */}
+        <div className="border-t border-slate-800 mt-8 pt-6">
+          <p className="text-slate-500 text-xs leading-relaxed max-w-5xl">
+            Genz AI Labs products are clinical decision-support tools intended for
+            use by qualified healthcare professionals. They are not medical devices
+            and do not replace clinical judgement, diagnosis, or treatment by a
+            licensed physician. For medical emergencies, contact your local
+            emergency services immediately.
+          </p>
+        </div>
+
+        <div className="border-t border-slate-800 mt-6 pt-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-slate-400 text-sm">
               © 2026 GenzAI Labs Pvt Ltd. All rights reserved.

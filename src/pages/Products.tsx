@@ -83,7 +83,7 @@ const Products = () => {
       id: "tumor-insightz",
       title: "MRI Tumor Insightz",
       description:
-        "Neuro-oncology DSC perfusion with nCBV/PSR/K2 maps, tumor differential diagnosis, and hot-spot biopsy guidance.",
+        "Neuro-oncology DSC perfusion with nCBV/PSR/K2 maps, tumor differential analysis (for clinician review), and hot-spot biopsy guidance.",
       icon: (
         <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-pink-500 to-rose-500 flex items-center justify-center">
           <Microscope className="h-8 w-8 text-white" />
@@ -91,7 +91,7 @@ const Products = () => {
       ),
       features: [
         "nCBV, PSR, K2, rPH maps",
-        "Tumor differential Dx",
+        "Tumor differential analysis (clinician review)",
         "Hot-Spot biopsy guidance",
         "Recurrence vs pseudoprogression",
       ],
@@ -109,7 +109,7 @@ const Products = () => {
         </div>
       ),
       features: [
-        "Tuberculosis detection (up to 99% confidence)",
+        "Tuberculosis screening (up to 99% model confidence — research dataset, BJMHS 2026)",
         "Device & artifact flagging",
         "Cardiomegaly / CT-ratio assessment",
         "Structured report with RT-PCR recommendation",
@@ -163,9 +163,10 @@ const Products = () => {
               <span className="text-blue-600"> Solutions</span>
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-4xl mx-auto">
-              Comprehensive suite of AI-driven diagnostic tools designed to
-              enhance clinical decision-making, improve patient outcomes, and
-              streamline healthcare workflows across medical institutions.
+              Comprehensive suite of AI-driven clinical decision-support tools
+              designed to enhance clinician decision-making, support workflow
+              efficiency, and streamline healthcare workflows across medical
+              institutions — used by qualified healthcare professionals.
             </p>
           </div>
         </div>

@@ -119,7 +119,7 @@ const Index = () => {
       image: "/award1.jpeg",
       title: "Innovation in AI Healthcare",
       description:
-        "Recognized for pioneering AI solutions in stroke detection at the Global Health Tech Summit.",
+        "Recognized for pioneering AI solutions for stroke perfusion analysis at the Global Health Tech Summit.",
       date: "October 2024",
     },
     {
@@ -172,11 +172,11 @@ const Index = () => {
     {
       title: "MRI Tumor Insightz",
       description:
-        "Neuro-oncology DSC perfusion with nCBV/PSR/K2 and tumor differential diagnosis.",
+        "Neuro-oncology DSC perfusion with nCBV/PSR/K2 and tumor differential analysis (for clinician review).",
       Icon: Microscope,
       gradient: "from-pink-500 to-rose-500",
       link: "/products/tumor-insightz",
-      stats: ["nCBV · PSR · K2", "Differential Dx", "Hot-Spot Biopsy"],
+      stats: ["nCBV · PSR · K2", "Differential Analysis", "Hot-Spot Biopsy"],
     },
     {
       title: "TB Insightz",
@@ -185,7 +185,7 @@ const Index = () => {
       Icon: Stethoscope,
       gradient: "from-emerald-500 to-green-600",
       link: "/products/tb-insightz",
-      stats: ["93.53% Accuracy", "100% Sensitivity", "κ = 0.87"],
+      stats: ["Research-validated", "Up to 99% model confidence", "BJMHS 2026"],
     },
   ];
 
@@ -206,7 +206,7 @@ const Index = () => {
       type: "Milestone",
       status: "Past",
       fullDescription:
-        "Excited to share a proud milestone for GenzAI Labs Pvt Ltd! We are now officially an Incubated Startup at DPU Foundation For Innovation Incubation & Entrepreneurship (DPU FIIIE). At GenzAI Labs, we are committed to building cutting-edge AI solutions for MRI, CT, and X-ray scans. Our flagship product, Stroke Insightz, is designed to assist doctors in stroke detection and analysis, ensuring clinical reliability, data security, and seamless hospital integration. A heartfelt thanks to Prof. Dr. Sushil Kachewar MD, DNB, Ph.D, along with the faculties, deans, and directors of Dr. D. Y. Patil Medical College, Hospital & Research Centre, Pimpri, Pune, and the team at DPU FIIIE for their support and recognition. This is just the beginning of our journey towards transforming medical imaging with AI.",
+        "Excited to share a proud milestone for GenzAI Labs Pvt Ltd! We are now officially an Incubated Startup at DPU Foundation For Innovation Incubation & Entrepreneurship (DPU FIIIE). At GenzAI Labs, we are committed to building cutting-edge AI solutions for MRI, CT, and X-ray scans. Our flagship product, Stroke Insightz, is designed to support doctors with stroke perfusion analysis workflows, ensuring clinical reliability, data security, and seamless hospital integration. A heartfelt thanks to Prof. Dr. Sushil Kachewar MD, DNB, Ph.D, along with the faculties, deans, and directors of Dr. D. Y. Patil Medical College, Hospital & Research Centre, Pimpri, Pune, and the team at DPU FIIIE for their support and recognition. This is just the beginning of our journey towards transforming medical imaging with AI.",
       highlights: [
         "Official incubation at DPU FIIIE",
         "Support from Dr. D. Y. Patil Medical College",
@@ -226,51 +226,51 @@ const Index = () => {
       type: "Conference",
       status: "Past",
       fullDescription:
-        "We are excited to announce that GenzAI Labs successfully presented our flagship product, Stroke Insightz, at the Imaging Update 2024 conference, organized by the Indian Imaging Academy in Goa. Our team set up a dedicated stall showcasing the power of AI-driven stroke detection, which drew significant interest from healthcare professionals and industry experts alike. Attendees were able to experience firsthand how Stroke Insightz delivers fast, accurate, and reliable stroke detection, revolutionizing patient care. This event provided an excellent opportunity for us to engage with leading medical imaging specialists and demonstrate the potential of AI technology in transforming stroke diagnostics. We look forward to future collaborations and continuing to innovate in the healthcare space.",
+        "We are excited to announce that GenzAI Labs successfully presented our flagship product, Stroke Insightz, at the Imaging Update 2024 conference, organized by the Indian Imaging Academy in Goa. Our team set up a dedicated stall showcasing AI-driven stroke perfusion analysis, which drew significant interest from healthcare professionals and industry experts alike. Attendees were able to experience firsthand how Stroke Insightz supports clinicians with fast, reliable perfusion analysis for stroke case review. This event provided an excellent opportunity for us to engage with leading medical imaging specialists and demonstrate the potential of AI technology to support stroke imaging workflows. We look forward to future collaborations and continuing to innovate in the healthcare space.",
       highlights: [
         "Presented Stroke Insightz at Imaging Update 2024",
-        "Dedicated stall showcasing AI-driven stroke detection",
+        "Dedicated stall showcasing AI-driven stroke perfusion analysis",
         "Engaged with leading medical imaging specialists",
-        "Demonstrated potential of AI in stroke diagnostics",
+        "Demonstrated potential of AI to support stroke imaging workflows",
       ],
     },
     {
       id: 3,
       image: "/stroke-logo.png",
       title:
-        "The Future of Stroke Detection: How GenzAI Labs is Revolutionizing Healthcare",
+        "The Future of Stroke Perfusion Analysis: How Genz AI Labs Supports Clinicians",
       summary:
-        "As healthcare moves toward faster and more precise diagnostics, GenzAI Labs is at the forefront of this transformation with cutting-edge AI technology.",
+        "As healthcare moves toward faster perfusion analysis workflows, GenzAI Labs is at the forefront of this transformation with cutting-edge AI decision-support technology.",
       date: "August 17, 2024",
       location: "Virtual Webinar",
       type: "Webinar",
       status: "Past",
       fullDescription:
-        "As healthcare moves toward faster and more precise diagnostics, GenzAI Labs is at the forefront of this transformation. With cutting-edge AI technology, we are reshaping stroke detection, reducing diagnostic time, and improving patient outcomes. Key Points: The current challenges in stroke detection, How GenzAI Labs' AI-powered tools enhance accuracy and speed, Real-world applications of GenzAI Labs' technology in stroke care, The profound impact on patient care and medical workflows.",
+        "As healthcare moves toward faster perfusion analysis workflows, GenzAI Labs is at the forefront of this transformation. With cutting-edge AI technology, we are accelerating perfusion analysis workflows for stroke care teams, reducing post-processing time, and supporting clinician decision-making. Key Points: Current workflow challenges in stroke perfusion analysis, How GenzAI Labs' AI-powered tools support clinician accuracy and speed, Real-world applications of GenzAI Labs' technology in stroke care workflows, The impact on clinical workflow efficiency. The technology supports — but does not replace — clinician judgement.",
       highlights: [
-        "Current challenges in stroke detection",
-        "AI-powered tools for enhanced accuracy and speed",
-        "Real-world applications in stroke care",
-        "Impact on patient care and medical workflows",
+        "Current workflow challenges in stroke perfusion analysis",
+        "AI-powered tools that support clinician accuracy and speed",
+        "Real-world applications in stroke care workflows",
+        "Impact on clinical workflow efficiency",
       ],
     },
     {
       id: 4,
       image: "/genz-main-logo.png",
-      title: "Early Stroke Detection: Why Every Second Counts with GenzAI Labs",
+      title: "Faster Perfusion Analysis Workflows for Stroke Care Teams",
       summary:
-        "In stroke cases, time is crucial, and every second can save a life. GenzAI Labs' AI-driven technology enables healthcare professionals to detect and treat strokes with unprecedented speed.",
+        "In stroke cases, time matters. Genz AI Labs' AI-driven technology supports healthcare professionals reviewing suspected stroke cases by accelerating perfusion analysis workflows. The technology does not diagnose or treat stroke.",
       date: "August 17, 2024",
       location: "Pune, India",
       type: "Workshop",
       status: "Past",
       fullDescription:
-        "In stroke cases, time is crucial, and every second can save a life. GenzAI Labs' AI-driven technology enables healthcare professionals to detect and treat strokes with unprecedented speed, preventing critical damage and improving recovery rates. Key Points: The importance of early intervention in stroke treatment, Traditional methods vs. GenzAI Labs' AI-powered stroke detection, How GenzAI Labs' technology minimizes treatment delays, Success stories of improved patient outcomes using GenzAI Labs' solutions.",
+        "In stroke cases, time matters. Genz AI Labs' AI-driven technology supports healthcare professionals reviewing suspected stroke cases by accelerating perfusion analysis workflows. The technology does not diagnose or treat stroke. Key Points: The importance of early clinician intervention in stroke care, Traditional manual post-processing vs. AI-supported perfusion analysis, How GenzAI Labs' technology helps reduce post-processing delays, Examples of improved workflow efficiency at deployed sites.",
       highlights: [
-        "Importance of early intervention in stroke treatment",
-        "Traditional methods vs. AI-powered stroke detection",
-        "Minimizing treatment delays with GenzAI Labs technology",
-        "Success stories of improved patient outcomes",
+        "Importance of early clinician intervention in stroke care",
+        "Traditional manual post-processing vs. AI-supported perfusion analysis",
+        "Reducing post-processing delays with GenzAI Labs technology",
+        "Workflow efficiency improvements at deployed sites",
       ],
     },
   ];
@@ -331,8 +331,8 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <Seo
-        title="AI Medical Imaging for Stroke, Tumor & TB Diagnosis"
-        description="GenzAI Labs builds AI-powered medical imaging platforms for acute stroke triage, tumor perfusion analysis, and tuberculosis screening — validated in peer-reviewed clinical studies."
+        title="AI Medical Imaging — Decision Support for Stroke, Tumor & TB Analysis"
+        description="GenzAI Labs builds AI-powered medical imaging platforms for acute stroke perfusion analysis, neuro-oncology, and tuberculosis screening — clinical decision support informed by peer-reviewed research, for use by qualified healthcare professionals."
         path="/"
       />
       {/* Hero Section */}
@@ -384,9 +384,10 @@ const Index = () => {
             className="text-base md:text-lg text-slate-300 mb-10 max-w-2xl mx-auto animate-fadeInUp leading-relaxed"
             style={{ animationDelay: "0.55s" }}
           >
-            AI-powered medical imaging that helps radiologists and clinicians
-            make faster, more accurate decisions — validated in peer-reviewed
-            clinical studies.
+            AI-powered medical imaging that supports radiologists and clinicians
+            in their decision-making, informed by peer-reviewed research. For
+            use by qualified healthcare professionals as a decision-support
+            tool — not a substitute for clinical judgement.
           </p>
 
           <div
@@ -417,7 +418,6 @@ const Index = () => {
             style={{ animationDelay: "0.9s" }}
           >
             {[
-              { label: "99% TB Accuracy", Icon: Shield },
               { label: "<30s Analysis", Icon: Zap },
               { label: "3 Clinical Partners", Icon: Users },
               { label: "3 Peer-Reviewed Papers", Icon: BookOpen },
@@ -470,7 +470,7 @@ const Index = () => {
             <StatCounter
               value={99}
               suffix="%"
-              label="TB Detection Accuracy"
+              label="TB Model Confidence (research)"
               icon={<Shield className="h-6 w-6" />}
             />
             <StatCounter
@@ -482,8 +482,9 @@ const Index = () => {
             />
           </div>
           <p className="text-center text-xs text-slate-500 mt-8 max-w-2xl mx-auto">
-            TB detection confidence reflects results from the peer-reviewed validation
-            study (BJMHS, Feb 2026). Analysis times vary by modality and study size.
+            TB model confidence reflects results from the peer-reviewed retrospective
+            validation study (BJMHS, Feb 2026, n=170) on a research dataset — not a
+            clinical performance claim. Analysis times vary by modality and study size.
           </p>
         </div>
       </section>
@@ -495,7 +496,7 @@ const Index = () => {
             <SectionHeading
               kicker="Our Solutions"
               title="Our Products"
-              subtitle="Comprehensive AI-powered diagnostic solutions designed to revolutionize medical imaging and improve patient outcomes."
+              subtitle="Comprehensive AI-powered clinical decision-support solutions designed to advance medical imaging workflows and improve clinician efficiency."
             />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
@@ -620,16 +621,32 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Clinical Evidence Section */}
+      {/* Research & Peer-Reviewed Studies */}
       <section className="py-20 md:py-28 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-center">
             <SectionHeading
-              kicker="Clinical Evidence"
-              title="Clinically Validated & Peer-Reviewed"
-              subtitle="Our platforms are backed by published research, clinical validation studies, and an active patent portfolio."
+              kicker="Research Citations"
+              title="Research & Peer-Reviewed Studies"
+              subtitle="Our work is informed by published research and an active patent portfolio."
             />
           </div>
+
+          {/* Research disclaimer */}
+          <div className="max-w-4xl mx-auto mb-10 p-5 rounded-xl bg-slate-50 border border-slate-200">
+            <p className="text-sm text-slate-700 leading-relaxed">
+              <strong className="text-slate-900 font-semibold">
+                Important — research vs clinical performance:
+              </strong>{" "}
+              Performance metrics shown below are from internal and academic
+              research studies on retrospective datasets. They describe model
+              performance in research settings and do not constitute clinical
+              performance claims or regulatory certifications. Our products are
+              intended as decision support for qualified healthcare professionals
+              and are not diagnostic devices.
+            </p>
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
@@ -639,6 +656,7 @@ const Index = () => {
                 title: "Published in IJSR & BJMHS",
                 description:
                   "Active publications in International Journal of Scientific Research and British Journal of Medical & Health Sciences (2024–2026).",
+                citation: null,
                 link: "/publications",
                 cta: "Read Publications",
               },
@@ -648,15 +666,20 @@ const Index = () => {
                 statLabel: "Provisional Patent",
                 title: "Indian Patent Office Filing",
                 description:
-                  "MRI Stroke Analysis & Perfusion Decision Support System — Application No. 202521099215, October 2025.",
+                  "MRI Stroke Perfusion Analysis & Decision Support System — Application No. 202521099215, October 2025.",
+                citation: null,
               },
               {
                 Icon: Award,
                 stat: "93.53%",
-                statLabel: "TB Validation Accuracy",
-                title: "Pilot Study on 170 Chest X-Rays",
+                statLabel: "TB Research Accuracy",
+                title: "Retrospective Pilot Study on 170 Chest X-Rays",
                 description:
-                  "100% sensitivity and Cohen's Kappa of 0.87 vs. radiologist readings — published BJMHS, Feb 2026.",
+                  "Research dataset only — 100% sensitivity and Cohen's Kappa of 0.87 vs. radiologist readings. Not a clinical performance claim.",
+                citation: {
+                  text: "BJMHS, Feb 2026 — TB Insightz Pilot Validation Study (retrospective, n=170)",
+                  href: "/bjmhs-tb-insightz-validation.pdf",
+                },
               },
             ].map((card, i) => (
               <motion.div
@@ -689,6 +712,16 @@ const Index = () => {
                     <CardDescription className="text-slate-600 leading-relaxed mb-4">
                       {card.description}
                     </CardDescription>
+                    {card.citation && (
+                      <a
+                        href={card.citation.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block text-xs text-blue-600 hover:text-blue-700 underline italic mb-4 leading-snug"
+                      >
+                        Source: {card.citation.text}
+                      </a>
+                    )}
                     {card.link && (
                       <Link to={card.link}>
                         <Button

@@ -28,15 +28,15 @@ const TbInsightz = () => {
   const features = [
     {
       icon: <Eye className="h-8 w-8 text-blue-600" />,
-      title: "Tuberculosis Detection",
+      title: "Tuberculosis Screening Support",
       description:
-        "High-confidence AI identification of tuberculosis on chest X-rays with probability scoring and bounding-box localization.",
+        "AI identification of suspected tuberculosis findings on chest X-rays with probability scoring and bounding-box localization — surfaced for clinician review.",
     },
     {
       icon: <Scan className="h-8 w-8 text-blue-600" />,
       title: "Device & Artifact Flagging",
       description:
-        "Automatically detects metallic implants, jewelry and imaging artifacts that may affect diagnostic accuracy.",
+        "Automatically flags metallic implants, jewelry and imaging artifacts that may affect image interpretation accuracy.",
     },
     {
       icon: <Heart className="h-8 w-8 text-blue-600" />,
@@ -53,7 +53,7 @@ const TbInsightz = () => {
   ];
 
   const detectionCapabilities = [
-    "Tuberculosis detection with probability score",
+    "Tuberculosis screening with model probability score",
     "Bounding-box localization on X-ray",
     "Device and artifact flagging",
     "Cardiomegaly assessment",
@@ -69,7 +69,7 @@ const TbInsightz = () => {
       value: "Digital Radiography (DR), Computed Radiography (CR)",
     },
     { label: "Processing Time", value: "< 30 seconds" },
-    { label: "TB Detection Confidence", value: "Up to 99% probability" },
+    { label: "TB Model Confidence (research dataset)", value: "Up to 99% probability — BJMHS 2026" },
     { label: "Specificity", value: "94%+ across findings" },
     { label: "Integration", value: "PACS, RIS, EMR compatible" },
     { label: "Standards", value: "DICOM compliant, HL7/FHIR ready" },
@@ -98,15 +98,15 @@ const TbInsightz = () => {
       number: "4",
       title: "Clinical Review",
       description:
-        "Radiologist reviews AI findings with enhanced visualization tools and makes final diagnosis.",
+        "Radiologist reviews AI findings with enhanced visualization tools and makes the final clinical interpretation.",
     },
   ];
 
   return (
     <div className="min-h-screen bg-white">
       <Seo
-        title="TB Insightz — AI Tuberculosis Detection"
-        description="AI-powered tuberculosis screening from chest X-rays with 99% detection confidence, device/artifact flagging, and cardiomegaly assessment."
+        title="TB Insightz — AI Tuberculosis Screening Support"
+        description="AI-powered tuberculosis screening from chest X-rays with up to 99% model confidence on a research dataset (BJMHS 2026), device/artifact flagging, and cardiomegaly assessment — a clinical decision-support tool for qualified healthcare professionals."
         path="/products/tb-insightz"
       />
       {/* Hero Section */}
@@ -131,7 +131,7 @@ const TbInsightz = () => {
             <div className="mb-6 flex items-center justify-center space-x-4">
               <h1 className="text-5xl md:text-6xl font-bold">
                 <span className="text-white">AI-Powered</span>
-                <span className="text-blue-400"> Tuberculosis Detection</span>
+                <span className="text-blue-400"> Tuberculosis Screening Support</span>
               </h1>
             </div>
             <p className="text-xl text-gray-200 mb-8">
@@ -202,7 +202,7 @@ const TbInsightz = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                Focused TB Detection Capabilities
+                Focused TB Screening Capabilities
               </h2>
               <p className="text-lg text-gray-600 mb-8">
                 TB Insightz is purpose-built for tuberculosis screening, with
@@ -221,17 +221,25 @@ const TbInsightz = () => {
             <div className="grid grid-cols-2 gap-6">
               <Card className="text-center border-none shadow-md">
                 <CardHeader>
-                  <div className="text-3xl font-bold text-blue-600">99%</div>
+                  <div className="text-3xl font-bold text-blue-600">Up to 99%</div>
                   <CardTitle className="text-sm text-gray-600">
-                    TB Detection Confidence
+                    TB Model Confidence (research dataset)
                   </CardTitle>
+                  <a
+                    href="/bjmhs-tb-insightz-validation.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block text-[10px] text-blue-600 hover:text-blue-700 underline italic mt-2 leading-tight"
+                  >
+                    Source: BJMHS, Feb 2026 — TB Insightz Pilot Validation Study (retrospective, n=170)
+                  </a>
                 </CardHeader>
               </Card>
               <Card className="text-center border-none shadow-md">
                 <CardHeader>
                   <div className="text-3xl font-bold text-blue-600">94%</div>
                   <CardTitle className="text-sm text-gray-600">
-                    Overall Specificity
+                    Overall Specificity (research)
                   </CardTitle>
                 </CardHeader>
               </Card>
@@ -239,7 +247,7 @@ const TbInsightz = () => {
                 <CardHeader>
                   <div className="text-3xl font-bold text-blue-600">3</div>
                   <CardTitle className="text-sm text-gray-600">
-                    Detection Categories
+                    Screening Categories
                   </CardTitle>
                 </CardHeader>
               </Card>
@@ -329,7 +337,7 @@ const TbInsightz = () => {
               Clinical Benefits
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Proven improvements in diagnostic accuracy, efficiency, and
+              Improvements in clinician interpretation accuracy, workflow efficiency, and
               patient care outcomes.
             </p>
           </div>
@@ -343,8 +351,9 @@ const TbInsightz = () => {
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-gray-600">
-                  Reduce missed diagnoses and improve tuberculosis detection
-                  rates with consistent, high-confidence AI screening.
+                  Support clinicians in reviewing chest X-rays with consistent,
+                  high-confidence AI screening — helping ensure suspected
+                  tuberculosis cases reach a clinician&apos;s eye.
                 </CardDescription>
               </CardContent>
             </Card>
@@ -359,7 +368,7 @@ const TbInsightz = () => {
               <CardContent>
                 <CardDescription className="text-gray-600">
                   Streamline radiology workflows and reduce reporting time while
-                  maintaining high-quality diagnostic standards.
+                  maintaining high-quality clinical interpretation standards.
                 </CardDescription>
               </CardContent>
             </Card>
@@ -393,8 +402,8 @@ const TbInsightz = () => {
             Transform Your TB Screening Workflow
           </h2>
           <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-            Join healthcare institutions using TB Insightz for fast, accurate
-            tuberculosis detection and improved patient outcomes.
+            Join healthcare institutions using TB Insightz for fast AI
+            tuberculosis screening support and improved workflow efficiency.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button

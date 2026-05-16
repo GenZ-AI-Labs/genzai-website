@@ -253,7 +253,7 @@ export const perfusionProducts: PerfusionProduct[] = [
     heroHeadline: "Neuro-Oncology",
     heroHighlight: "Perfusion Intelligence",
     description:
-      "nCBV, PSR, K2 leakage-corrected perfusion maps with tumor differential diagnosis, hot-spot biopsy guidance, and recurrence vs pseudoprogression assessment.",
+      "nCBV, PSR, K2 leakage-corrected perfusion maps with tumor differential analysis (for clinician review), hot-spot biopsy guidance, and recurrence vs pseudoprogression assessment.",
     iconName: "Microscope",
     accent: {
       from: "from-pink-500",
@@ -281,7 +281,7 @@ export const perfusionProducts: PerfusionProduct[] = [
       "ADC — Apparent Diffusion Coefficient",
       "NAWM-normalized reference maps",
     ],
-    metricsTitle: "Differential Diagnosis Support",
+    metricsTitle: "Differential Analysis (for Clinician Review)",
     metrics: [
       { label: "High-grade glioma (GBM)", value: "nCBV >3.0, PSR 50-85%" },
       { label: "Low-grade glioma", value: "nCBV <1.75, PSR >85%" },
@@ -300,7 +300,7 @@ export const perfusionProducts: PerfusionProduct[] = [
     ],
     reportFeatures: [
       "nCBV, PSR, K2 overlay maps",
-      "Differential Diagnosis",
+      "Differential Analysis (for clinician review)",
       "Tumor Burden %",
       "Hot-Spot biopsy guidance",
       "Leakage correction impact",

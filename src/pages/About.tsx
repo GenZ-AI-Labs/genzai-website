@@ -48,7 +48,7 @@ const About = () => {
     <div className="min-h-screen bg-white">
       <Seo
         title="About Us"
-        description="GenzAI Labs Pvt Ltd is a medical AI company from Pune, India, building AI-powered imaging platforms for stroke, tumor, and TB diagnostics. Incubated by Dr. D. Y. Patil Vidyapeeth."
+        description="GenzAI Labs Pvt Ltd is a medical AI company from Pune, India, building AI-powered imaging platforms for stroke perfusion analysis, neuro-oncology, and TB screening — clinical decision-support tools for qualified healthcare professionals. Incubated by Dr. D. Y. Patil Vidyapeeth."
         path="/about"
       />
       {/* Hero Section */}
@@ -64,10 +64,11 @@ const About = () => {
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-4xl mx-auto">
               GenzAI Labs is at the forefront of medical AI innovation,
-              developing cutting-edge solutions that enable healthcare
-              professionals to make faster, more accurate diagnoses and deliver
-              exceptional patient care through the power of artificial
-              intelligence.
+              developing cutting-edge solutions that support healthcare
+              professionals with faster medical imaging analysis and support
+              more accurate clinical decision-making through the power of
+              artificial intelligence — keeping the clinician in the loop on
+              every case.
             </p>
           </div>
         </div>
@@ -82,10 +83,10 @@ const About = () => {
                 Our Mission
               </h2>
               <p className="text-lg text-gray-600 mb-6">
-                We are dedicated to revolutionizing healthcare through
-                AI-powered stroke detection and medical imaging analysis. Our
+                We are dedicated to advancing healthcare through AI-powered
+                stroke perfusion analysis and medical imaging support. Our
                 mission is to provide healthcare professionals with the tools
-                they need to deliver faster, more accurate diagnoses in
+                they need to support more accurate clinical decision-making in
                 real-time.
               </p>
               <p className="text-lg text-gray-600 mb-6">
@@ -96,7 +97,7 @@ const About = () => {
               <div className="flex items-center space-x-4">
                 <Award className="h-8 w-8 text-blue-600" />
                 <span className="text-lg font-semibold text-gray-900">
-                  Clinically validated and trusted by medical professionals
+                  Research-validated and trusted by medical professionals
                 </span>
               </div>
             </div>
@@ -186,14 +187,14 @@ const About = () => {
               </h2>
               <p className="text-lg text-gray-600 mb-6">
                 Our platform is purpose-built for medical imaging analysis,
-                delivering high accuracy across stroke detection, perfusion
-                analysis and neuro-oncology workflows.
+                delivering reliable AI support across stroke perfusion analysis,
+                perfusion workflows, and neuro-oncology review.
               </p>
               <p className="text-lg text-gray-600 mb-6">
                 Through continuous refinement and validation, our AI is
-                engineered to detect even subtle clinical indicators with
-                remarkable precision — while keeping clinicians firmly in
-                control of every diagnostic decision.
+                engineered to surface even subtle imaging findings for review —
+                while keeping clinicians firmly in control of every clinical
+                decision.
               </p>
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
@@ -256,8 +257,8 @@ const About = () => {
             At GenzAI Labs, our team is a blend of visionary leaders, AI
             specialists, and medical experts dedicated to transforming
             healthcare. Each member brings a wealth of knowledge and passion,
-            working collaboratively to push the boundaries of stroke detection
-            and diagnosis. Together, we are committed to delivering innovative
+            working collaboratively to advance stroke perfusion analysis and
+            medical imaging decision-support. Together, we are committed to delivering innovative
             solutions that improve patient outcomes and redefine medical
             technology.
           </p>

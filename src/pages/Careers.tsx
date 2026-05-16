@@ -34,7 +34,7 @@ const Careers = () => {
       type: "Full-time",
       experience: "3-5 years",
       description:
-        "Develop and optimize deep learning models for medical image analysis and stroke detection.",
+        "Develop and optimize deep learning models for medical image analysis and stroke perfusion analysis.",
       requirements: [
         "Python, TensorFlow/PyTorch",
         "Computer Vision experience",
@@ -49,7 +49,7 @@ const Careers = () => {
       type: "Full-time",
       experience: "2-4 years",
       description:
-        "Support clinical validation studies and regulatory submissions for our AI-powered diagnostic tools.",
+        "Support clinical validation studies and regulatory submissions for our AI-powered clinical decision-support tools.",
       requirements: [
         "Medical/Clinical background",
         "Regulatory experience",
@@ -171,9 +171,9 @@ const Careers = () => {
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-4xl mx-auto">
               Join a passionate team of engineers, researchers, and healthcare
-              professionals who are revolutionizing medical diagnosis through
-              cutting-edge AI technology. Make a meaningful impact while growing
-              your career at the forefront of healthcare innovation.
+              professionals who are advancing medical imaging decision-support
+              through cutting-edge AI technology. Make a meaningful impact while
+              growing your career at the forefront of healthcare innovation.
             </p>
           </div>
         </div>
