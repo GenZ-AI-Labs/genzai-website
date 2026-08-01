@@ -37,6 +37,30 @@
       "version": "v1.0",
       "updated": "2026-08-01",
       "restrictedTo": ["rahim.p@genzailabs.com"]
+    },
+    {
+      "id": "dicom-anonymiser",
+      "type": "zip",
+      "title": "Quick Rad AI — On-Prem DICOM Anonymiser",
+      "description": "On-premise DICOM anonymiser package. Install and configure using the accompanying deployment guide.",
+      "file": "/downloads/Quick-Rad-AI-On-Prem-DICOM-Anonymiser.zip",
+      "filename": "Quick Rad AI - On-Prem DICOM ANONYMISER.zip",
+      "size": "21.1 KB",
+      "version": "v1.0",
+      "updated": "2026-08-01",
+      "restrictedTo": ["rahim.p@genzailabs.com", "Hospital_IT"]
+    },
+    {
+      "id": "qr-anonymiser-guide",
+      "type": "pdf",
+      "title": "QR Anonymiser Deployment Guide",
+      "description": "Step-by-step deployment and configuration guide for the DICOM Anonymiser.",
+      "file": "/downloads/QR_Anonymiser_Deployment_Guide.pdf",
+      "filename": "QR_Anonymiser_Deployment_Guide.pdf",
+      "size": "5.3 KB",
+      "version": "v1.0",
+      "updated": "2026-08-01",
+      "restrictedTo": ["rahim.p@genzailabs.com", "Hospital_IT"]
     }
   ]
 }
