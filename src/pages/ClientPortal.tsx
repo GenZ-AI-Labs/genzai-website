@@ -13,6 +13,7 @@ import {
   LogOut,
   FileArchive,
   FileText,
+  FolderOpen,
   ShieldCheck,
   AlertCircle,
 } from "lucide-react";
@@ -86,6 +87,17 @@ const ClientPortal = () => {
     setUsername("");
     setPassword("");
   };
+
+  // A download carrying `restrictedTo` is only listed for the usernames it
+  // names; everything else is available to any signed-in client.
+  const visibleDownloads = portalData.downloads.filter((item) => {
+    const restrictedTo = (item as { restrictedTo?: string[] }).restrictedTo;
+    if (!restrictedTo) return true;
+    if (!user) return false;
+    return restrictedTo.some(
+      (allowed) => allowed.toLowerCase() === user.username.toLowerCase()
+    );
+  });
 
   return (
     <div className="min-h-screen bg-white">
@@ -234,8 +246,27 @@ const ClientPortal = () => {
                   Available Downloads
                 </h2>
 
+                {visibleDownloads.length === 0 && (
+                  <div className="bg-gray-50 rounded-lg border border-gray-200 p-8 text-center">
+                    <FolderOpen className="h-10 w-10 text-gray-400 mx-auto mb-3" />
+                    <h3 className="text-lg font-semibold text-gray-900 mb-1">
+                      No downloads available
+                    </h3>
+                    <p className="text-gray-600">
+                      There are no files assigned to your account yet. Contact{" "}
+                      <a
+                        href="mailto:sales@genzailabs.com"
+                        className="text-blue-600 hover:underline"
+                      >
+                        sales@genzailabs.com
+                      </a>{" "}
+                      if you were expecting a package here.
+                    </p>
+                  </div>
+                )}
+
                 <div className="space-y-4">
-                  {portalData.downloads.map((item) => (
+                  {visibleDownloads.map((item) => (
                     <div
                       key={item.id}
                       className="bg-white rounded-lg border border-gray-200 shadow-sm p-6 flex flex-col md:flex-row md:items-center gap-5"

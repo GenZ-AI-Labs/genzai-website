@@ -15,15 +15,16 @@
   ],
   "downloads": [
     {
-      "id": "deploy-package",
+      "id": "router-package",
       "type": "zip",
-      "title": "GenzAI Deployment Package",
-      "description": "Deployment bundle for on-premise installation. Extract and follow the included setup instructions.",
-      "file": "/downloads/deploy.zip",
-      "filename": "deploy.zip",
+      "title": "Router Package",
+      "description": "Router configuration bundle. Deploy alongside the QR Forwarder using the accompanying guide.",
+      "file": "/downloads/Router.zip",
+      "filename": "Router.zip",
       "size": "10.2 KB",
       "version": "v1.0",
-      "updated": "2026-08-01"
+      "updated": "2026-08-01",
+      "restrictedTo": ["rahim.p@genzailabs.com"]
     },
     {
       "id": "qr-forwarder-guide",
@@ -34,7 +35,8 @@
       "filename": "QR_Forwarder_Deployment_Guide.pdf",
       "size": "5.4 KB",
       "version": "v1.0",
-      "updated": "2026-08-01"
+      "updated": "2026-08-01",
+      "restrictedTo": ["rahim.p@genzailabs.com"]
     }
   ]
 }
