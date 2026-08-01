@@ -160,6 +160,19 @@ export function Navbar() {
                     Careers
                   </Link>
                 </NavigationMenuItem>
+
+                <NavigationMenuItem>
+                  <Link
+                    to="/client"
+                    className={`px-3 py-2 text-sm font-medium transition-colors ${
+                      isActive("/client")
+                        ? "text-blue-600"
+                        : "text-slate-700 hover:text-blue-600"
+                    }`}
+                  >
+                    Client Login
+                  </Link>
+                </NavigationMenuItem>
               </NavigationMenuList>
             </NavigationMenu>
 
@@ -239,6 +252,13 @@ export function Navbar() {
                 onClick={() => setIsOpen(false)}
               >
                 Careers
+              </Link>
+              <Link
+                to="/client"
+                className="px-3 py-2 text-sm font-medium text-slate-700 hover:text-blue-600"
+                onClick={() => setIsOpen(false)}
+              >
+                Client Login
               </Link>
               <div className="pt-2">
                 <Button className="w-full bg-blue-500 hover:bg-blue-400 text-white shadow-sm shadow-blue-500/20">

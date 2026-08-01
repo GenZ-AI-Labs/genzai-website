@@ -24,6 +24,7 @@ import StrokeWhitePaper from "./pages/StrokeWhitePaper";
 import ApplyNowPage from "./pages/ApplyNowPage";
 import Publications from "./pages/Publications";
 import Disclaimer from "./pages/Disclaimer";
+import ClientPortal from "./pages/ClientPortal";
 
 
 const queryClient = new QueryClient();
@@ -54,6 +55,7 @@ const App = () => (
                 <Route path="/stroke-white-paper" element={<StrokeWhitePaper />} />
                 <Route path="/apply-now" element={<ApplyNowPage />} />
                 <Route path="/publications" element={<Publications />} />
+                <Route path="/client" element={<ClientPortal />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </main>

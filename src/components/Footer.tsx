@@ -106,10 +106,10 @@ export function Footer() {
               <li className="flex items-center space-x-2 text-slate-300">
                 <Mail className="h-4 w-4" />
                 <a
-                  href="mailto:doc@genzailabs.com"
+                  href="mailto:sales@genzailabs.com"
                   className="hover:text-white transition-colors"
                 >
-                  doc@genzailabs.com
+                  sales@genzailabs.com
                 </a>
               </li>
               <li className="flex items-start space-x-2 text-slate-300">

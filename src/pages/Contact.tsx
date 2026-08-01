@@ -90,7 +90,7 @@ const Contact = () => {
       icon: <Mail className="h-8 w-8 text-blue-600" />,
       title: "Email Support",
       description: "Get detailed assistance via email",
-      details: "doc@genzailabs.com",
+      details: "sales@genzailabs.com",
       availability: "Response within 4 hours"
     },
     {
@@ -114,7 +114,7 @@ const Contact = () => {
       location: "Headquarters - India",
       address: "Office No. 659, Gera's Imperium Gateway, near Bhosari Metro Station, Nashik Phata Flyover, Pune – 411034",
       phone: "+91 99230 30250",
-      email: "doc@genzailabs.com",
+      email: "sales@genzailabs.com",
       hours: "9:00 AM - 6:00 PM IST"
     }
   ];

@@ -1,0 +1,40 @@
+{
+  "users": [
+    {
+      "username": "Hospital_IT",
+      "password": "Client@2026!",
+      "name": "Hospital IT",
+      "organization": "Client Access"
+    },
+    {
+      "username": "rahim.p@genzailabs.com",
+      "password": "Pune@2026",
+      "name": "Rahim P",
+      "organization": "GenzAI Labs"
+    }
+  ],
+  "downloads": [
+    {
+      "id": "deploy-package",
+      "type": "zip",
+      "title": "GenzAI Deployment Package",
+      "description": "Deployment bundle for on-premise installation. Extract and follow the included setup instructions.",
+      "file": "/downloads/deploy.zip",
+      "filename": "deploy.zip",
+      "size": "10.2 KB",
+      "version": "v1.0",
+      "updated": "2026-08-01"
+    },
+    {
+      "id": "qr-forwarder-guide",
+      "type": "pdf",
+      "title": "QR Forwarder Deployment Guide",
+      "description": "Step-by-step deployment and configuration guide for the QR Forwarder component.",
+      "file": "/downloads/QR_Forwarder_Deployment_Guide.pdf",
+      "filename": "QR_Forwarder_Deployment_Guide.pdf",
+      "size": "5.4 KB",
+      "version": "v1.0",
+      "updated": "2026-08-01"
+    }
+  ]
+}

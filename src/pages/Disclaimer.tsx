@@ -128,10 +128,10 @@ const Disclaimer = () => {
               For questions about intended use, regulatory status, or clinical
               validation studies, please contact us at{" "}
               <a
-                href="mailto:doc@genzailabs.com"
+                href="mailto:sales@genzailabs.com"
                 className="text-blue-600 hover:underline"
               >
-                doc@genzailabs.com
+                sales@genzailabs.com
               </a>
               .
             </p>
