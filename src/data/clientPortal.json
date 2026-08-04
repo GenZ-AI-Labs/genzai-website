@@ -15,52 +15,15 @@
   ],
   "downloads": [
     {
-      "id": "router-package",
-      "type": "zip",
-      "title": "Router Package",
-      "description": "Router configuration bundle. Deploy alongside the QR Forwarder using the accompanying guide.",
-      "file": "/downloads/Router.zip",
-      "filename": "Router.zip",
-      "size": "10.2 KB",
-      "version": "v1.0",
-      "updated": "2026-08-01",
-      "restrictedTo": ["rahim.p@genzailabs.com"]
-    },
-    {
-      "id": "qr-forwarder-guide",
-      "type": "pdf",
-      "title": "QR Forwarder Deployment Guide",
-      "description": "Step-by-step deployment and configuration guide for the QR Forwarder component.",
-      "file": "/downloads/QR_Forwarder_Deployment_Guide.pdf",
-      "filename": "QR_Forwarder_Deployment_Guide.pdf",
-      "size": "5.4 KB",
-      "version": "v1.0",
-      "updated": "2026-08-01",
-      "restrictedTo": ["rahim.p@genzailabs.com"]
-    },
-    {
       "id": "dicom-anonymiser",
       "type": "zip",
       "title": "Quick Rad AI — On-Prem DICOM Anonymiser",
-      "description": "On-premise DICOM anonymiser package. Install and configure using the accompanying deployment guide.",
-      "file": "/downloads/Quick-Rad-AI-On-Prem-DICOM-Anonymiser-v6.zip",
-      "filename": "Quick Rad AI - On-Prem DICOM ANONYMISER_v6.zip",
-      "size": "21.3 KB",
-      "version": "v6",
-      "updated": "2026-08-01",
-      "restrictedTo": ["rahim.p@genzailabs.com", "Hospital_IT"]
-    },
-    {
-      "id": "qr-anonymiser-guide",
-      "type": "pdf",
-      "title": "QR Anonymiser Deployment Guide",
-      "description": "Step-by-step deployment and configuration guide for the DICOM Anonymiser.",
-      "file": "/downloads/QR_Anonymiser_Deployment_Guide_V6.pdf",
-      "filename": "QR_Anonymiser_Deployment_Guide_V6.pdf",
-      "size": "5.3 KB",
-      "version": "v6",
-      "updated": "2026-08-01",
-      "restrictedTo": ["rahim.p@genzailabs.com", "Hospital_IT"]
+      "description": "On-premise DICOM anonymiser package. Unzip and run install.bat, then configure using the included README.",
+      "file": "/downloads/Quick-Rad-AI-On-Prem-DICOM-Anonymiser.zip",
+      "filename": "Quick Rad AI - On-Prem DICOM ANONYMISER.zip",
+      "size": "3.8 MB",
+      "version": "v1.0",
+      "updated": "2026-08-04"
     }
   ]
 }
