@@ -1,4 +1,62 @@
+# https://www.genzailabs.com/robots.txt
+
 User-agent: *
 Allow: /
+Disallow: /client
+
+# --- Search engine AI training / grounding ---
+# Google-Extended governs use of content for Gemini training and grounding.
+# It does NOT affect Google Search crawling, indexing or ranking.
+User-agent: Google-Extended
+Allow: /
+
+# --- LLM crawlers ---
+# GenzAI Labs permits retrieval by LLM crawlers. Our public content is regulatory
+# status, intended use, algorithm descriptions and evidence position. The failure
+# mode we care about is a model inventing our regulatory status or performance
+# claims; the defence against that is accurate, retrievable content, not a block.
+
+User-agent: GPTBot
+Allow: /
+Disallow: /client
+
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /client
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /client
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /client
+
+User-agent: Claude-User
+Allow: /
+Disallow: /client
+
+User-agent: Claude-SearchBot
+Allow: /
+Disallow: /client
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /client
+
+User-agent: Perplexity-User
+Allow: /
+Disallow: /client
+
+User-agent: CCBot
+Allow: /
+Disallow: /client
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Widely reported to disregard robots.txt; recorded to document intent.
+User-agent: Bytespider
+Disallow: /
 
 Sitemap: https://www.genzailabs.com/sitemap.xml

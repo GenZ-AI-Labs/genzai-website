@@ -10,7 +10,7 @@
  * Pages carrying <meta name="robots" content="noindex"> are excluded, so the
  * noindex flag in <Seo> is the single control for both.
  */
-import { readdirSync, readFileSync, statSync, writeFileSync } from "node:fs";
+import { copyFileSync, existsSync, readdirSync, readFileSync, statSync, writeFileSync } from "node:fs";
 import { join, relative, sep } from "node:path";
 
 const SITE_URL = "https://www.genzailabs.com";
@@ -97,3 +97,14 @@ writeFileSync(join(DIST, "sitemap.xml"), xml);
 
 console.log(`sitemap.xml — ${entries.length} URLs from ${files.length} prerendered pages`);
 for (const [path, reason] of excluded) console.log(`  excluded ${path} (${reason})`);
+
+// Vercel serves /404.html with a real 404 status for unmatched paths. Promote the
+// prerendered NotFound page so unknown URLs get branded chrome instead of the
+// platform default -- while still returning 404 rather than the old 200-for-everything.
+const notFound = join(DIST, "404", "index.html");
+if (existsSync(notFound)) {
+  copyFileSync(notFound, join(DIST, "404.html"));
+  console.log("  404.html written from prerendered /404");
+} else {
+  console.warn("  WARNING: /404 was not prerendered; Vercel will use its default 404 page");
+}
