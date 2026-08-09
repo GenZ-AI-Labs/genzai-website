@@ -469,13 +469,20 @@ const Index = () => {
               label="Clinical Partners"
               icon={<Users className="h-6 w-6" />}
             />
-            <StatCounter
-              value={93.53}
-              decimals={2}
-              suffix="%"
-              label="TB Research Accuracy (n=170)"
-              icon={<Shield className="h-6 w-6" />}
-            />
+            {/* Deliberately the study's SHAPE, not its headline accuracy.
+                A counter strips a figure of every qualifier by design, and gets
+                screenshotted, quoted and lifted without its neighbours. A sample
+                size cannot be misquoted as a performance claim. The accuracy
+                figure lives on the TB product page, inside the same block as its
+                study context. */}
+            <Link to="/publications" className="block">
+              <StatCounter
+                value={170}
+                prefix="n="
+                label="Peer-Reviewed Validation Study"
+                icon={<Shield className="h-6 w-6" />}
+              />
+            </Link>
             <StatCounter
               value={30}
               suffix="s"
@@ -485,11 +492,15 @@ const Index = () => {
             />
           </div>
           <p className="text-center text-xs text-slate-500 mt-8 max-w-2xl mx-auto">
-            TB accuracy is the overall accuracy reported in the peer-reviewed
-            retrospective validation study (BJMHS, Feb 2026, n=170) on a research
-            dataset — not a clinical performance claim, and not a prediction of
-            performance on any other population, scanner or setting. Analysis times
-            vary by modality and study size.
+            Refers to the peer-reviewed retrospective validation study of TB
+            Insightz (BJMHS, Feb 2026, n=170) on a research dataset. Research
+            performance is not clinical performance and does not predict results on
+            any other population, scanner or setting — see the{" "}
+            <Link to="/products/tb-insightz" className="underline hover:text-slate-700">
+              TB Insightz page
+            </Link>{" "}
+            for the reported figures with their study context. Analysis times vary
+            by modality and study size.
           </p>
         </div>
       </section>
