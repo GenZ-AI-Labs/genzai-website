@@ -230,7 +230,11 @@ const Events = () => {
                   <CardDescription className="text-gray-600 mb-4">
                     {event.description}
                   </CardDescription>
-                  <Button variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50">
+                  <Button
+                    variant="outline"
+                    className="border-blue-600 text-blue-600 hover:bg-blue-50"
+                    aria-label={`Learn more about ${event.title}`}
+                  >
                     Learn More
                     <ExternalLink className="ml-2 h-4 w-4" />
                   </Button>
