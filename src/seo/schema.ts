@@ -187,15 +187,17 @@ export function articleSchema(input: ArticleInput) {
 /**
  * Per-product schema text, keyed by route slug.
  *
- * Written specifically for structured data and deliberately NOT derived from
- * page copy. Some existing product copy describes outputs in terms that read as
- * diagnostic conclusions (e.g. differential analysis mapping measured values to
- * named tumour entities, seizure-focus localisation, onset-time estimation).
- * Propagating that phrasing into JSON-LD would publish a machine-readable
- * diagnostic claim that travels without its on-page context.
+ * Kept as a separate, single, auditable block rather than reused from page copy:
+ * structured data is extracted and reproduced out of context, so this text is
+ * held to a stricter standard than anything rendered next to a disclaimer.
  *
- * These entries describe what the software measures. Page copy is untouched;
- * the discrepancy is reported rather than silently reconciled.
+ * Page copy has since been brought into the same measurement-based framing, so
+ * the two no longer diverge in substance -- but this stays the canonical
+ * regulatory wording. If page copy and this file ever disagree, this file is
+ * correct and the page needs fixing.
+ *
+ * Nothing here may map a measurement to a named condition, localise pathology,
+ * estimate timing, or recommend an intervention.
  */
 export const PRODUCT_SCHEMA: Record<
   string,

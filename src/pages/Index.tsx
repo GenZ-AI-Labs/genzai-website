@@ -155,7 +155,7 @@ const Index = () => {
     {
       title: "MR Stroke Insightz",
       description:
-        "MRI DSC perfusion with DWI-ASPECTS and FLAIR mismatch for onset estimation.",
+        "MRI DSC perfusion with DWI-ASPECTS regional summary and FLAIR signal intensity ratio.",
       Icon: Activity,
       gradient: "from-purple-500 to-indigo-500",
       link: "/products/mr-stroke-insightz",
@@ -164,20 +164,20 @@ const Index = () => {
     {
       title: "MRI ASL Insightz",
       description:
-        "Non-contrast brain perfusion — gadolinium-free CBF for 7 clinical indications.",
+        "Non-contrast brain perfusion — gadolinium-free absolute CBF in mL/100g/min.",
       Icon: Waves,
       gradient: "from-cyan-500 to-blue-500",
       link: "/products/asl-insightz",
-      stats: ["Gadolinium-free", "Absolute CBF", "7 Indications"],
+      stats: ["Gadolinium-free", "Absolute CBF", "Contrast-free"],
     },
     {
       title: "MRI Tumor Insightz",
       description:
-        "Neuro-oncology DSC perfusion with nCBV/PSR/K2 and tumor differential analysis (for clinician review).",
+        "Neuro-oncology DSC perfusion with leakage-corrected nCBV, PSR and K2 measurements.",
       Icon: Microscope,
       gradient: "from-pink-500 to-rose-500",
       link: "/products/tumor-insightz",
-      stats: ["nCBV · PSR · K2", "Differential Analysis", "Hot-Spot Biopsy"],
+      stats: ["nCBV · PSR · K2", "Leakage-corrected", "Regional Statistics"],
     },
     {
       title: "TB Insightz",
@@ -186,7 +186,7 @@ const Index = () => {
       Icon: Stethoscope,
       gradient: "from-emerald-500 to-green-600",
       link: "/products/tb-insightz",
-      stats: ["Research-validated", "Up to 99% model confidence", "BJMHS 2026"],
+      stats: ["Research dataset", "93.53% accuracy (n=170)", "BJMHS 2026"],
     },
   ];
 
@@ -470,9 +470,10 @@ const Index = () => {
               icon={<Users className="h-6 w-6" />}
             />
             <StatCounter
-              value={99}
+              value={93.53}
+              decimals={2}
               suffix="%"
-              label="TB Model Confidence (research)"
+              label="TB Research Accuracy (n=170)"
               icon={<Shield className="h-6 w-6" />}
             />
             <StatCounter
@@ -484,9 +485,11 @@ const Index = () => {
             />
           </div>
           <p className="text-center text-xs text-slate-500 mt-8 max-w-2xl mx-auto">
-            TB model confidence reflects results from the peer-reviewed retrospective
-            validation study (BJMHS, Feb 2026, n=170) on a research dataset — not a
-            clinical performance claim. Analysis times vary by modality and study size.
+            TB accuracy is the overall accuracy reported in the peer-reviewed
+            retrospective validation study (BJMHS, Feb 2026, n=170) on a research
+            dataset — not a clinical performance claim, and not a prediction of
+            performance on any other population, scanner or setting. Analysis times
+            vary by modality and study size.
           </p>
         </div>
       </section>
@@ -541,12 +544,12 @@ const Index = () => {
                         </span>
                       ))}
                     </div>
-                    <Link to={product.link}>
+                    <Link to={product.link} aria-label={`Learn more about ${product.title}`}>
                       <Button
                         variant="outline"
                         className="border-slate-300 text-slate-900 hover:bg-slate-900 hover:text-white hover:border-slate-900 transition-all group/btn"
                       >
-                        Learn More
+                        Explore {product.title}
                         <ArrowRight className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
                       </Button>
                     </Link>

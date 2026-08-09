@@ -49,17 +49,17 @@ const TbInsightz = () => {
       icon: <FileText className="h-8 w-8 text-blue-600" />,
       title: "Structured Reporting",
       description:
-        "Clinical-grade PDF report with patient metadata, annotated findings and RT-PCR test recommendation.",
+        "Structured PDF report with patient metadata, annotated regions and model probability scores, for review by a qualified healthcare professional.",
     },
   ];
 
   const detectionCapabilities = [
-    "Tuberculosis screening with model probability score",
+    "Model probability score for TB-associated radiographic features",
     "Bounding-box localization on X-ray",
     "Device and artifact flagging",
     "Cardiomegaly assessment",
     "Cardio-thoracic ratio calculation",
-    "RT-PCR test recommendation",
+    "Standing note that diagnosis requires microbiological confirmation",
     "Patient metadata capture",
     "Structured PDF report output",
   ];
@@ -70,8 +70,11 @@ const TbInsightz = () => {
       value: "Digital Radiography (DR), Computed Radiography (CR)",
     },
     { label: "Processing Time", value: "< 30 seconds" },
-    { label: "TB Model Confidence (research dataset)", value: "Up to 99% probability — BJMHS 2026" },
-    { label: "Specificity", value: "94%+ across findings" },
+    // Figures below are quoted from the BJMHS Feb 2026 pilot study exactly as
+    // published (retrospective, n=170: 88 TB-positive, 82 normal). Do not round,
+    // re-derive or generalise them; they describe that dataset only.
+    { label: "Accuracy (research dataset)", value: "93.53% — BJMHS 2026, n=170" },
+    { label: "Specificity (research dataset)", value: "86.59% — BJMHS 2026, n=170" },
     { label: "Integration", value: "PACS, RIS, EMR compatible" },
     { label: "Standards", value: "DICOM compliant, HL7/FHIR ready" },
   ];
@@ -93,7 +96,7 @@ const TbInsightz = () => {
       number: "3",
       title: "Report Generation",
       description:
-        "Structured report with annotations, probability scores and RT-PCR recommendation is generated.",
+        "Structured report with annotations and probability scores is generated. Reports carry a standing note that diagnosis of tuberculosis requires microbiological confirmation.",
     },
     {
       number: "4",
@@ -107,7 +110,7 @@ const TbInsightz = () => {
     <div className="min-h-screen bg-white">
       <Seo
         title="TB Insightz — AI Tuberculosis Screening Support"
-        description="AI-powered tuberculosis screening from chest X-rays with up to 99% model confidence on a research dataset (BJMHS 2026), device/artifact flagging, and cardiomegaly assessment — a clinical decision-support tool for qualified healthcare professionals."
+        description="AI-assisted analysis of frontal chest X-rays for tuberculosis evaluation: model probability scoring with region localisation, device and artefact flagging, and cardiothoracic ratio measurement. Clinical decision support for qualified healthcare professionals; not a diagnostic device."
         path="/products/tb-insightz"
         jsonLd={[
           medicalDeviceSchema({
@@ -236,9 +239,9 @@ const TbInsightz = () => {
             <div className="grid grid-cols-2 gap-6">
               <Card className="text-center border-none shadow-md">
                 <CardHeader>
-                  <div className="text-3xl font-bold text-blue-600">Up to 99%</div>
+                  <div className="text-3xl font-bold text-blue-600">93.53%</div>
                   <CardTitle className="text-sm text-gray-600">
-                    TB Model Confidence (research dataset)
+                    Overall Accuracy (research dataset)
                   </CardTitle>
                   <a
                     href="/bjmhs-tb-insightz-validation.pdf"
@@ -252,7 +255,7 @@ const TbInsightz = () => {
               </Card>
               <Card className="text-center border-none shadow-md">
                 <CardHeader>
-                  <div className="text-3xl font-bold text-blue-600">94%</div>
+                  <div className="text-3xl font-bold text-blue-600">86.59%</div>
                   <CardTitle className="text-sm text-gray-600">
                     Overall Specificity (research dataset)
                   </CardTitle>

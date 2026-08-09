@@ -36,7 +36,7 @@ const Products = () => {
         "Core/Penumbra volumetrics",
         "CT-ASPECTS scoring",
         "Mismatch ratio & HIR",
-        "Thrombectomy decision support",
+        "Threshold-based volumetrics for clinician review",
       ],
       link: "/products/ct-stroke-insightz",
       status: "Available",
@@ -45,17 +45,17 @@ const Products = () => {
       id: "mr-stroke-insightz",
       title: "MR Stroke Insightz",
       description:
-        "MRI DSC Perfusion stroke evaluation with DWI-ASPECTS, FLAIR mismatch for onset estimation, and perfusion-diffusion analysis.",
+        "MRI DSC Perfusion measurements with DWI-ASPECTS regional summary, FLAIR signal intensity ratio, and perfusion-diffusion volumetric comparison.",
       icon: (
         <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-purple-500 to-indigo-500 flex items-center justify-center">
           <Activity className="h-8 w-8 text-white" />
         </div>
       ),
       features: [
-        "DWI infarct segmentation",
-        "DWI-ASPECTS scoring",
-        "FLAIR Mismatch (SIR)",
-        "Wake-up stroke onset estimation",
+        "DWI region segmentation",
+        "DWI-ASPECTS regional summary",
+        "FLAIR SIR value",
+        "Perfusion-diffusion volumetric comparison",
       ],
       link: "/products/mr-stroke-insightz",
       status: "Available",
@@ -64,7 +64,7 @@ const Products = () => {
       id: "asl-insightz",
       title: "MRI ASL Insightz",
       description:
-        "Non-contrast brain perfusion via Arterial Spin Labeling — gadolinium-free CBF quantification for 7 clinical indications.",
+        "Non-contrast brain perfusion via Arterial Spin Labeling — gadolinium-free absolute CBF quantification in mL/100g/min.",
       icon: (
         <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-cyan-500 to-teal-500 flex items-center justify-center">
           <Waves className="h-8 w-8 text-white" />
@@ -74,7 +74,7 @@ const Products = () => {
         "Absolute CBF (ml/100g/min)",
         "pCASL / CASL / PASL support",
         "CBF Asymmetry Index",
-        "Pediatric & renal-impaired safe",
+        "No contrast agent administered",
       ],
       link: "/products/asl-insightz",
       status: "Available",
@@ -83,7 +83,7 @@ const Products = () => {
       id: "tumor-insightz",
       title: "MRI Tumor Insightz",
       description:
-        "Neuro-oncology DSC perfusion with nCBV/PSR/K2 maps, tumor differential analysis (for clinician review), and hot-spot biopsy guidance.",
+        "Neuro-oncology DSC perfusion with leakage-corrected nCBV/PSR/K2 maps, FLAIR-based region segmentation and regional statistics.",
       icon: (
         <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-pink-500 to-rose-500 flex items-center justify-center">
           <Microscope className="h-8 w-8 text-white" />
@@ -91,9 +91,9 @@ const Products = () => {
       ),
       features: [
         "nCBV, PSR, K2, rPH maps",
-        "Tumor differential analysis (clinician review)",
-        "Hot-Spot biopsy guidance",
-        "Recurrence vs pseudoprogression",
+        "Leakage correction with before/after comparison",
+        "Region of maximum nCBV reported",
+        "Regional statistics (mean, median, P90)",
       ],
       link: "/products/tumor-insightz",
       status: "Available",
@@ -109,10 +109,10 @@ const Products = () => {
         </div>
       ),
       features: [
-        "Tuberculosis screening (up to 99% model confidence — research dataset, BJMHS 2026)",
+        "Tuberculosis evaluation support (93.53% accuracy on a research dataset, n=170 — BJMHS 2026)",
         "Device & artifact flagging",
         "Cardiomegaly / CT-ratio assessment",
-        "Structured report with RT-PCR recommendation",
+        "Structured PDF report output",
       ],
       link: "/products/tb-insightz",
       status: "Available",
@@ -207,9 +207,9 @@ const Products = () => {
                     ))}
                   </div>
                   {product.status === "Available" ? (
-                    <Link to={product.link}>
+                    <Link to={product.link} aria-label={`Learn more about ${product.title}`}>
                       <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white">
-                        Learn More
+                        Explore {product.title}
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </Button>
                     </Link>
