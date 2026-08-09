@@ -10,9 +10,17 @@ export default defineConfig(({ mode }) => ({
     port: 8080,
     watch: {
       // vite-react-ssg writes and then removes .vite-react-ssg-temp during a
-      // build. If the dev server is watching it, running `npm run build` while
+      // build. If the dev server watches it, running `npm run build` while
       // `npm run dev` is up crashes the dev server with EBUSY on Windows.
-      ignored: ["**/.vite-react-ssg-temp/**", "**/dist/**"],
+      //
+      // These MUST be regexes, not globs. chokidar hands anymatch native paths,
+      // which on Windows use backslashes, and picomatch does not match a
+      // backslash-separated path against a "**/x/**" glob -- so the glob form
+      // silently ignores nothing. Verified:
+      //   picomatch('**/.vite-react-ssg-temp/**')('D:\\...\\.vite-react-ssg-temp\\a\\b.mp4') === false
+      //   picomatch('**/.vite-react-ssg-temp/**')('D:/.../.vite-react-ssg-temp/a/b.mp4')     === true
+      // A regex accepting either separator works on both platforms.
+      ignored: [/[\\/]\.vite-react-ssg-temp[\\/]/, /[\\/]dist[\\/]/],
     },
   },
   plugins: [
