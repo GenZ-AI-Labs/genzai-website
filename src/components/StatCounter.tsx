@@ -19,11 +19,33 @@ export const StatCounter = ({
   decimals = 0,
   icon,
 }: StatCounterProps) => {
-  const [current, setCurrent] = useState(0);
+  // Seeded with the final value, not 0.
+  //
+  // This component is prerendered in Node, where useEffect never runs. Seeding 0
+  // would bake "0" into the static HTML — publishing a wrong number to every
+  // non-rendering consumer (e.g. "0% TB Model Confidence"). Seeding the final
+  // value also makes server and client agree on first render, so hydration is clean.
+  //
+  // The count-up animation is preserved as progressive enhancement below.
+  const [current, setCurrent] = useState(value);
   const ref = useRef<HTMLDivElement>(null);
   const started = useRef(false);
 
   useEffect(() => {
+    // Rewind to 0 so the animation has somewhere to travel from — but only while
+    // the element is still below the viewport, where the rewind is invisible.
+    // If it is already on screen, keep the final value rather than flash it away.
+    const el = ref.current;
+    const offscreen = el
+      ? el.getBoundingClientRect().top > window.innerHeight
+      : true;
+
+    if (offscreen) {
+      setCurrent(0);
+    } else {
+      started.current = true;
+    }
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
