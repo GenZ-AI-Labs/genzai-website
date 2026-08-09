@@ -21,6 +21,7 @@ import {
 } from "lucide-react";
 import { getProductBySlug } from "@/data/perfusionProducts";
 import { Seo } from "@/components/Seo";
+import { medicalDeviceSchema, breadcrumbSchema, PRODUCT_SCHEMA } from "@/seo/schema";
 
 const iconMap = {
   Heart,
@@ -42,6 +43,23 @@ const PerfusionProductDetail = () => {
         title={`${product.title} — ${product.tagline}`}
         description={product.description}
         path={`/products/${product.slug}`}
+        jsonLd={[
+          medicalDeviceSchema({
+            name: product.title,
+            path: `/products/${product.slug}`,
+            // Schema text comes from PRODUCT_SCHEMA, not product.description:
+            // structured data is reproduced out of context, so it is written
+            // separately to stay strictly within decision-support framing.
+            description: PRODUCT_SCHEMA[product.slug].description,
+            indication: PRODUCT_SCHEMA[product.slug].indication,
+            specialties: PRODUCT_SCHEMA[product.slug].specialties,
+          }),
+          breadcrumbSchema([
+            { name: "Home", path: "/" },
+            { name: "Products", path: "/products" },
+            { name: product.title, path: `/products/${product.slug}` },
+          ]),
+        ]}
       />
       {/* Hero */}
       <section className="relative py-20 overflow-hidden">

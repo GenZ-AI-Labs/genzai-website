@@ -35,6 +35,7 @@ import { StatCounter } from "@/components/StatCounter";
 import { AiAnalysisShowcase } from "@/components/AiAnalysisShowcase";
 import { SectionHeading } from "@/components/SectionHeading";
 import { Seo } from "@/components/Seo";
+import { organizationSchema } from "@/seo/schema";
 import { motion } from "framer-motion";
 import React from "react";
 
@@ -334,6 +335,7 @@ const Index = () => {
         title="AI Medical Imaging — Decision Support for Stroke, Tumor & TB Analysis"
         description="GenzAI Labs builds AI-powered medical imaging platforms for acute stroke perfusion analysis, neuro-oncology, and tuberculosis screening — clinical decision support informed by peer-reviewed research, for use by qualified healthcare professionals."
         path="/"
+        jsonLd={organizationSchema()}
       />
       {/* Hero Section */}
       <section className="relative h-screen min-h-[640px] flex items-center justify-center overflow-hidden bg-slate-950">

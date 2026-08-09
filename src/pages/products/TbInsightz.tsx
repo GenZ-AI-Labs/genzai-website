@@ -21,6 +21,7 @@ import {
   Shield,
 } from "lucide-react";
 import { Seo } from "@/components/Seo";
+import { medicalDeviceSchema, breadcrumbSchema, PRODUCT_SCHEMA } from "@/seo/schema";
 
 const TbInsightz = () => {
   const navigate = useNavigate();
@@ -108,6 +109,20 @@ const TbInsightz = () => {
         title="TB Insightz — AI Tuberculosis Screening Support"
         description="AI-powered tuberculosis screening from chest X-rays with up to 99% model confidence on a research dataset (BJMHS 2026), device/artifact flagging, and cardiomegaly assessment — a clinical decision-support tool for qualified healthcare professionals."
         path="/products/tb-insightz"
+        jsonLd={[
+          medicalDeviceSchema({
+            name: "TB Insightz",
+            path: "/products/tb-insightz",
+            description: PRODUCT_SCHEMA["tb-insightz"].description,
+            indication: PRODUCT_SCHEMA["tb-insightz"].indication,
+            specialties: PRODUCT_SCHEMA["tb-insightz"].specialties,
+          }),
+          breadcrumbSchema([
+            { name: "Home", path: "/" },
+            { name: "Products", path: "/products" },
+            { name: "TB Insightz", path: "/products/tb-insightz" },
+          ]),
+        ]}
       />
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
