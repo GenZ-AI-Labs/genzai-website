@@ -20,7 +20,20 @@ export default defineConfig(({ mode }) => ({
     },
   },
   ssgOptions: {
-    script: "async",
+    // MUST be "defer", not "async".
+    //
+    // vite-react-ssg sets window.__VITE_REACT_SSG_HASH__ from an inline <script>
+    // near the end of the document, and the client reads it to fetch
+    // /static-loader-data-manifest-<hash>.json. With "async" the module bundle can
+    // execute before the parser reaches that assignment, so the hash is undefined,
+    // the fetch 404s to HTML, JSON.parse throws inside a route loader, and React
+    // discards the prerendered DOM and falls back to a full client render
+    // (errors #418 x6 and #423 on the homepage).
+    //
+    // It is a race, so it presents intermittently -- it reproduced consistently
+    // only with the HTTP cache disabled. "defer" guarantees the inline assignment
+    // runs first.
+    script: "defer",
     formatting: "minify",
     // Emit /about/index.html rather than /about.html so Vercel's cleanUrls
     // serves /about directly.
