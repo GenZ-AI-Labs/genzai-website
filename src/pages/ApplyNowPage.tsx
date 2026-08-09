@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Seo } from '@/components/Seo';
 
 const ApplyNowPage = () => {
   const navigate = useNavigate();
@@ -36,6 +37,11 @@ const ApplyNowPage = () => {
 
   return (
     <section className="py-20 bg-gray-100">
+      <Seo
+        title="Apply Now"
+        description="Apply to join GenzAI Labs. Submit your details and CV to be considered for open roles in AI medical imaging engineering, clinical research and regulatory affairs."
+        path="/apply-now"
+      />
       <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-blue-600 mb-4">Apply Now</h1>

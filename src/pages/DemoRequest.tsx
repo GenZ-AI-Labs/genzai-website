@@ -10,6 +10,7 @@ import { useToast } from "@/hooks/use-toast";
 import { demoRequestSchema, DemoRequestData } from "@/lib/schemas";
 import { submitDemoRequest } from "@/lib/form-utils";
 import { useNavigate } from "react-router-dom";
+import { Seo } from "@/components/Seo";
 
 export const DemoRequest: React.FC = () => {
   const { toast } = useToast();
@@ -55,6 +56,11 @@ export const DemoRequest: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+      <Seo
+        title="Request a Demo"
+        description="Request a demonstration of GenzAI Labs imaging software. Tell us your modality, deployment environment and clinical workflow, and our team will arrange a walkthrough."
+        path="/demo-request"
+      />
       <div className="max-w-3xl w-full space-y-8 bg-white p-8 rounded-lg shadow-lg">
         <div>
           <h2 className="text-3xl font-bold text-blue-600 text-center sm:text-4xl">Request a Demo</h2>

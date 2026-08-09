@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { Seo } from '@/components/Seo';
+import { articleSchema } from '@/seo/schema';
 
 const StrokeWhitePaper = () => {
   const [formData, setFormData] = useState({
@@ -34,6 +36,19 @@ const StrokeWhitePaper = () => {
 
   return (
     <section className="py-20 bg-gray-100">
+      <Seo
+        title="Through the Lens of Stroke Insights — White Paper"
+        description="GenzAI Labs white paper on AI-supported stroke perfusion analysis workflows. Clinical decision support for qualified healthcare professionals; not a diagnostic device."
+        path="/stroke-white-paper"
+        ogType="article"
+        jsonLd={articleSchema({
+          headline: "Through the Lens of Stroke Insights",
+          path: "/stroke-white-paper",
+          description:
+            "White paper on AI-supported stroke perfusion analysis workflows and clinical decision-support software.",
+          image: "/genz-white-paper.png",
+        })}
+      />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">Through the Lens of Stroke Insights</h1>

@@ -105,6 +105,7 @@ const ClientPortal = () => {
         title="Client Portal"
         description="Secure client portal for GenzAI Labs partners — sign in to access your deployment packages and downloads."
         path="/client"
+        noindex
       />
 
       <section className="bg-gradient-to-br from-blue-50 via-white to-cyan-50 py-20">
