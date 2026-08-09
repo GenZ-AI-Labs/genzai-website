@@ -19,4 +19,19 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  ssgOptions: {
+    script: "async",
+    formatting: "minify",
+    // Emit /about/index.html rather than /about.html so Vercel's cleanUrls
+    // serves /about directly.
+    dirStyle: "nested",
+    // Critical-CSS inlining (beasties/critters) is off: it rewrites the emitted
+    // <head> and is an unnecessary variable while establishing prerender parity.
+    crittersOptions: false,
+  },
+  ssr: {
+    // Bundled rather than externalised so they are transformed for the Node
+    // render pass. Both are browser-oriented and ship ESM-only builds.
+    noExternal: ["framer-motion", "lenis"],
+  },
 }));
