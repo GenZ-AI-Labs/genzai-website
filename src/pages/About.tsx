@@ -37,11 +37,14 @@ const About = () => {
     },
   ];
 
+  // Every figure here must be independently verifiable from something we publish.
+  // Do not add a number without a source. Deployment scale and any accuracy figure
+  // belong on product pages next to their study context, not in a summary strip.
   const stats = [
-    { number: "500+", label: "Healthcare Institutions" },
-    { number: "1M+", label: "Scans Analyzed" },
-    { number: "95%", label: "Accuracy Rate" },
-    { number: "24/7", label: "Support Available" },
+    { number: "5", label: "AI-Powered Products" },
+    { number: "3", label: "Clinical Partners" },
+    { number: "3", label: "Peer-Reviewed Papers" },
+    { number: "1", label: "Patent Filed" },
   ];
 
   return (
@@ -151,10 +154,10 @@ const About = () => {
       <section className="py-20 bg-gradient-to-b from-blue-400 via-blue-600 to-blue-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Our Impact</h2>
+            <h2 className="text-4xl font-bold text-white mb-4">Where We Are</h2>
             <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-              Numbers that reflect our commitment to improving healthcare
-              outcomes worldwide.
+              Our current position, stated plainly. Research performance figures
+              are published with their study context on each product page.
             </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
