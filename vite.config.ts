@@ -8,6 +8,12 @@ export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
     port: 8080,
+    watch: {
+      // vite-react-ssg writes and then removes .vite-react-ssg-temp during a
+      // build. If the dev server is watching it, running `npm run build` while
+      // `npm run dev` is up crashes the dev server with EBUSY on Windows.
+      ignored: ["**/.vite-react-ssg-temp/**", "**/dist/**"],
+    },
   },
   plugins: [
     react(),
