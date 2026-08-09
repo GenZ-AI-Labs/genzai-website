@@ -48,7 +48,14 @@ export const routes: RouteRecord[] = [
       { path: "contact", lazy: page(() => import("./pages/Contact")) },
       { path: "careers", lazy: page(() => import("./pages/Careers")) },
       { path: "publications", lazy: page(() => import("./pages/Publications")) },
-      { path: "demo-request", lazy: page(() => import("./pages/DemoRequest")) },
+      {
+        path: "demo-request",
+        // Named-only export; the `page` helper above resolves `.default`, which
+        // would be undefined here and silently render an empty page body.
+        lazy: async () => ({
+          Component: (await import("./pages/DemoRequest")).DemoRequest,
+        }),
+      },
       { path: "apply-now", lazy: page(() => import("./pages/ApplyNowPage")) },
       {
         path: "stroke-white-paper",
@@ -60,6 +67,11 @@ export const routes: RouteRecord[] = [
       // Gated. Prerendered so the sign-in gate is served as static HTML, but
       // marked noindex via <Seo> and therefore excluded from the sitemap.
       { path: "client", lazy: page(() => import("./pages/ClientPortal")) },
+
+      // Prerendered so postbuild can emit dist/404.html, which Vercel serves
+      // (with a real 404 status) for URLs that match no static file. noindex via
+      // <Seo>, and excluded from the sitemap.
+      { path: "404", lazy: page(() => import("./pages/NotFound")) },
 
       { path: "*", lazy: page(() => import("./pages/NotFound")) },
     ],
