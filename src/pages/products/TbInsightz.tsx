@@ -254,8 +254,16 @@ const TbInsightz = () => {
                 <CardHeader>
                   <div className="text-3xl font-bold text-blue-600">94%</div>
                   <CardTitle className="text-sm text-gray-600">
-                    Overall Specificity (research)
+                    Overall Specificity (research dataset)
                   </CardTitle>
+                  <a
+                    href="/bjmhs-tb-insightz-validation.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block text-[10px] text-blue-600 hover:text-blue-700 underline italic mt-2 leading-tight"
+                  >
+                    Source: BJMHS, Feb 2026 — TB Insightz Pilot Validation Study (retrospective, n=170)
+                  </a>
                 </CardHeader>
               </Card>
               <Card className="text-center border-none shadow-md">
