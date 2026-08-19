@@ -26,3 +26,6 @@ dist-ssr
 
 # Planning / analysis documents — not build artifacts, not shipped
 output
+
+# Per-site bundles with real config. Never publish these.
+private-releases/
