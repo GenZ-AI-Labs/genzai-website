@@ -24,6 +24,21 @@
       "size": "3.8 MB",
       "version": "v1.0",
       "updated": "2026-08-04"
+    },
+    {
+      "id": "dicom-forwarder",
+      "type": "zip",
+      "title": "Quick Rad AI — On-Prem DICOM Forwarder",
+      "description": "Store-and-forward DICOM gateway for a hospital PC. Unzip, check forwarder_config.json matches the settings issued for your site, then run install_task.bat as administrator.",
+      "file": "/downloads/QR_Forwarder_GENZAILABS.zip",
+      "filename": "QR_Forwarder_GENZAILABS.zip",
+      "size": "10 KB",
+      "version": "v1.0",
+      "updated": "2026-08-19",
+      "restrictedTo": [
+        "Hospital_IT",
+        "rahim.p@genzailabs.com"
+      ]
     }
   ]
 }
