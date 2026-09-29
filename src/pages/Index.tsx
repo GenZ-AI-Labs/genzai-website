@@ -35,6 +35,11 @@ import { StatCounter } from "@/components/StatCounter";
 import { AiAnalysisShowcase } from "@/components/AiAnalysisShowcase";
 import { SectionHeading } from "@/components/SectionHeading";
 import { upcomingProducts, UPCOMING_SUBTITLE } from "@/data/upcomingProducts";
+import { getProductBySlug } from "@/data/perfusionProducts";
+import { ProductShowcaseHero } from "@/components/ProductShowcaseHero";
+
+// Featured product shown above the main hero.
+const featuredProduct = getProductBySlug("ncct-nwu-insightz");
 import { Seo } from "@/components/Seo";
 import { organizationSchema } from "@/seo/schema";
 import { motion } from "framer-motion";
@@ -320,6 +325,17 @@ const Index = () => {
         path="/"
         jsonLd={organizationSchema()}
       />
+      {/* Featured product */}
+      {featuredProduct && (
+        <ProductShowcaseHero
+          product={featuredProduct}
+          headingAs="h2"
+          isNew
+          primary={{ label: `Explore ${featuredProduct.title}`, to: `/products/${featuredProduct.slug}` }}
+          secondary={{ label: "Request Demo", to: "/demo-request" }}
+        />
+      )}
+
       {/* Hero Section */}
       <section className="relative h-screen min-h-[640px] flex items-center justify-center overflow-hidden bg-[#eef6ff]">
         {/* Background Video — greyscale with strong contrast so the DNA and

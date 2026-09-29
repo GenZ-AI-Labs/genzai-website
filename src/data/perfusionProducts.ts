@@ -27,6 +27,13 @@ export interface PerfusionProduct {
   /** Rendered only when non-empty. */
   useCases: { title: string; description: string }[];
   reportFeatures: string[];
+  /**
+   * Optional hero showcase: three real output images shown as glass cards
+   * (the middle one featured and larger). Replaces the single hero image.
+   */
+  heroShowcase?: { src: string; label: string }[];
+  /** Hex colour used to tint the hero particle video and glow. */
+  heroTint?: string;
   /** Optional explanatory section rendered after the hero. */
   overview?: { title: string; body: string };
   /** Optional detailed report breakdown, rendered as its own section. */
@@ -54,6 +61,12 @@ export const perfusionProducts: PerfusionProduct[] = [
       text: "text-amber-500",
     },
     heroImage: "/brain-3D-image.png",
+    heroTint: "#e11d48",
+    heroShowcase: [
+      { src: "/ncct/nwu-threshold.png", label: "NWU > 11.5%" },
+      { src: "/ncct/overlays-stack.png", label: "DL core · NWU > 11.5% · Elevated NWU" },
+      { src: "/ncct/nwu-elevated.png", label: "Elevated NWU band" },
+    ],
     overview: {
       title: "What it measures",
       body:

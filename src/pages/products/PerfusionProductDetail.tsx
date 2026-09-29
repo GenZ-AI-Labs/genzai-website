@@ -21,6 +21,7 @@ import {
   Target,
 } from "lucide-react";
 import { getProductBySlug } from "@/data/perfusionProducts";
+import { ProductShowcaseHero } from "@/components/ProductShowcaseHero";
 import { Seo } from "@/components/Seo";
 import { medicalDeviceSchema, breadcrumbSchema, PRODUCT_SCHEMA } from "@/seo/schema";
 
@@ -64,6 +65,13 @@ const PerfusionProductDetail = () => {
         ]}
       />
       {/* Hero */}
+      {product.heroShowcase && product.heroShowcase.length === 3 ? (
+        <ProductShowcaseHero
+          product={product}
+          primary={{ label: "Request Demo", to: "/demo-request" }}
+          secondary={{ label: "Contact Sales", to: "/contact" }}
+        />
+      ) : (
       <section className="relative py-20 overflow-hidden">
         <video
           autoPlay
@@ -130,6 +138,7 @@ const PerfusionProductDetail = () => {
           </div>
         </div>
       </section>
+      )}
 
       {/* Overview */}
       {product.overview && (
