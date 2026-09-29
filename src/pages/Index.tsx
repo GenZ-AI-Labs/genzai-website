@@ -18,13 +18,8 @@ import {
   Users,
   ArrowRight,
   CheckCircle,
-  Activity,
   Target,
   Award,
-  Stethoscope,
-  Heart,
-  Waves,
-  Microscope,
   BookOpen,
   FileText,
 } from "lucide-react";
@@ -32,14 +27,9 @@ import { FreeTrialModal } from "@/components/modals/FreeTrialModal";
 import { BrochureDownloadModal } from "@/components/modals/BrochureDownloadModal";
 import { ConsultationModal } from "@/components/modals/ConsultationModal";
 import { StatCounter } from "@/components/StatCounter";
-import { AiAnalysisShowcase } from "@/components/AiAnalysisShowcase";
 import { SectionHeading } from "@/components/SectionHeading";
 import { upcomingProducts, UPCOMING_SUBTITLE } from "@/data/upcomingProducts";
-import { getProductBySlug } from "@/data/perfusionProducts";
-import { ProductShowcaseHero } from "@/components/ProductShowcaseHero";
-
-// Featured product shown above the main hero.
-const featuredProduct = getProductBySlug("ncct-nwu-insightz");
+import { HomeProductCarousel } from "@/components/HomeProductCarousel";
 import { Seo } from "@/components/Seo";
 import { organizationSchema } from "@/seo/schema";
 import { motion } from "framer-motion";
@@ -139,63 +129,6 @@ const Index = () => {
     },
   ];
 
-  const products = [
-    {
-      title: "NCCT NWU Insightz",
-      description:
-        "Net Water Uptake, a deep-learning infarct core and automated CT-ASPECTS from a routine non-contrast head CT — for centres with no CTP or MRI.",
-      Icon: Brain,
-      gradient: "from-amber-500 to-red-500",
-      link: "/products/ncct-nwu-insightz",
-      stats: ["NWU", "CT-ASPECTS", "Non-contrast CT"],
-      isNew: true,
-    },
-    {
-      title: "CT Stroke Insightz",
-      description:
-        "CT Perfusion for acute stroke triage — core/penumbra, CT-ASPECTS, collateral assessment.",
-      Icon: Heart,
-      gradient: "from-red-500 to-orange-500",
-      link: "/products/ct-stroke-insightz",
-      stats: ["ASPECTS", "Core/Penumbra", "<5 min"],
-    },
-    {
-      title: "MR Stroke Insightz",
-      description:
-        "MRI DSC perfusion with DWI-ASPECTS regional summary and FLAIR signal intensity ratio.",
-      Icon: Activity,
-      gradient: "from-purple-500 to-indigo-500",
-      link: "/products/mr-stroke-insightz",
-      stats: ["DWI-ASPECTS", "FLAIR Mismatch", "DSC"],
-    },
-    {
-      title: "MRI ASL Insightz",
-      description:
-        "Non-contrast brain perfusion — gadolinium-free absolute CBF in mL/100g/min.",
-      Icon: Waves,
-      gradient: "from-cyan-500 to-blue-500",
-      link: "/products/asl-insightz",
-      stats: ["Gadolinium-free", "Absolute CBF", "Contrast-free"],
-    },
-    {
-      title: "MRI Tumor Insightz",
-      description:
-        "Neuro-oncology DSC perfusion with leakage-corrected nCBV, PSR and K2 measurements.",
-      Icon: Microscope,
-      gradient: "from-pink-500 to-rose-500",
-      link: "/products/tumor-insightz",
-      stats: ["nCBV · PSR · K2", "Leakage-corrected", "Regional Statistics"],
-    },
-    {
-      title: "TB Insightz",
-      description:
-        "AI-powered tuberculosis screening from chest X-rays with device/artifact and cardiomegaly checks.",
-      Icon: Stethoscope,
-      gradient: "from-emerald-500 to-green-600",
-      link: "/products/tb-insightz",
-      stats: ["Research dataset", "93.53% accuracy (n=170)", "BJMHS 2026"],
-    },
-  ];
 
   // Events and news
   const [selectedEvent, setSelectedEvent] = React.useState(null);
@@ -325,16 +258,8 @@ const Index = () => {
         path="/"
         jsonLd={organizationSchema()}
       />
-      {/* Featured product */}
-      {featuredProduct && (
-        <ProductShowcaseHero
-          product={featuredProduct}
-          headingAs="h2"
-          isNew
-          primary={{ label: `Explore ${featuredProduct.title}`, to: `/products/${featuredProduct.slug}` }}
-          secondary={{ label: "Request Demo", to: "/demo-request" }}
-        />
-      )}
+      {/* Product showcase carousel */}
+      <HomeProductCarousel />
 
       {/* Hero Section */}
       <section className="relative h-screen min-h-[640px] flex items-center justify-center overflow-hidden bg-[#eef6ff]">
@@ -467,8 +392,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-      {/* AI-Segmented Analysis Showcase — auto-rotating carousel */}
-      <AiAnalysisShowcase />
 
       {/* Trust Strip — animated stat counters */}
       <section className="py-16 md:py-20 bg-white border-y border-slate-100">
@@ -520,79 +443,11 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Products Overview Section */}
+      {/* Upcoming products */}
       <section className="py-20 md:py-28 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-center">
-            <SectionHeading
-              kicker="Our Solutions"
-              title="Our Products"
-              subtitle="Comprehensive AI-powered clinical decision-support solutions designed to advance medical imaging workflows and improve clinician efficiency."
-            />
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-            {products.map((product, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-60px" }}
-                transition={{ duration: 0.5, delay: index * 0.08 }}
-              >
-                <Card className="group relative h-full bg-white border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 hover:border-blue-200 transition-all duration-300 rounded-xl overflow-hidden">
-                  {/* Hover bloom from icon */}
-                  <div
-                    className={`absolute top-0 left-1/2 -translate-x-1/2 w-40 h-40 rounded-full bg-gradient-to-br ${product.gradient} opacity-0 group-hover:opacity-10 blur-3xl transition-opacity duration-500 pointer-events-none`}
-                  />
-                  {product.isNew && (
-                    <span className="absolute top-3 right-3 z-10 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-amber-500 text-white text-[11px] font-bold uppercase tracking-wide shadow-sm">
-                      <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
-                      New · Now available
-                    </span>
-                  )}
-                  <CardHeader className="text-center pb-4 relative">
-                    <div className="flex justify-center mb-4">
-                      <div
-                        className={`w-16 h-16 rounded-xl bg-gradient-to-br ${product.gradient} flex items-center justify-center shadow-sm group-hover:scale-110 group-hover:rotate-3 transition-transform duration-500`}
-                      >
-                        <product.Icon className="h-8 w-8 text-white" strokeWidth={2} />
-                      </div>
-                    </div>
-                    <CardTitle className="text-xl text-slate-900">
-                      {product.title}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className="text-center relative">
-                    <CardDescription className="text-slate-600 mb-5 leading-relaxed">
-                      {product.description}
-                    </CardDescription>
-                    <div className="flex flex-wrap justify-center gap-1.5 mb-6">
-                      {product.stats.map((stat, i) => (
-                        <span
-                          key={i}
-                          className="inline-flex items-center px-2.5 py-1 rounded-md bg-slate-50 border border-slate-200 text-[11px] font-semibold text-slate-700 group-hover:bg-blue-50 group-hover:border-blue-200 group-hover:text-blue-700 transition-colors duration-300"
-                        >
-                          {stat}
-                        </span>
-                      ))}
-                    </div>
-                    <Link to={product.link} aria-label={`Learn more about ${product.title}`}>
-                      <Button
-                        variant="outline"
-                        className="border-slate-300 text-slate-900 hover:bg-slate-900 hover:text-white hover:border-slate-900 transition-all group/btn"
-                      >
-                        Explore {product.title}
-                        <ArrowRight className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
-                      </Button>
-                    </Link>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
-
           {/* Upcoming products */}
-          <div className="text-center mt-20 mb-10">
+          <div className="text-center mb-10">
             <span className="inline-flex items-center px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-[11px] font-semibold tracking-[0.18em] uppercase mb-4">
               Pipeline
             </span>

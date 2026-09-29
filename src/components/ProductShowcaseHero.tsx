@@ -17,6 +17,8 @@ interface ProductShowcaseHeroProps {
   headingAs?: "h1" | "h2";
   /** Show the "New · Now available" tag. */
   isNew?: boolean;
+  /** Extra classes for the section, e.g. room for carousel controls. */
+  className?: string;
 }
 
 /**
@@ -30,13 +32,14 @@ export const ProductShowcaseHero = ({
   secondary,
   headingAs = "h1",
   isNew = false,
+  className = "",
 }: ProductShowcaseHeroProps) => {
   const navigate = useNavigate();
   const Heading = headingAs;
   const showcase = product.heroShowcase ?? [];
 
   return (
-      <section className="relative overflow-hidden bg-black pt-20 pb-24">
+      <section className={`relative overflow-hidden bg-black flex flex-col justify-center min-h-[calc(100svh-6rem)] py-8 lg:py-10 [@media(max-height:760px)]:py-4 ${className}`}>
         {/* Particle video, greyscaled then tinted with the product colour.
             Scaled up so the stock footage's corner watermark is cropped out. */}
         <video
@@ -60,8 +63,8 @@ export const ProductShowcaseHero = ({
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Text */}
-          <div className="max-w-3xl mx-auto text-center">
-            <div className="mb-5 flex flex-wrap items-center justify-center gap-2">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="mb-4 [@media(max-height:760px)]:mb-2 flex flex-wrap items-center justify-center gap-2">
               {isNew && (
                 <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500 text-white text-[11px] font-bold uppercase tracking-wide">
                   <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
@@ -72,16 +75,18 @@ export const ProductShowcaseHero = ({
                 {product.badge}
               </Badge>
             </div>
-            <Heading className="text-4xl md:text-6xl font-bold tracking-tight leading-[1.1]">
+            <Heading className="text-3xl md:text-4xl [@media(min-width:1280px)_and_(min-height:761px)]:text-5xl [@media(max-height:760px)]:text-3xl font-bold tracking-tight leading-[1.1]">
               <span className="text-white">{product.heroHeadline}</span>{" "}
-              <span className="bg-gradient-to-r from-rose-300 via-orange-200 to-amber-200 bg-clip-text text-transparent">
+              <span
+                className={`bg-gradient-to-r ${product.heroHighlightClass ?? "from-sky-300 via-cyan-200 to-blue-200"} bg-clip-text text-transparent`}
+              >
                 {product.heroHighlight}
               </span>
             </Heading>
-            <p className="text-lg text-gray-300 mt-6 leading-relaxed">
+            <p className="text-sm [@media(min-width:768px)_and_(min-height:761px)]:text-base text-gray-300 mt-4 [@media(max-height:760px)]:mt-2 leading-relaxed max-w-3xl mx-auto">
               {product.description}
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+            <div className="flex flex-col sm:flex-row gap-3 justify-center mt-6 [@media(max-height:760px)]:mt-4">
               <Button
                 size="lg"
                 className="bg-white text-slate-900 hover:bg-gray-200 px-8 py-3 rounded-full"
@@ -102,14 +107,14 @@ export const ProductShowcaseHero = ({
           </div>
 
           {/* Glass cards: real output, middle card featured */}
-          <div className="mt-16 grid grid-cols-1 md:grid-cols-[1fr_1.35fr_1fr] gap-6 md:gap-8 items-center">
+          <div className="mt-8 [@media(min-width:1024px)_and_(min-height:761px)]:mt-10 [@media(max-height:760px)]:mt-5 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-[1fr_1.35fr_1fr] gap-5 md:gap-6 items-center">
             {showcase.map((card, i) => {
               const featured = i === 1;
               return (
                 <figure
                   key={card.src}
                   className={`group relative rounded-3xl overflow-hidden border border-white/10 bg-gradient-to-b from-white/[0.08] to-white/[0.02] backdrop-blur-md shadow-2xl transition-transform duration-500 hover:-translate-y-1 ${
-                    featured ? "p-5 md:p-6" : "p-4 md:p-5 md:scale-95"
+                    featured ? "p-3 md:p-4" : "p-3 md:scale-95"
                   }`}
                 >
                   <div
@@ -121,9 +126,13 @@ export const ProductShowcaseHero = ({
                   <img
                     src={card.src}
                     alt={`${product.title} — ${card.label}`}
-                    className={`relative w-full object-contain rounded-xl ${featured ? "max-h-[28rem]" : "max-h-72"}`}
+                    className={`relative mx-auto w-full object-contain rounded-xl ${
+                    featured
+                      ? "max-h-[40vh] [@media(min-width:768px)_and_(min-height:761px)]:max-h-[36vh] [@media(min-width:768px)_and_(max-height:760px)]:max-h-[30vh]"
+                      : "max-h-[32vh] [@media(min-width:768px)_and_(min-height:761px)]:max-h-[26vh] [@media(min-width:768px)_and_(max-height:760px)]:max-h-[22vh]"
+                  }`}
                   />
-                  <figcaption className="relative mt-4 text-center">
+                  <figcaption className="relative mt-3 text-center">
                     <span className="inline-flex items-center px-3 py-1 rounded-full bg-white text-slate-900 text-[11px] font-semibold uppercase tracking-wide">
                       {card.label}
                     </span>

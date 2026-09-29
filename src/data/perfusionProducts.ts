@@ -34,6 +34,8 @@ export interface PerfusionProduct {
   heroShowcase?: { src: string; label: string }[];
   /** Hex colour used to tint the hero particle video and glow. */
   heroTint?: string;
+  /** Tailwind gradient stops for the highlighted part of the hero headline. */
+  heroHighlightClass?: string;
   /** Optional explanatory section rendered after the hero. */
   overview?: { title: string; body: string };
   /** Optional detailed report breakdown, rendered as its own section. */
@@ -62,6 +64,7 @@ export const perfusionProducts: PerfusionProduct[] = [
     },
     heroImage: "/brain-3D-image.png",
     heroTint: "#e11d48",
+    heroHighlightClass: "from-rose-300 via-orange-200 to-amber-200",
     heroShowcase: [
       { src: "/ncct/nwu-threshold.png", label: "NWU > 11.5%" },
       { src: "/ncct/overlays-stack.png", label: "DL core · NWU > 11.5% · Elevated NWU" },
@@ -138,6 +141,13 @@ export const perfusionProducts: PerfusionProduct[] = [
       text: "text-red-500",
     },
     heroImage: "/brain-3D-image.png",
+    heroTint: "#ea580c",
+    heroHighlightClass: "from-orange-300 via-amber-200 to-yellow-200",
+    heroShowcase: [
+      { src: "/showcase/ct-rcbf.png", label: "rCBF" },
+      { src: "/showcase/ct-mismatch.png", label: "CBF + Tmax mismatch" },
+      { src: "/showcase/ct-tmax.png", label: "Tmax" },
+    ],
     pipeline: [
       "Automated DICOM ingestion and preprocessing",
       "Brain extraction, CSF removal and motion correction",
@@ -211,6 +221,13 @@ export const perfusionProducts: PerfusionProduct[] = [
       text: "text-purple-500",
     },
     heroImage: "/brain-3D-image.png",
+    heroTint: "#7c3aed",
+    heroHighlightClass: "from-violet-300 via-purple-200 to-fuchsia-200",
+    heroShowcase: [
+      { src: "/showcase/mr-rcbf.png", label: "rCBF" },
+      { src: "/showcase/mr-mismatch.png", label: "DWI + Tmax mismatch" },
+      { src: "/showcase/mr-tmax.png", label: "Tmax" },
+    ],
     pipeline: [
       "Auto-segregate Perfusion, DWI and FLAIR series from mixed upload",
       "Brain extraction and motion correction",
@@ -286,6 +303,13 @@ export const perfusionProducts: PerfusionProduct[] = [
       text: "text-cyan-500",
     },
     heroImage: "/brain-3D-image.png",
+    heroTint: "#0891b2",
+    heroHighlightClass: "from-cyan-300 via-teal-200 to-emerald-200",
+    heroShowcase: [
+      { src: "/showcase/asl-global-cbf.png", label: "Global CBF" },
+      { src: "/showcase/asl-maps.png", label: "Absolute CBF · DWI segmentation" },
+      { src: "/showcase/asl-territory.png", label: "Territory asymmetry index" },
+    ],
     pipeline: [
       "Auto-detect pCASL/CASL/PASL acquisition scheme",
       "Motion correction and brain extraction",
@@ -354,6 +378,13 @@ export const perfusionProducts: PerfusionProduct[] = [
       text: "text-pink-500",
     },
     heroImage: "/brain-3D-image.png",
+    heroTint: "#db2777",
+    heroHighlightClass: "from-pink-300 via-rose-200 to-fuchsia-200",
+    heroShowcase: [
+      { src: "/showcase/tumor-ncbv.png", label: "Leakage-corrected nCBV" },
+      { src: "/showcase/tumor-dsc.png", label: "DSC signal-time curve & statistics" },
+      { src: "/showcase/tumor-k2.png", label: "K2 leakage coefficient" },
+    ],
     pipeline: [
       "DSC preprocessing and motion correction",
       "Arterial and venous reference detection",
