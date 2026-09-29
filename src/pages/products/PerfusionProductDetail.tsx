@@ -15,6 +15,7 @@ import {
   Heart,
   Waves,
   Microscope,
+  Brain,
   Layers,
   FileText,
   Target,
@@ -28,6 +29,7 @@ const iconMap = {
   Activity,
   Waves,
   Microscope,
+  Brain,
 } as const;
 
 const PerfusionProductDetail = () => {
@@ -129,6 +131,20 @@ const PerfusionProductDetail = () => {
         </div>
       </section>
 
+      {/* Overview */}
+      {product.overview && (
+        <section className="py-16 bg-white">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              {product.overview.title}
+            </h2>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              {product.overview.body}
+            </p>
+          </div>
+        </section>
+      )}
+
       {/* Pipeline + Maps */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -224,7 +240,34 @@ const PerfusionProductDetail = () => {
         </div>
       </section>
 
+      {/* Report breakdown */}
+      {product.reportDetails && (
+        <section className="py-20 bg-gray-50">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <Badge className="mb-4 bg-blue-100 text-blue-800">Report</Badge>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+                {product.reportDetails.title}
+              </h2>
+            </div>
+            <Card className="border-none shadow-lg">
+              <CardContent className="pt-6">
+                <ul className="space-y-4">
+                  {product.reportDetails.items.map((item, i) => (
+                    <li key={i} className="flex items-start space-x-3">
+                      <FileText className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                      <span className="text-gray-700">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
+          </div>
+        </section>
+      )}
+
       {/* Clinical use cases */}
+      {product.useCases.length > 0 && (
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -254,6 +297,7 @@ const PerfusionProductDetail = () => {
           </div>
         </div>
       </section>
+      )}
 
       {/* Sample generated outputs */}
       <section className="py-20">

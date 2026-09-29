@@ -34,6 +34,7 @@ import { ConsultationModal } from "@/components/modals/ConsultationModal";
 import { StatCounter } from "@/components/StatCounter";
 import { AiAnalysisShowcase } from "@/components/AiAnalysisShowcase";
 import { SectionHeading } from "@/components/SectionHeading";
+import { upcomingProducts, UPCOMING_SUBTITLE } from "@/data/upcomingProducts";
 import { Seo } from "@/components/Seo";
 import { organizationSchema } from "@/seo/schema";
 import { motion } from "framer-motion";
@@ -134,6 +135,16 @@ const Index = () => {
   ];
 
   const products = [
+    {
+      title: "NCCT NWU Insightz",
+      description:
+        "Net Water Uptake, a deep-learning infarct core and automated CT-ASPECTS from a routine non-contrast head CT — for centres with no CTP or MRI.",
+      Icon: Brain,
+      gradient: "from-amber-500 to-red-500",
+      link: "/products/ncct-nwu-insightz",
+      stats: ["NWU", "CT-ASPECTS", "Non-contrast CT"],
+      isNew: true,
+    },
     {
       title: "CT Stroke Insightz",
       description:
@@ -329,6 +340,18 @@ const Index = () => {
 
         {/* Hero Content */}
         <div className="relative z-10 text-center max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
+          <div className="mb-5 animate-fadeInUp" style={{ animationDelay: "0.1s" }}>
+            <Link
+              to="/products/ncct-nwu-insightz"
+              className="group inline-flex flex-wrap items-center justify-center gap-2 px-4 py-2 rounded-full bg-amber-500/15 border border-amber-400/60 text-amber-200 text-sm font-medium hover:bg-amber-500/25 transition-colors"
+            >
+              <span className="px-2 py-0.5 rounded-full bg-amber-500 text-white text-[11px] font-bold uppercase tracking-wide">
+                New
+              </span>
+              NCCT NWU Insightz is now available — stroke quantification from a routine non-contrast CT
+              <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
           <div
             className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-400/40 text-blue-300 text-[11px] font-semibold tracking-[0.18em] uppercase mb-6 animate-fadeInUp"
             style={{ animationDelay: "0.2s" }}
@@ -501,6 +524,12 @@ const Index = () => {
                   <div
                     className={`absolute top-0 left-1/2 -translate-x-1/2 w-40 h-40 rounded-full bg-gradient-to-br ${product.gradient} opacity-0 group-hover:opacity-10 blur-3xl transition-opacity duration-500 pointer-events-none`}
                   />
+                  {product.isNew && (
+                    <span className="absolute top-3 right-3 z-10 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-amber-500 text-white text-[11px] font-bold uppercase tracking-wide shadow-sm">
+                      <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
+                      New · Now available
+                    </span>
+                  )}
                   <CardHeader className="text-center pb-4 relative">
                     <div className="flex justify-center mb-4">
                       <div
@@ -540,13 +569,69 @@ const Index = () => {
                 </Card>
               </motion.div>
             ))}
+          </div>
 
-            {/* Explore All card — 6th slot */}
+          {/* Upcoming products */}
+          <div className="text-center mt-20 mb-10">
+            <span className="inline-flex items-center px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-[11px] font-semibold tracking-[0.18em] uppercase mb-4">
+              Pipeline
+            </span>
+            <h3 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight">
+              Upcoming Products
+            </h3>
+            <p className="text-slate-600 mt-3 text-base md:text-lg">
+              {UPCOMING_SUBTITLE}
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {upcomingProducts.map((product, index) => (
+              <motion.div
+                key={product.id}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-60px" }}
+                transition={{ duration: 0.5, delay: index * 0.08 }}
+              >
+                <div className="relative h-full bg-white/70 border-2 border-dashed border-slate-300 rounded-xl p-6 flex flex-col">
+                  <span
+                    className={`absolute top-3 right-3 inline-flex items-center px-2.5 py-1 rounded-full text-[11px] font-bold uppercase tracking-wide ${
+                      product.status === "Under Validation"
+                        ? "bg-amber-100 text-amber-800"
+                        : "bg-blue-100 text-blue-800"
+                    }`}
+                  >
+                    {product.status}
+                  </span>
+                  <div
+                    className={`w-14 h-14 rounded-xl bg-gradient-to-br ${product.gradient} flex items-center justify-center mb-4`}
+                  >
+                    <product.Icon className="h-7 w-7 text-white" strokeWidth={2} />
+                  </div>
+                  <h4 className="text-xl font-semibold text-slate-900 mb-1">
+                    {product.title}
+                  </h4>
+                  <p className="text-sm font-medium text-slate-700 mb-3">
+                    {product.subtitle}
+                  </p>
+                  <p className="text-sm text-slate-600 leading-relaxed mb-5">
+                    {product.description}
+                  </p>
+                  <Link to="/contact" className="mt-auto" aria-label={`Register interest in ${product.title}`}>
+                    <Button variant="outline" className="w-full border-slate-300 text-slate-900">
+                      Register interest
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </Link>
+                </div>
+              </motion.div>
+            ))}
+
+            {/* Explore All card */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
-              transition={{ duration: 0.5, delay: products.length * 0.08 }}
+              transition={{ duration: 0.5, delay: upcomingProducts.length * 0.08 }}
             >
               <Link to="/products" className="block h-full">
                 <div className="group relative h-full bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 border border-slate-800 hover:border-blue-400/50 rounded-xl overflow-hidden shadow-sm hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex flex-col items-center justify-center text-center p-8 min-h-[320px]">

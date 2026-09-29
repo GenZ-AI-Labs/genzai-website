@@ -31,6 +31,7 @@ const NON_PERFORMANCE = [
   /^100%$/, // layout/width copy such as "100% of studies routed" — also a real registered value
   /^0%$/,
   /^30%$/, // rCBF threshold (configurable parameter, stated with provenance)
+  /^11\.5%$/, // NCCT NWU core threshold (method parameter, not a performance figure)
   /^6s$/,
   /^\d{1,2}\/\d{1,2}$/,
 ];

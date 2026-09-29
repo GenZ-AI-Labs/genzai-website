@@ -70,6 +70,12 @@ export function Navbar() {
                   <NavigationMenuContent>
                     <div className="w-72 p-4 bg-white">
                       <Link
+                        to="/products/ncct-nwu-insightz"
+                        className="block px-3 py-2 text-sm text-slate-700 hover:text-blue-600 hover:bg-slate-50 rounded-md"
+                      >
+                        NCCT NWU Insightz
+                      </Link>
+                      <Link
                         to="/products/ct-stroke-insightz"
                         className="block px-3 py-2 text-sm text-slate-700 hover:text-blue-600 hover:bg-slate-50 rounded-md"
                       >

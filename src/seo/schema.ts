@@ -225,6 +225,17 @@ export const PRODUCT_SCHEMA: Record<
       "series of the brain in adult patients undergoing imaging evaluation.",
     specialties: ["Radiology", "Neurology"],
   },
+  "ncct-nwu-insightz": {
+    description:
+      "Image-processing software that computes net water uptake, a deep-learning lesion " +
+      "segmentation with associated volumes, and an automated CT-ASPECTS regional summary " +
+      "from non-contrast head CT, presented with a structured summary report for " +
+      "interpretation by a qualified healthcare professional.",
+    indication:
+      "Processing and quantitative analysis of non-contrast CT studies of the head in " +
+      "adult patients undergoing imaging evaluation.",
+    specialties: ["Radiology", "Neurology"],
+  },
   "asl-insightz": {
     description:
       "Image-processing software that quantifies cerebral blood flow in absolute units " +

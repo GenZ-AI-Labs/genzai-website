@@ -300,6 +300,50 @@ const About = () => {
           </div>
         </div>
       </section>
+
+      {/* Advisory and Scientific Board */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl font-bold text-gray-900 text-center mb-12">
+            Advisory and Scientific Board
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div className="text-center">
+              <img
+                src="/Dr.Rahul_Kulkarni.png"
+                alt="Dr. Rahul Kulkarni"
+                className="h-48 w-48 object-cover object-top rounded-full mx-auto mb-4 shadow-md"
+              />
+              <h3 className="text-xl font-semibold text-gray-900">
+                Dr. Rahul Kulkarni
+              </h3>
+              <p className="text-gray-600 mt-1">MBBS, MD Medicine (Pune), DM Neuro (Mumbai), DNB Neuro (Delhi), FIAN, FAAN</p>
+            </div>
+            <div className="text-center">
+              <img
+                src="/Dr.Aniruddha.png"
+                alt="Dr. Aniruddha Joshi"
+                className="h-48 w-48 object-cover object-top rounded-full mx-auto mb-4 shadow-md"
+              />
+              <h3 className="text-xl font-semibold text-gray-900">
+                Dr. Aniruddha Joshi
+              </h3>
+              <p className="text-gray-600 mt-1">MBBS, D.M.R.D., D.N.B. (Radiology)</p>
+            </div>
+            <div className="text-center">
+              <img
+                src="/Dr.Sushil_kachewar.png"
+                alt="Prof. Dr. Sushil Kachewar"
+                className="h-48 w-48 object-cover object-top rounded-full mx-auto mb-4 shadow-md"
+              />
+              <h3 className="text-xl font-semibold text-gray-900">
+                Prof. Dr. Sushil Kachewar
+              </h3>
+              <p className="text-gray-600 mt-1">MD, DNB, Ph.D</p>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };

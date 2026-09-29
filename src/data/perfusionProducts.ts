@@ -11,7 +11,7 @@ export interface PerfusionProduct {
   heroHeadline: string;
   heroHighlight: string;
   description: string;
-  iconName: "Heart" | "Activity" | "Waves" | "Microscope";
+  iconName: "Heart" | "Activity" | "Waves" | "Microscope" | "Brain";
   accent: {
     from: string;
     to: string;
@@ -24,14 +24,90 @@ export interface PerfusionProduct {
   maps: string[];
   metricsTitle: string;
   metrics: { label: string; value: string }[];
+  /** Rendered only when non-empty. */
   useCases: { title: string; description: string }[];
   reportFeatures: string[];
+  /** Optional explanatory section rendered after the hero. */
+  overview?: { title: string; body: string };
+  /** Optional detailed report breakdown, rendered as its own section. */
+  reportDetails?: { title: string; items: string[] };
   reportPage1: string;
   reportPage2: string;
   sampleImages?: SampleImage[];
 }
 
 export const perfusionProducts: PerfusionProduct[] = [
+  {
+    slug: "ncct-nwu-insightz",
+    title: "NCCT NWU Insightz",
+    tagline: "Net Water Uptake from Non-Contrast CT",
+    badge: "NCCT NWU (Net Water Uptake)",
+    heroHeadline: "Stroke quantification",
+    heroHighlight: "where there is no perfusion scanner",
+    description:
+      "NCCT NWU Insightz reads a routine non-contrast head CT and returns Net Water Uptake (NWU), a deep-learning infarct core, and an automated CT-ASPECTS score — bringing quantitative measurement to centres that have no CTP or MRI, for interpretation by qualified healthcare professionals.",
+    iconName: "Brain",
+    accent: {
+      from: "from-amber-500",
+      to: "to-red-500",
+      ring: "ring-amber-400",
+      text: "text-amber-500",
+    },
+    heroImage: "/brain-3D-image.png",
+    overview: {
+      title: "What it measures",
+      body:
+        "NWU is the percentage density loss of ischemic tissue against the mirrored healthy hemisphere — a direct imaging proxy for the water that accumulates in infarcted brain. The pipeline computes it voxel-wise, then reports it three ways: total core volume, an elevated band, and a mean within the DL-detected lesion.",
+    },
+    pipeline: [
+      "Routine non-contrast head CT (DICOM) ingestion",
+      "Density comparison against the mirrored healthy hemisphere",
+      "Voxel-wise Net Water Uptake (NWU) computation",
+      "Deep-learning lesion segmentation",
+      "Automated CT-ASPECTS across all 10 regions",
+      "3-page structured report generation",
+    ],
+    mapsTitle: "Outputs",
+    maps: [
+      "Voxel-wise NWU",
+      "DL infarct core (mL, left/right)",
+      "NWU > 11.5% volume (mL, left/right)",
+      "Elevated NWU band",
+      "CT-ASPECTS 0–10 with per-region table",
+      "Segmentation overlays on axial slices and in the viewer",
+    ],
+    metricsTitle: "Measurements",
+    metrics: [
+      { label: "Net Water Uptake (NWU)", value: "Percentage density loss against the mirrored healthy hemisphere, computed voxel-wise" },
+      { label: "DL Infarct Core", value: "Deep-learning core volume in mL, left and right" },
+      { label: "NWU > 11.5% Volume", value: "Core volume by NWU threshold in mL, left and right" },
+      { label: "Core Concordance", value: "Agreement between the two independent core estimates" },
+      { label: "Mean Lesion NWU", value: "Mean NWU within the DL-detected lesion" },
+      { label: "CT-ASPECTS", value: "0–10, with involved/normal status for each of the 10 regions" },
+    ],
+    // No use cases supplied with the approved copy; section is not rendered.
+    useCases: [],
+    reportFeatures: [],
+    reportDetails: {
+      title: "What the report gives the clinician (3 pages)",
+      items: [
+        "CT-ASPECTS 0–10 with a per-region involved/normal table across all 10 regions",
+        "Two independent core estimates — DL infarct core (mL, left/right) and NWU > 11.5% (mL, left/right) — plus their concordance, so disagreement is visible rather than hidden",
+        "Elevated NWU band with lateralised excess and a stated detection limit",
+        "Edema progression rate (%/h) when onset or last-known-well time is supplied — and onset can be entered after processing, re-rendering the report without re-running the scan",
+        "Literature-referenced flags for large core volume, hemispheric involvement, insula involvement and a published malignant-edema criterion, each carrying its citation",
+        "Segmentation overlays on axial slices, and the same overlays in the viewer",
+      ],
+    },
+    reportPage1: "CT-ASPECTS & Core Estimates",
+    reportPage2: "Segmentation Maps",
+    sampleImages: [
+      {
+        src: "/NWU.png",
+        caption: "Segmentation maps on axial slices — DL core (top), NWU > 11.5% (middle) and elevated NWU band (bottom)",
+      },
+    ],
+  },
   {
     slug: "ct-stroke-insightz",
     title: "CT Stroke Insightz",

@@ -133,7 +133,7 @@ export const AiAnalysisShowcase = () => {
             AI-Segmented Analysis
           </h2>
           <p className="text-slate-600 mt-4 max-w-2xl mx-auto text-base md:text-lg">
-            Real outputs from our perfusion pipeline — one case at a time.
+            Real outputs from our imaging pipelines — one case at a time.
           </p>
         </motion.div>
 

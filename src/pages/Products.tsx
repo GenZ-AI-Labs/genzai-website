@@ -13,15 +13,36 @@ import {
   Activity,
   Waves,
   Microscope,
+  Brain,
   Stethoscope,
   ArrowRight,
   CheckCircle,
 } from "lucide-react";
 import { Seo } from "@/components/Seo";
+import { upcomingProducts, UPCOMING_SUBTITLE } from "@/data/upcomingProducts";
 
 const Products = () => {
   const navigate = useNavigate();
   const products = [
+    {
+      id: "ncct-nwu-insightz",
+      title: "NCCT NWU Insightz",
+      description:
+        "NCCT NWU (Net Water Uptake) — Net Water Uptake, a deep-learning infarct core and automated CT-ASPECTS from a routine non-contrast head CT, for centres with no CTP or MRI.",
+      icon: (
+        <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-amber-500 to-red-500 flex items-center justify-center">
+          <Brain className="h-8 w-8 text-white" />
+        </div>
+      ),
+      features: [
+        "Net Water Uptake (NWU)",
+        "DL infarct core + NWU core, with concordance",
+        "Automated CT-ASPECTS (10 regions)",
+        "Segmentation overlays on axial slices",
+      ],
+      link: "/products/ncct-nwu-insightz",
+      status: "Available",
+    },
     {
       id: "ct-stroke-insightz",
       title: "CT Stroke Insightz",
@@ -133,6 +154,12 @@ const Products = () => {
             {status}
           </Badge>
         );
+      case "Under Validation":
+        return (
+          <Badge className="bg-amber-100 text-amber-800 hover:bg-amber-200">
+            {status}
+          </Badge>
+        );
       case "In Development":
         return (
           <Badge className="bg-blue-100 text-blue-800 hover:bg-blue-200">
@@ -148,7 +175,7 @@ const Products = () => {
     <div className="min-h-screen bg-white">
       <Seo
         title="Products"
-        description="Explore the GenzAI Labs AI product suite: CT Stroke, MR Stroke, MRI ASL, MRI Tumor, and TB Insightz — purpose-built medical AI for imaging departments."
+        description="Explore the GenzAI Labs AI product suite: NCCT NWU, CT Stroke, MR Stroke, MRI ASL, MRI Tumor, and TB Insightz — purpose-built medical AI for imaging departments."
         path="/products"
       />
       {/* Hero Section */}
@@ -218,6 +245,82 @@ const Products = () => {
                       {product.status}
                     </Button>
                   )}
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Upcoming Products */}
+      <section className="pb-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <Badge className="mb-4 bg-blue-100 text-blue-800 hover:bg-blue-200">
+              Pipeline
+            </Badge>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Upcoming Products
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              {UPCOMING_SUBTITLE}
+            </p>
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {upcomingProducts.map((product) => (
+              <Card
+                key={product.id}
+                className="border-2 border-dashed border-slate-300 shadow-none bg-slate-50/60"
+              >
+                <CardHeader className="pb-6">
+                  <div className="flex items-center space-x-4 mb-4">
+                    <div
+                      className={`w-16 h-16 rounded-xl bg-gradient-to-br ${product.gradient} flex items-center justify-center`}
+                    >
+                      <product.Icon className="h-8 w-8 text-white" />
+                    </div>
+                    <div>
+                      <CardTitle className="text-2xl text-gray-900 mb-2">
+                        {product.title}
+                      </CardTitle>
+                      {getStatusBadge(product.status)}
+                    </div>
+                  </div>
+                  <p className="text-gray-900 font-medium mb-2">
+                    {product.subtitle}
+                  </p>
+                  <CardDescription className="text-gray-600 text-lg">
+                    {product.description}
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-3 mb-6">
+                    {product.features.map((feature, index) => (
+                      <div key={index} className="flex items-start space-x-3">
+                        <CheckCircle className="h-5 w-5 text-slate-400 flex-shrink-0 mt-0.5" />
+                        <span className="text-gray-700">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+                  {product.images?.map((img) => (
+                    <figure key={img.src} className="mb-6">
+                      <img
+                        src={img.src}
+                        alt={img.caption}
+                        loading="lazy"
+                        className="w-full h-auto rounded-lg border border-slate-200 bg-white"
+                      />
+                      <figcaption className="text-sm text-gray-500 mt-2 text-center">
+                        {img.caption}
+                      </figcaption>
+                    </figure>
+                  ))}
+                  <Link to="/contact" aria-label={`Register interest in ${product.title}`}>
+                    <Button variant="outline" className="w-full">
+                      Register interest
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </Link>
                 </CardContent>
               </Card>
             ))}
