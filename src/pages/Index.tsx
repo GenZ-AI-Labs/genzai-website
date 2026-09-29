@@ -321,11 +321,12 @@ const Index = () => {
         jsonLd={organizationSchema()}
       />
       {/* Hero Section */}
-      <section className="relative h-screen min-h-[640px] flex items-center justify-center overflow-hidden bg-slate-950">
-        {/* Background Video */}
+      <section className="relative h-screen min-h-[640px] flex items-center justify-center overflow-hidden bg-[#eef6ff]">
+        {/* Background Video — greyscale with strong contrast so the DNA and
+            particles read as crisp dark detail, then tinted very light blue. */}
         <video
           ref={videoRef}
-          className="absolute top-0 left-0 w-full h-full object-cover"
+          className="absolute top-0 left-0 w-full h-full object-cover grayscale contrast-[1.6] brightness-[1.2]"
           autoPlay
           loop
           muted
@@ -334,16 +335,19 @@ const Index = () => {
           <source src="/background2.mp4" type="video/mp4" />
         </video>
 
-        {/* Layered gradient overlay for contrast + depth */}
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/70 via-slate-900/60 to-slate-950/85"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_transparent_40%,_rgba(2,6,23,0.6)_100%)]"></div>
+        {/* Very light blue tint: multiply keeps the dark detail, turns white pale blue */}
+        <div className="absolute inset-0 bg-[#dbeafe] mix-blend-multiply pointer-events-none"></div>
+        {/* Soft light haze behind the text so it stays readable over the detail */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(239,246,255,0.8)_0%,_rgba(239,246,255,0.35)_45%,_transparent_75%)] pointer-events-none"></div>
+        {/* Fade to light blue at top and bottom */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#eef6ff]/60 via-transparent to-[#eef6ff]/80 pointer-events-none"></div>
 
         {/* Hero Content */}
-        <div className="relative z-10 text-center max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
+        <div className="relative z-10 text-center max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-slate-900">
           <div className="mb-5 animate-fadeInUp" style={{ animationDelay: "0.1s" }}>
             <Link
               to="/products/ncct-nwu-insightz"
-              className="group inline-flex flex-wrap items-center justify-center gap-2 px-4 py-2 rounded-full bg-amber-500/15 border border-amber-400/60 text-amber-200 text-sm font-medium hover:bg-amber-500/25 transition-colors"
+              className="group inline-flex flex-wrap items-center justify-center gap-2 px-4 py-2 rounded-full bg-amber-100/90 border border-amber-400 text-amber-900 text-sm font-medium hover:bg-amber-200 transition-colors"
             >
               <span className="px-2 py-0.5 rounded-full bg-amber-500 text-white text-[11px] font-bold uppercase tracking-wide">
                 New
@@ -353,10 +357,10 @@ const Index = () => {
             </Link>
           </div>
           <div
-            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-400/40 text-blue-300 text-[11px] font-semibold tracking-[0.18em] uppercase mb-6 animate-fadeInUp"
+            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/70 border border-blue-300 text-blue-700 text-[11px] font-semibold tracking-[0.18em] uppercase mb-6 animate-fadeInUp"
             style={{ animationDelay: "0.2s" }}
           >
-            <span className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse" />
+            <span className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse" />
             Transforming Healthcare with AI
           </div>
 
@@ -365,12 +369,12 @@ const Index = () => {
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 animate-fadeInUp text-center tracking-tight leading-[1.1]"
             style={{ animationDelay: "0.35s" }}
           >
-            <span className="block text-white">Transforming Healthcare</span>
+            <span className="block text-slate-900">Transforming Healthcare</span>
             <span className="block mt-2">
-              <span className="text-slate-300">with </span>
+              <span className="text-slate-600">with </span>
               <span
                 key={index}
-                className="animate-fadeText inline-block bg-gradient-to-r from-blue-300 via-cyan-300 to-blue-400 bg-clip-text text-transparent"
+                className="animate-fadeText inline-block bg-gradient-to-r from-blue-700 via-sky-600 to-cyan-600 bg-clip-text text-transparent"
               >
                 {phrases[index]}
               </span>
@@ -378,7 +382,7 @@ const Index = () => {
           </h1>
 
           <p
-            className="text-base md:text-lg text-slate-300 mb-10 max-w-2xl mx-auto animate-fadeInUp leading-relaxed"
+            className="text-base md:text-lg text-slate-700 mb-10 max-w-2xl mx-auto animate-fadeInUp leading-relaxed"
             style={{ animationDelay: "0.55s" }}
           >
             AI-powered medical imaging that supports radiologists and clinicians
@@ -402,7 +406,7 @@ const Index = () => {
             <Button
               size="lg"
               variant="outline"
-              className="bg-white/5 backdrop-blur-sm text-white border-white/30 hover:bg-white hover:text-slate-900 hover:border-white px-8 py-3 rounded-full transition-all duration-300"
+              className="bg-white/70 backdrop-blur-sm text-slate-900 border-slate-300 hover:bg-slate-900 hover:text-white hover:border-slate-900 px-8 py-3 rounded-full transition-all duration-300"
               onClick={() => navigate("/products")}
             >
               View Solutions
@@ -421,16 +425,16 @@ const Index = () => {
             ].map(({ label, Icon }) => (
               <div
                 key={label}
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/5 border border-white/15 backdrop-blur-sm text-white/90 text-xs font-semibold"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/70 border border-slate-200 backdrop-blur-sm text-slate-800 text-xs font-semibold"
               >
-                <Icon className="h-3.5 w-3.5 text-blue-300" />
+                <Icon className="h-3.5 w-3.5 text-blue-600" />
                 {label}
               </div>
             ))}
           </div>
 
           <p
-            className="mt-6 text-xs text-slate-400 tracking-wide animate-fadeInUp"
+            className="mt-6 text-xs text-slate-600 tracking-wide animate-fadeInUp"
             style={{ animationDelay: "1.05s" }}
           >
             Trusted by Deenanath Mangeshkar Hospital &nbsp;·&nbsp; DY Patil Hospital &nbsp;·&nbsp; Noble Hospital
@@ -439,10 +443,10 @@ const Index = () => {
 
         {/* Scroll indicator */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 animate-fadeInUp" style={{ animationDelay: "1.2s" }}>
-          <div className="flex flex-col items-center gap-2 text-white/60">
+          <div className="flex flex-col items-center gap-2 text-slate-500">
             <span className="text-[10px] tracking-[0.3em] uppercase">Scroll</span>
-            <div className="w-5 h-8 border border-white/40 rounded-full flex items-start justify-center p-1">
-              <div className="w-0.5 h-2 bg-white/80 rounded-full animate-bounce" />
+            <div className="w-5 h-8 border border-slate-400 rounded-full flex items-start justify-center p-1">
+              <div className="w-0.5 h-2 bg-slate-500 rounded-full animate-bounce" />
             </div>
           </div>
         </div>
