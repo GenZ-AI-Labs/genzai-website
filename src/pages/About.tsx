@@ -51,7 +51,7 @@ const About = () => {
     <div className="min-h-screen bg-white">
       <Seo
         title="About Us"
-        description="GenzAI Labs Pvt Ltd is a medical AI company from Pune, India, building AI-powered imaging platforms for stroke perfusion analysis, neuro-oncology, and TB screening — clinical decision-support tools for qualified healthcare professionals. Incubated by Dr. D. Y. Patil Vidyapeeth."
+        description="GenzAI Labs Pvt Ltd is a medical AI company from Pune, India, building AI-powered imaging platforms for stroke perfusion analysis, neuro-oncology, and TB screening — clinical decision-support tools for qualified healthcare professionals."
         path="/about"
       />
       {/* Hero Section */}
@@ -268,34 +268,33 @@ const About = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div className="text-center">
               <img
-                src="/Picture2.png"
-                alt="Shri. Balaji Naidu"
-                className="h-48 w-48 object-cover rounded-full mx-auto mb-4 shadow-md"
-              />
-              <h3 className="text-xl font-semibold text-gray-900">
-                Shri. Balaji Naidu
-              </h3>
-              <p className="text-gray-600">Director</p>
-              <p className="text-gray-500 mt-2">
-                Shri. Balaji Naidu leads with a vision to integrate cutting-edge
-                AI into healthcare, bringing decades of leadership experience to
-                guide our mission.
-              </p>
-            </div>
-            <div className="text-center">
-              <img
-                src="/profile.png"
+                src="/Rahim_director.jpeg"
                 alt="Rahim Pathan"
                 className="h-48 w-48 object-cover rounded-full mx-auto mb-4 shadow-md"
               />
               <h3 className="text-xl font-semibold text-gray-900">
                 Rahim Pathan
               </h3>
-              <p className="text-gray-600">Founder and CEO</p>
+              <p className="text-gray-600">Director and Co-Founder</p>
               <p className="text-gray-500 mt-2">
-                Rahim Pathan, as the founder, drives innovation with his
+                Rahim Pathan, as director and co-founder, drives innovation with his
                 expertise in AI and healthcare, shaping GenzAI Labs into a leader
                 in medical technology.
+              </p>
+            </div>
+            <div className="text-center">
+              <img
+                src="/Sagar_Chheda_director.jpeg"
+                alt="Sagar Chheda"
+                className="h-48 w-48 object-cover rounded-full mx-auto mb-4 shadow-md"
+              />
+              <h3 className="text-xl font-semibold text-gray-900">
+                Sagar Chheda
+              </h3>
+              <p className="text-gray-600">Director</p>
+              <p className="text-gray-500 mt-2">
+                Sagar Chheda serves as a Director of GenzAI Labs, supporting the
+                company's leadership and strategic direction.
               </p>
             </div>
           </div>

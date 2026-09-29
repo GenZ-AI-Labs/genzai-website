@@ -52,15 +52,6 @@ const Index = () => {
     { src: "/dpu.png", alt: "DY Patil Hospital" },
   ];
 
-  // Incubated by
-  const incubators = [
-    {
-      src: "/DPU-logo-pune.png",
-      alt: "Dr. D. Y. Patil Vidyapeeth",
-      link: "https://dpu.edu.in/",
-    },
-  ];
-
   // Video speed manage for hero section
   const videoRef = React.useRef(null);
   React.useEffect(() => {
@@ -196,25 +187,6 @@ const Index = () => {
 
   // Events info
   const events = [
-    {
-      id: 1,
-      image: "/first-event.jpg",
-      title: "GenzAI Labs Joins DPU FIIIE as an Officially Incubated Startup",
-      summary:
-        "Excited to share a proud milestone for GenzAI Labs Pvt Ltd! We are now officially an Incubated Startup at DPU Foundation For Innovation Incubation & Entrepreneurship (DPU FIIIE).",
-      date: "September 23, 2025",
-      location: "Dr. D. Y. Patil Medical College, Pune",
-      type: "Milestone",
-      status: "Past",
-      fullDescription:
-        "Excited to share a proud milestone for GenzAI Labs Pvt Ltd! We are now officially an Incubated Startup at DPU Foundation For Innovation Incubation & Entrepreneurship (DPU FIIIE). At GenzAI Labs, we are committed to building cutting-edge AI solutions for MRI, CT, and X-ray scans. Our flagship product, Stroke Insightz, is designed to support doctors with stroke perfusion analysis workflows, ensuring clinical reliability, data security, and seamless hospital integration. A heartfelt thanks to Prof. Dr. Sushil Kachewar MD, DNB, Ph.D, along with the faculties, deans, and directors of Dr. D. Y. Patil Medical College, Hospital & Research Centre, Pimpri, Pune, and the team at DPU FIIIE for their support and recognition. This is just the beginning of our journey towards transforming medical imaging with AI.",
-      highlights: [
-        "Official incubation at DPU FIIIE",
-        "Support from Dr. D. Y. Patil Medical College",
-        "Recognition for Stroke Insightz innovation",
-        "Commitment to AI in medical imaging",
-      ],
-    },
     {
       id: 2,
       image: "/third-event.jpg",
@@ -942,70 +914,6 @@ const Index = () => {
               </motion.div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Incubated By */}
-      <section className="relative py-20 md:py-28 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-center">
-            <SectionHeading
-              kicker="Supported By"
-              title="Incubated By"
-            />
-          </div>
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-60px" }}
-            transition={{ duration: 0.6 }}
-            className="max-w-5xl mx-auto"
-          >
-            <div className="grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-12 items-center bg-white border border-slate-200 rounded-2xl p-8 md:p-10 shadow-sm hover:shadow-lg transition-shadow duration-300">
-              {/* Logo — 2/5 cols */}
-              <div className="md:col-span-2 flex justify-center">
-                {incubators.map((incubator, index) => (
-                  <a
-                    key={`incubator-${index}`}
-                    href={incubator.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block cursor-pointer transition-transform duration-300 hover:scale-105 max-w-[240px]"
-                  >
-                    <img
-                      src={incubator.src}
-                      alt={incubator.alt}
-                      className="w-full h-auto object-contain"
-                    />
-                  </a>
-                ))}
-              </div>
-              {/* Description — 3/5 cols */}
-              <div className="md:col-span-3">
-                <p className="text-slate-700 text-base md:text-lg leading-relaxed">
-                  Part of the{" "}
-                  <span className="font-semibold text-slate-900">
-                    DPU Foundation for Innovation Incubation & Entrepreneurship (FIIIE)
-                  </span>
-                  , supporting deep-tech healthcare startups in India.
-                </p>
-                <div className="flex flex-wrap gap-2 mt-5">
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-semibold">
-                    <Calendar className="h-3 w-3" />
-                    Since April 2025
-                  </span>
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-slate-700 text-xs font-semibold">
-                    <MapPin className="h-3 w-3" />
-                    Pune, India
-                  </span>
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-slate-700 text-xs font-semibold">
-                    <Award className="h-3 w-3" />
-                    Deep-Tech Healthcare
-                  </span>
-                </div>
-              </div>
-            </div>
-          </motion.div>
         </div>
       </section>
 

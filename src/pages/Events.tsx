@@ -66,25 +66,6 @@ const Events = () => {
   // events
   const events = [
     {
-      id: 1,
-      image: "/first-event.jpg",
-      title: "GenzAI Labs Joins DPU FIIIE as an Officially Incubated Startup",
-      summary:
-        "Excited to share a proud milestone for GenzAI Labs Pvt Ltd! We are now officially an Incubated Startup at DPU Foundation For Innovation Incubation & Entrepreneurship (DPU FIIIE).",
-      date: "September 23, 2025",
-      location: "Dr. D. Y. Patil Medical College, Pune",
-      type: "Milestone",
-      status: "Past",
-      fullDescription:
-        "Excited to share a proud milestone for GenzAI Labs Pvt Ltd! We are now officially an Incubated Startup at DPU Foundation For Innovation Incubation & Entrepreneurship (DPU FIIIE). At GenzAI Labs, we are committed to building cutting-edge AI solutions for MRI, CT, and X-ray scans. Our flagship product, Stroke Insightz, is designed to support doctors with stroke perfusion analysis workflows, ensuring clinical reliability, data security, and seamless hospital integration. A heartfelt thanks to Prof. Dr. Sushil Kachewar MD, DNB, Ph.D, along with the faculties, deans, and directors of Dr. D. Y. Patil Medical College, Hospital & Research Centre, Pimpri, Pune, and the team at DPU FIIIE for their support and recognition. This is just the beginning of our journey towards transforming medical imaging with AI.",
-      highlights: [
-        "Official incubation at DPU FIIIE",
-        "Support from Dr. D. Y. Patil Medical College",
-        "Recognition for Stroke Insightz innovation",
-        "Commitment to AI in medical imaging",
-      ],
-    },
-    {
       id: 2,
       image: "/third-event.jpg",
       title:
